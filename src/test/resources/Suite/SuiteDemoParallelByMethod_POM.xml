@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Suite Demo Parallel Testing By Method" verbose="1" parallel="methods">
+
+    <test name="Suite Demo Parallel Testing By Method">
+        <classes>
+        </classes>
+    </test>
+</suite>
