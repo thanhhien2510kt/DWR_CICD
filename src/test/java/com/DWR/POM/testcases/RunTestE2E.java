@@ -27,7 +27,7 @@ public class RunTestE2E extends BaseTestE2E {
     public void testAddNewCustomer ( ){
         String CUSTOMER_NAME = "Rosy Duong";
 
-        getDashboardPage().clickMenuDeliveryInfo();
+        getDashboardPage().clickDeliveryReceiptPage();
 
 //        int totalCustomerBefore = Integer.parseInt(getCustomerPage().getTotalCustomer());
 //        System.out.println(getCustomerPage().getTotalCustomer());;

@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DWR2510" />
+        <module name="DWR" />
         <module name="SeleniumTesNGParallel112023" />
       </profile>
     </annotationProcessing>

@@ -43,10 +43,10 @@ public class LoginPage extends CommonPage {
         WebUI.clickElement(buttonDWR);
     }
 
-    public DashboardPage LoginCRM (String email, String password){
+    public DashboardPage LoginCRM (String username, String password){
         WebUI.openURL(URL);
         WebUI.waitForPageLoaded();
-        enterUsername(email);
+        enterUsername(username);
         enterPassword(password);
         clickLoginButton();
         WebUI.sleep(2);
@@ -55,10 +55,10 @@ public class LoginPage extends CommonPage {
         return new DashboardPage();
     }
 
-    public DashboardPage LoginCRM_Fail (String email, String password){
+    public DashboardPage LoginCRM_Fail (String username, String password){
         WebUI.openURL(URL);
         WebUI.waitForPageLoaded();
-        enterUsername(email);
+        enterUsername(username);
         enterPassword(password);
         clickLoginButton();
         WebUI.sleep(2);

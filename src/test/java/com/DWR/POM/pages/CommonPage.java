@@ -48,19 +48,19 @@ public class CommonPage {
     public By menuDeliveryInfo = By.xpath("//span[normalize-space()='Thông tin giao hàng']");
     public By menuDeliveryReceiptPage = By.xpath("//a[normalize-space()='Phiếu giao hàng']");
     public By menuDepositReceipt = By.xpath("//a[contains(text(),'Phiếu thu tiền cọc')]");
-    //public By menuSales = By.xpath("//li[@class='menu-item-sales']");
-    //public By iconNotification = By.xpath("//a[contains(@class,'notifications-icon')]");
 
-    public DeliveryReceiptPage clickMenuDeliveryInfo(){
+
+    public DeliveryReceiptPage clickDeliveryReceiptPage(){
         WebUI.waitForPageLoaded();
-        WebUI.clickElement(menuDeliveryInfo,5);
-        WebUI.clickElement(menuDeliveryReceiptPage,5);
+        WebUI.clickElement(menuDeliveryInfo,3);
+        WebUI.clickElement(menuDeliveryReceiptPage,3);
         return new DeliveryReceiptPage();
     }
 
     public DepositReceiptPage clickDepositReceiptPage(){
         WebUI.waitForPageLoaded();
-        WebUI.clickElement(menuDepositReceipt,5);
+        WebUI.clickElement(menuDeliveryInfo,3);
+        WebUI.clickElement(menuDepositReceipt,3);
 
         return new DepositReceiptPage();
     }
