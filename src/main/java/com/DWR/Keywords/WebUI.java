@@ -162,7 +162,7 @@ public class WebUI {
     }
 
     @Step("Check Element {1} Exist ")
-    public static Boolean checkElementExist(WebDriver driver, By by) {
+    public static boolean checkElementExist(WebDriver driver, By by) {
         List<WebElement> listElement = driverManager.getDriver().findElements(by);
 
         if (listElement.size() > 0) {
@@ -177,7 +177,7 @@ public class WebUI {
     }
 
     @Step("Check Element {0} Exist ")
-    public static Boolean checkElementExist(By by) {
+    public static boolean checkElementExist(By by) {
         sleep(2);
         List < WebElement > listElement = getListWebElement(by);
 
@@ -503,6 +503,7 @@ public class WebUI {
         }
     }
 
+
     public static void waitForElementClickable(By by, int timeOut) {
         try {
             WebDriverWait wait = new WebDriverWait(driverManager.getDriver(), Duration.ofSeconds(timeOut), Duration.ofMillis(500));
@@ -523,7 +524,7 @@ public class WebUI {
         ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
             @Override
             public Boolean apply(WebDriver driver) {
-                return js.executeScript("return document.readyState").toString().equals("complete");
+                return (Boolean) js.executeScript("return document.readyState").toString().equals("complete");
             }
         };
 
@@ -553,7 +554,7 @@ public class WebUI {
         ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
             @Override
             public Boolean apply(WebDriver driver) {
-                return js.executeScript("return document.readyState").toString().equals("complete");
+                return (Boolean) js.executeScript("return document.readyState").toString().equals("complete");
             }
         };
 
@@ -582,7 +583,7 @@ public class WebUI {
         ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
             @Override
             public Boolean apply(WebDriver driver) {
-                return js.executeScript("return document.readyState").toString().equals("complete");
+                return (Boolean) js.executeScript("return document.readyState").toString().equals("complete");
             }
         };
 
