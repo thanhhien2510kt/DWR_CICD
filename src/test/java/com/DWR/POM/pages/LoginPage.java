@@ -1,5 +1,6 @@
 package com.DWR.POM.pages;
 
+import com.DWR.Constant.ConfigData;
 import com.DWR.Keywords.WebUI;
 import com.DWR.driver.driverManager;
 import org.openqa.selenium.By;
@@ -17,57 +18,70 @@ public class LoginPage extends CommonPage {
     }
 
     //Khai báo các element dạng đối tương By
-    private By headerPage = By.xpath("//h1[normalize-space()='Login']");
-    private By inputEmail = By.xpath("//input[@id='email']");
-    private By inputPassword = By.xpath("//input[@id='password']");
-    private By buttonLogin = By.xpath("//button[normalize-space()='Login']");
-    private By errorMessage = By.xpath("//div[contains(@class,\"alert alert-danger\")]");
-    private By menuDashboard = By.xpath("//span[normalize-space()='Dashboard']");
-    private By dropdownProfile = By.xpath("//li[contains(@class,'user-profile')]");
-    private By optionLogout = By.xpath("//a[text()='Logout']");
+    private By inputUsername = By.xpath("//input[@id='Username']");
+    private By inputPassword = By.xpath("//input[@id='Password']");
+    private By buttonLogin = By.xpath("//button[@id='btnLogin']");
+    private By buttonDWR = By.xpath("//button[normalize-space()='DWR']");
+    private By errorMessage = By.xpath("//div[@class='toast-message']");
+    private By menuDashboard = By.xpath("//img[@src='/assets/images/logo/aeon-logo.png']");
+    private By optionLogout = By.xpath("//a[contains(text(),'Đăng xuất')]");
 
     // Khai báo hàm xử lý
-    public void enterEmail (String email){
-
-        WebUI.setText(inputEmail, email);
+    public void enterUsername (String email){
+        WebUI.setText(inputUsername, email);
     }
 
     public void enterPassword (String password){
-
-        //driver.findElement(inputPassword).sendKeys(password);
         WebUI.setText(inputPassword, password);
     }
 
     public void clickLoginButton (){
-
         WebUI.clickElement(buttonLogin);
     }
 
+    public void clickDWRButton (){
+        WebUI.clickElement(buttonDWR);
+    }
+
     public DashboardPage LoginCRM (String email, String password){
-        //driver.get(ConfigData.URL);
         WebUI.openURL(URL);
         WebUI.waitForPageLoaded();
-        enterEmail(email);
+        enterUsername(email);
         enterPassword(password);
         clickLoginButton();
+        WebUI.sleep(2);
+        clickDWRButton();
 
         return new DashboardPage();
     }
 
-    public void Logout (){
-        WebUI.clickElement(dropdownProfile);
+    public DashboardPage LoginCRM_Fail (String email, String password){
+        WebUI.openURL(URL);
+        WebUI.waitForPageLoaded();
+        enterUsername(email);
+        enterPassword(password);
+        clickLoginButton();
+        WebUI.sleep(2);
+
+        return new DashboardPage();
+    }
+
+    public void Logout (String username){
+        WebUI.waitForPageLoaded();
+        WebUI.clickElement(By.xpath("//span[normalize-space()='"+ username +"']"));
         WebUI.clickElement(optionLogout);
+        WebUI.sleep(2);
     }
 
     public void verifyLoginSuccess(){
         WebUI.waitForPageLoaded();
-        Assert.assertTrue(WebUI.checkElementExist(menuDashboard), "FAIL. Can not direct to Dashboard Page");
-        Assert.assertEquals(driverManager.getDriver().getCurrentUrl(),"https://crm.DWR.com/admin/","FAIL. Can not direct to Dashboard Page");
+        Assert.assertTrue(WebUI.checkElementExist(menuDashboard), "FAIL. Cannot redirect to the Dashboard page");
+        Assert.assertEquals(driverManager.getDriver().getCurrentUrl(),"http://20.24.110.171/dwr","FAIL. Cannot redirect to the Dashboard page");
     }
     public void verifyLoginFail (String expectedMessage){
         WebUI.waitForPageLoaded();
-        Assert.assertTrue(WebUI.checkElementExist(errorMessage), "FAIL. The error message not display");
-        Assert.assertEquals(WebUI.getElementText(errorMessage), expectedMessage, "FAIL.The content of error message is not match ");
+        Assert.assertTrue(WebUI.checkElementExist(errorMessage), "FAIL. The error message is not displayed.");
+        Assert.assertEquals(WebUI.getElementText(errorMessage), expectedMessage, "FAIL.The content of the error message does not match. ");
     }
 
 }

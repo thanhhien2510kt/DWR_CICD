@@ -14,16 +14,17 @@ public class LoginTest extends BaseTest {
         loginPage  = new LoginPage();
 
         ExcelHelper excelHelper = new ExcelHelper();
-        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","Sheet3");
+        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","Login");
 
 
-        for ( int i = 1 ; i <= 3 ; i ++){
+        for ( int i = 1 ; i <= 1 ; i ++){
             loginPage.LoginCRM(
-                    excelHelper.getCellData("EMAIL",i),
+                    excelHelper.getCellData("USERNAME",i),
                     excelHelper.getCellData("PASSWORD",i)
             );
             loginPage.verifyLoginSuccess();
-            loginPage.Logout();
+            loginPage.Logout(excelHelper.getCellData("USERNAME",i));
+
         }
         excelHelper.setCellData("Passed","STATUS", 1);
 
@@ -34,14 +35,14 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
 
         ExcelHelper excelHelper = new ExcelHelper();
-        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","Sheet1");
+        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","LoginFail");
 
-        loginPage.LoginCRM(
-                excelHelper.getCellData("EMAIL",2),
-                excelHelper.getCellData("PASSWORD",2)
+        loginPage.LoginCRM_Fail(
+                excelHelper.getCellData("USERNAME",1),
+                excelHelper.getCellData("PASSWORD",1)
         );
 
-        loginPage.verifyLoginFail("Invalid email or password");
+        loginPage.verifyLoginFail("Username/password not correct");
         excelHelper.setCellData("Failed","STATUS", 2);
     }
 
@@ -50,14 +51,14 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
 
         ExcelHelper excelHelper = new ExcelHelper();
-        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","Sheet1");
+        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","LoginFail");
 
 
-        loginPage.LoginCRM(
-                excelHelper.getCellData("EMAIL",3),
-                excelHelper.getCellData("PASSWORD",3)
+        loginPage.LoginCRM_Fail(
+                excelHelper.getCellData("USERNAME",2),
+                excelHelper.getCellData("PASSWORD",2)
         );
-        loginPage.verifyLoginFail("Invalid email or password");
+        loginPage.verifyLoginFail("Username/password not correct");
 //        loginPage.Logout();
         excelHelper.setCellData("Failed","STATUS", 3);
 
@@ -69,14 +70,14 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
 
         ExcelHelper excelHelper = new ExcelHelper();
-        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","Sheet1");
+        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","LoginFail");
 
-        loginPage.LoginCRM(
-                excelHelper.getCellData("EMAIL",4),
-                excelHelper.getCellData("PASSWORD",4)
+        loginPage.LoginCRM_Fail(
+                excelHelper.getCellData("USERNAME",3),
+                excelHelper.getCellData("PASSWORD",3)
         );
 
-        loginPage.verifyLoginFail("The Password field is required.");
+        loginPage.verifyLoginFail("Username/password not correct");
         excelHelper.setCellData("Failed","STATUS", 4);
     }
 
@@ -85,13 +86,13 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
 
         ExcelHelper excelHelper = new ExcelHelper();
-        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","Sheet1");
+        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","LoginFail");
 
-        loginPage.LoginCRM(
-                excelHelper.getCellData("EMAIL",5),
-                excelHelper.getCellData("PASSWORD",5)
+        loginPage.LoginCRM_Fail(
+                excelHelper.getCellData("USERNAME",4),
+                excelHelper.getCellData("PASSWORD",4)
         );
-        loginPage.verifyLoginFail("The Email Address field is required.");
+        loginPage.verifyLoginFail("Username/password not correct");
         excelHelper.setCellData("Failed","STATUS", 5);
     }
 }

@@ -4,7 +4,7 @@ import com.DWR.helpers.PropertiesHelper;
 
 public class ConfigData {
     public static String URL = PropertiesHelper.getValue("URL") ;
-    public static String EMAIL = PropertiesHelper.getValue("EMAIL") ;
+    public static String USERNAME = PropertiesHelper.getValue("USERNAME") ;
     public static String PASSWORD = PropertiesHelper.getValue("PASSWORD");
     public static int TIMEOUT_EXPLICIT_WAIT = Integer.parseInt(PropertiesHelper.getValue("TIMEOUT_EXPLICIT_WAIT"));
     public static double TIMEOUT_STEP = Double.parseDouble(PropertiesHelper.getValue("TIMEOUT_STEP"));

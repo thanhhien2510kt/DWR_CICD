@@ -27,14 +27,14 @@ public class CommonPage {
 
     public DeliveryReceiptPage getDeliveryReceiptPage() {
         if(deliveryReceiptPage == null){
-            deliveryReceiptPage = new DeliveryReceiptPage;
+            deliveryReceiptPage = new DeliveryReceiptPage();
         }
         return deliveryReceiptPage;
     }
 
     public DepositReceiptPage getDepositReceiptPage() {
         if(depositReceiptPage == null){
-            depositReceiptPage = new DepositReceipt();
+            depositReceiptPage = new DepositReceiptPage();
         }
         return depositReceiptPage;
     }
@@ -58,11 +58,11 @@ public class CommonPage {
         return new DeliveryReceiptPage();
     }
 
-    public depositReceiptPage clickDepositReceiptPage(){
+    public DepositReceiptPage clickDepositReceiptPage(){
         WebUI.waitForPageLoaded();
         WebUI.clickElement(menuDepositReceipt,5);
 
-        return new depositReceiptPage();
+        return new DepositReceiptPage();
     }
 
     public DashboardPage clickMenuDWR(){

@@ -12,7 +12,7 @@ import com.DWR.helpers.PropertiesHelper;
 import com.DWR.helpers.SystemHelper;
 import com.aventstack.extentreports.Status;
 import io.qameta.allure.Step;
-import org.apache.commons.logging.Log;
+//import org.apache.commons.logging.Log;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
