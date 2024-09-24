@@ -47,6 +47,7 @@ public class DeliveryReceiptPage extends CommonPage {
     //Element Search
     private  By searchCustomerName = By.xpath("//input[@id='customer_name']");
     private  By searchType = By.xpath("(//div/label[text()='Loại phiếu']/parent::div)/following-sibling::div//span[@role='combobox']");
+    private  By searchDepositStatus = By.xpath("(//div/label[text()='Trạng thái phiếu cọc']/parent::div)/following-sibling::div//span[@role='combobox']");
 
     private  By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
 
@@ -219,7 +220,7 @@ public class DeliveryReceiptPage extends CommonPage {
 
     }
 
-    public void searchRecept (String type, String name){
+    public void searchRecept (String type, String name, String deposit){
         WebUI.waitForPageLoaded();
         WebUI.clickElement(searchType);
         WebUI.sleep(1);
@@ -229,14 +230,31 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.clickElement(searchCustomerName);
         WebUI.setText(searchCustomerName, name);
 
+        if (deposit == "Yes"){
+            WebUI.clickElement(searchDepositStatus);
+            WebUI.sleep(1);
+            WebUI.clickElement(By.xpath("//ul/li[normalize-space()='Có']"));
+            WebUI.sleep(1);
+        } else if (deposit == "No") {
+            WebUI.clickElement(searchDepositStatus);
+            WebUI.sleep(1);
+            WebUI.clickElement(By.xpath("//ul/li[normalize-space()='Không']"));
+            WebUI.sleep(1);
+        }else {
+
+        }
+
         WebUI.clickElement(searchButton);
         WebUI.sleep(3);
+
     }
 
     public String getDeliveryReceiptCodeOfFistItemInTable (){
+        //get Delivery Receipt Code Of Fist Item In Table
         String DeliveryReceiptCode = WebUI.getElementText(deliveryReceiptCode);
         return  DeliveryReceiptCode;
     }
+
 
 
 

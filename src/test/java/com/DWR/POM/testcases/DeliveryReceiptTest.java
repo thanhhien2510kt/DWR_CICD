@@ -9,6 +9,7 @@ public class DeliveryReceiptTest extends BaseTest {
 
     @Test
     public void testAddNewDeliveryReceipt_CDO (){
+        //Login
         ExcelHelper excelHelper = new ExcelHelper();
         excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","Login");
 
@@ -77,14 +78,37 @@ public class DeliveryReceiptTest extends BaseTest {
 
     }
 
+    public String searchDeliveryReceipt (String typeName) {
+        String deliveryReceiptCode;
+        switch (typeName) {
+            case "CDO":
+                testAddNewDeliveryReceipt_CDO();
+                //search phiếu vừa tạo
+                getDeliveryReceiptPage().searchRecept("CDO", "Rosy Dương", "Other");
+                break;
+
+            case "COD_Yes":
+                testAddNewDeliveryReceipt_COD_Yes();
+                //search phiếu vừa tạo
+                getDeliveryReceiptPage().searchRecept("COD", "Rosy Dương", "Yes");
+                break;
+
+            case "COD_No":
+                testAddNewDeliveryReceipt_COD_No();
+                //search phiếu vừa tạo
+                getDeliveryReceiptPage().searchRecept("COD", "Rosy Dương", "No");
+                break;
+
+        }
+        deliveryReceiptCode = getDeliveryReceiptPage().getDeliveryReceiptCodeOfFistItemInTable();
+
+        return deliveryReceiptCode;
+    }
+
     @Test
-    public void searchDeliveryReceipt_CDO (){
-        testAddNewDeliveryReceipt_CDO();
-
-        //search phiếu vừa tạo
-        getDeliveryReceiptPage().searchRecept("CDO", "Rosy Dương");
-
-        getDeliveryReceiptPage().getDeliveryReceiptCodeOfFistItemInTable();
+    public void approveFlow (){
+        String code = searchDeliveryReceipt("CDO");
+        System.out.println(code);
 
     }
 
