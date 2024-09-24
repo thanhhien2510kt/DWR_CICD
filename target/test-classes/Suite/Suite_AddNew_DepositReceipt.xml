@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Suite_AddNew_DepositReceipt" verbose="1"  >
+
+    <test name="Suite_AddNew_DepositReceipt">
+        <classes>
+            <class name="com.DWR.POM.testcases.DeliveryReceiptTest">
+                <methods>
+                    <include name="testAddNewDeliveryReceipt_COD_Yes"/>
+                </methods>
+            </class>
+
+            <class name="com.DWR.POM.testcases.DepositReceiptTest">
+                <methods>
+                    <include name="AddNewDepositReceipt"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
