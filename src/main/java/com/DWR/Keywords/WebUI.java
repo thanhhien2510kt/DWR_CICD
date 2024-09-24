@@ -161,6 +161,19 @@ public class WebUI {
         }
     }
 
+    @Step("Clear text on element  {0} ")
+    public static void clearText(By by) {
+        waitForElementPresent(by);
+        sleep(TIMEOUT_STEP);
+        getWebElement(by).clear();
+        LogUtils.info("Clear text on element " + by);
+        ExtentTestManager.logMessage(Status.PASS,"Clear text on element " + by);
+
+        if(PropertiesHelper.getValue("SCREENSHOT_STEP_ALL").equals("true")){
+            CaptureHelper.screenshot(SystemHelper.makeSlug("ClearText_" + by.toString()));  // khi nào chạy tuần tự mới dùng record, chạy parrallel ko record
+        }
+    }
+
     @Step("Check Element {1} Exist ")
     public static boolean checkElementExist(WebDriver driver, By by) {
         List<WebElement> listElement = driverManager.getDriver().findElements(by);
