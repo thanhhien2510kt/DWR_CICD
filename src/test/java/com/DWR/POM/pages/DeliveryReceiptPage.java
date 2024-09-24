@@ -46,12 +46,21 @@ public class DeliveryReceiptPage extends CommonPage {
 
     //Element Search
     private  By searchCustomerName = By.xpath("//input[@id='customer_name']");
+    private  By searchCode = By.xpath("//input[@id='Code']");
     private  By searchType = By.xpath("(//div/label[text()='Loại phiếu']/parent::div)/following-sibling::div//span[@role='combobox']");
     private  By searchDepositStatus = By.xpath("(//div/label[text()='Trạng thái phiếu cọc']/parent::div)/following-sibling::div//span[@role='combobox']");
 
     private  By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
 
     private By deliveryReceiptCode = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[3]");
+
+    private By iconSendOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Send']");
+    private By buttonYes = By.xpath("//button[contains(text(),'Đồng ý')]");
+
+    private By iconApproveOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Approve']");
+    private By ApproveConfirmButton = By.xpath("//button[@id='btnApprove']");
+
+    private By iconPrintOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Print']");
 
 
     //Hàm xử lý cho trang DeliveryReceiptPage
@@ -249,11 +258,54 @@ public class DeliveryReceiptPage extends CommonPage {
 
     }
 
+    public void searchRecept (String code){
+        WebUI.waitForPageLoaded();
+        WebUI.clickElement(searchCode);
+        WebUI.sleep(1);
+        WebUI.setText(searchCode,code);
+        WebUI.sleep(1);
+
+
+        WebUI.clickElement(searchButton);
+        WebUI.sleep(3);
+
+    }
+
     public String getDeliveryReceiptCodeOfFistItemInTable (){
         //get Delivery Receipt Code Of Fist Item In Table
         String DeliveryReceiptCode = WebUI.getElementText(deliveryReceiptCode);
         return  DeliveryReceiptCode;
     }
+
+    public  void clickIconSend (){
+        WebUI.clickElement(iconSendOfFirstItem);
+        WebUI.sleep(2);
+        WebUI.clickElement(buttonYes);
+        WebUI.sleep(5);
+    }
+
+    public  void clickIconApprove (){
+        WebUI.clickElement(iconApproveOfFirstItem);
+        WebUI.sleep(2);
+        WebUI.clickElement(ApproveConfirmButton);
+        WebUI.sleep(5);
+    }
+
+    public  void clickIconPrint (){
+        WebUI.clickElement(iconPrintOfFirstItem);
+        WebUI.sleep(2);
+        WebUI.clickElement(buttonYes);
+        WebUI.sleep(5);
+    }
+
+
+
+
+
+
+
+
+
 
 
 

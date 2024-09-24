@@ -10,16 +10,7 @@ public class DeliveryReceiptTest extends BaseTest {
     @Test
     public void testAddNewDeliveryReceipt_CDO (){
         //Login
-        ExcelHelper excelHelper = new ExcelHelper();
-        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","Login");
-
-        for (int i=1; i <= 1; i++ ){
-            getLoginPage().LoginCRM(
-                    excelHelper.getCellData("USERNAME", i),
-                    excelHelper.getCellData("PASSWORD", i)
-            );
-        }
-
+        getLoginPage().LoginCRM_Excel(1,1);
         clickDeliveryReceiptPage();
 
 
@@ -33,18 +24,9 @@ public class DeliveryReceiptTest extends BaseTest {
 
     @Test
     public void testAddNewDeliveryReceipt_COD_Yes (){
-        ExcelHelper excelHelper = new ExcelHelper();
-        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","Login");
-
-        for (int i=1; i <= 1; i++ ){
-            getLoginPage().LoginCRM(
-                    excelHelper.getCellData("USERNAME", i),
-                    excelHelper.getCellData("PASSWORD", i)
-            );
-        }
-
+        //Login
+        getLoginPage().LoginCRM_Excel(1,1);
         clickDeliveryReceiptPage();
-
 
         //tạo phiếu COD (có cọc)
         WebUI.sleep(3);
@@ -52,21 +34,18 @@ public class DeliveryReceiptTest extends BaseTest {
         WebUI.waitForPageLoaded();
         getDeliveryReceiptPage().enterDataAddNewCOD_Yes();
 
+        //send phiếu
+        String code = getDeliveryReceiptPage().getDeliveryReceiptCodeOfFistItemInTable();
+        getDeliveryReceiptPage().searchRecept(code);
+        getDeliveryReceiptPage().clickIconSend();
 
     }
 
+
     @Test
     public void testAddNewDeliveryReceipt_COD_No (){
-        ExcelHelper excelHelper = new ExcelHelper();
-        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","Login");
-
-        for (int i=1; i <= 1; i++ ){
-            getLoginPage().LoginCRM(
-                    excelHelper.getCellData("USERNAME", i),
-                    excelHelper.getCellData("PASSWORD", i)
-            );
-        }
-
+        //Login
+        getLoginPage().LoginCRM_Excel(1,1);
         clickDeliveryReceiptPage();
 
         //tạo phiếu COD (không cọc)
@@ -106,9 +85,24 @@ public class DeliveryReceiptTest extends BaseTest {
     }
 
     @Test
-    public void approveFlow (){
+    public void approveFlow_CDO (){
         String code = searchDeliveryReceipt("CDO");
-        System.out.println(code);
+
+        //B1: Send phiếu
+        getDeliveryReceiptPage().searchRecept(code);
+        getDeliveryReceiptPage().clickIconSend();
+
+        // B2: G4 OP - phê duyệt
+        getLoginPage().Logout("G1_FL");
+        getLoginPage().LoginCRM_Excel(4,4);
+        clickDeliveryReceiptPage();
+        getDeliveryReceiptPage().searchRecept(code);
+        getDeliveryReceiptPage().clickIconApprove();
+
+        // B3: G4 Op - in đơn
+        getDeliveryReceiptPage().clickIconPrint();
+
+
 
     }
 

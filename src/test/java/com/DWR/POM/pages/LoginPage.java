@@ -3,6 +3,7 @@ package com.DWR.POM.pages;
 import com.DWR.Constant.ConfigData;
 import com.DWR.Keywords.WebUI;
 import com.DWR.driver.driverManager;
+import com.DWR.helpers.ExcelHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -54,6 +55,26 @@ public class LoginPage extends CommonPage {
 
         return new DashboardPage();
     }
+
+    public DashboardPage LoginCRM_Excel (int from, int to){
+        ExcelHelper excelHelper = new ExcelHelper();
+        excelHelper.setExcelFile("src/test/resources/TestData/Login.xlsx","Login");
+
+        WebUI.openURL(URL);
+        WebUI.waitForPageLoaded();
+
+        for (int i= from; i <= to; i++ ){
+            enterUsername(excelHelper.getCellData("USERNAME", i));
+            enterPassword(excelHelper.getCellData("PASSWORD", i));
+        }
+
+        clickLoginButton();
+        WebUI.sleep(2);
+        clickDWRButton();
+
+        return new DashboardPage();
+    }
+
 
     public DashboardPage LoginCRM_Fail (String username, String password){
         WebUI.openURL(URL);

@@ -49,6 +49,12 @@ public class CommonPage {
     public By menuDeliveryReceiptPage = By.xpath("//a[normalize-space()='Phiếu giao hàng']");
     public By menuDepositReceipt = By.xpath("//a[contains(text(),'Phiếu thu tiền cọc')]");
 
+    public DashboardPage clickMenuDWR(){
+        WebUI.waitForPageLoaded();
+        WebUI.clickElement(menuDWR,5);
+
+        return new DashboardPage();
+    }
 
     public DeliveryReceiptPage clickDeliveryReceiptPage(){
         WebUI.waitForPageLoaded();
@@ -65,10 +71,7 @@ public class CommonPage {
         return new DepositReceiptPage();
     }
 
-    public DashboardPage clickMenuDWR(){
-        WebUI.waitForPageLoaded();
-        WebUI.clickElement(menuDWR,5);
 
-        return new DashboardPage();
-    }
+
+
 }
