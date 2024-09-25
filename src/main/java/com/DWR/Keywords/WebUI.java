@@ -79,19 +79,18 @@ public class WebUI {
     }
 
 
-    
     ////
 
 
     public static void sleep(double second) {
         try {
-            Thread.sleep((long)(1000 * second));
+            Thread.sleep((long) (1000 * second));
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static void upLoadFileWithRobotClass (By divFileUpload, String filePath){
+    public static void upLoadFileWithRobotClass(By divFileUpload, String filePath) {
         //Click để mở form upload
         WebUI.clickElement(divFileUpload);
         WebUI.sleep(2);
@@ -134,17 +133,17 @@ public class WebUI {
         return driverManager.getDriver().findElement(by);
     }
 
-    public static List < WebElement > getListWebElement(By by) {
+    public static List<WebElement> getListWebElement(By by) {
         return driverManager.getDriver().findElements(by);
     }
 
     @Step("Set key: {1} on element {0} ")
-    public static void setKeys (By by, Keys keys){
+    public static void setKeys(By by, Keys keys) {
 
         getWebElement(by).sendKeys(keys);
-        ExtentTestManager.logMessage(Status.PASS,"setKeys_" + by.toString());
+        ExtentTestManager.logMessage(Status.PASS, "setKeys_" + by.toString());
 
-        if(PropertiesHelper.getValue("SCREENSHOT_STEP_ALL").equals("true")){
+        if (PropertiesHelper.getValue("SCREENSHOT_STEP_ALL").equals("true")) {
             CaptureHelper.screenshot(SystemHelper.makeSlug("setKeys_" + by.toString()));  // khi nào chạy tuần tự mới dùng record, chạy parrallel ko record
         }
     }
@@ -155,9 +154,9 @@ public class WebUI {
         sleep(TIMEOUT_STEP);
         getWebElement(by).sendKeys(value);
         LogUtils.info("Set text: " + value + " on element " + by);
-        ExtentTestManager.logMessage(Status.PASS,"Set text: " + value + " on element " + by);
+        ExtentTestManager.logMessage(Status.PASS, "Set text: " + value + " on element " + by);
 
-        if(PropertiesHelper.getValue("SCREENSHOT_STEP_ALL").equals("true")){
+        if (PropertiesHelper.getValue("SCREENSHOT_STEP_ALL").equals("true")) {
             CaptureHelper.screenshot(SystemHelper.makeSlug("setText_" + by.toString()));  // khi nào chạy tuần tự mới dùng record, chạy parrallel ko record
         }
     }
@@ -168,9 +167,9 @@ public class WebUI {
         sleep(TIMEOUT_STEP);
         getWebElement(by).clear();
         LogUtils.info("Clear text on element " + by);
-        ExtentTestManager.logMessage(Status.PASS,"Clear text on element " + by);
+        ExtentTestManager.logMessage(Status.PASS, "Clear text on element " + by);
 
-        if(PropertiesHelper.getValue("SCREENSHOT_STEP_ALL").equals("true")){
+        if (PropertiesHelper.getValue("SCREENSHOT_STEP_ALL").equals("true")) {
             CaptureHelper.screenshot(SystemHelper.makeSlug("ClearText_" + by.toString()));  // khi nào chạy tuần tự mới dùng record, chạy parrallel ko record
         }
     }
@@ -181,11 +180,11 @@ public class WebUI {
 
         if (listElement.size() > 0) {
             LogUtils.info("Element " + by + " existing.");
-            ExtentTestManager.logMessage(Status.INFO,"Element " + by + " existing.");
+            ExtentTestManager.logMessage(Status.INFO, "Element " + by + " existing.");
             return true;
         } else {
             LogUtils.error("Element " + by + " NOT exist.");
-            ExtentTestManager.logMessage(Status.INFO,"Element " + by + " NOT exist.");
+            ExtentTestManager.logMessage(Status.INFO, "Element " + by + " NOT exist.");
             return false;
         }
     }
@@ -193,7 +192,7 @@ public class WebUI {
     @Step("Check Element {0} Exist ")
     public static boolean checkElementExist(By by) {
         sleep(2);
-        List < WebElement > listElement = getListWebElement(by);
+        List<WebElement> listElement = getListWebElement(by);
 
         if (listElement.size() > 0) {
             LogUtils.info("checkElementExist: " + true + " --- " + by);
@@ -209,8 +208,8 @@ public class WebUI {
         driverManager.getDriver().get(url);
         sleep(TIMEOUT_STEP);
         LogUtils.info("Open URL: " + url);
-        ExtentTestManager.logMessage(Status.PASS,"Open URL: " + url);
-        if(PropertiesHelper.getValue("SCREENSHOT_STEP_ALL").equals("true")){
+        ExtentTestManager.logMessage(Status.PASS, "Open URL: " + url);
+        if (PropertiesHelper.getValue("SCREENSHOT_STEP_ALL").equals("true")) {
             CaptureHelper.screenshot(SystemHelper.makeSlug("OpenURL_" + url));  // khi nào chạy tuần tự mới dùng record, chạy parrallel ko record
             ExtentTestManager.addScreenshot(SystemHelper.makeSlug("OpenURL_" + url));
             AllureManager.saveScreenshotPNG();
@@ -224,9 +223,9 @@ public class WebUI {
         sleep(TIMEOUT_STEP);
         getWebElement(by).click();
         LogUtils.info("Click element: " + by);
-        ExtentTestManager.logMessage(Status.PASS,"Click element: " + by );
+        ExtentTestManager.logMessage(Status.PASS, "Click element: " + by);
 
-        if(PropertiesHelper.getValue("SCREENSHOT_STEP_ALL").equals("true")){
+        if (PropertiesHelper.getValue("SCREENSHOT_STEP_ALL").equals("true")) {
             CaptureHelper.screenshot(SystemHelper.makeSlug("clickElement_" + by.toString()));  // khi nào chạy tuần tự mới dùng record, chạy parrallel ko record
             ExtentTestManager.addScreenshot(SystemHelper.makeSlug("clickElement_" + by.toString()));
             AllureManager.saveScreenshotPNG();
@@ -239,7 +238,7 @@ public class WebUI {
         sleep(TIMEOUT_STEP);
         getWebElement(by).click();
         LogUtils.info("Click element: " + by);
-        ExtentTestManager.logMessage(Status.PASS,"Click element: " + by );
+        ExtentTestManager.logMessage(Status.PASS, "Click element: " + by);
     }
 
 
@@ -249,7 +248,7 @@ public class WebUI {
         sleep(TIMEOUT_STEP);
         String text = getWebElement(by).getText();
         LogUtils.info("Get text: " + text);
-        ExtentTestManager.logMessage(Status.PASS,"Get text: " + text );
+        ExtentTestManager.logMessage(Status.PASS, "Get text: " + text);
         AllureManager.saveTextLog("Get text: " + text);
         return text; //Trả về một giá trị kiểu String
     }
@@ -280,13 +279,14 @@ public class WebUI {
 
     /**
      * Cuộn đén vị trí phần tử chỉ định
+     *
      * @param element
      * @param position nếu giá trị true thì cuộn lên trên, nếu giá trị false thì cuộn xuống dưới
      */
 
     public static void scrollToElement(By element, String position) {
         JavascriptExecutor js = (JavascriptExecutor) driverManager.getDriver();
-        js.executeScript("arguments[0].scrollIntoView("+position+");", getWebElement(element));
+        js.executeScript("arguments[0].scrollIntoView(" + position + ");", getWebElement(element));
     }
 
     public static void scrollToElement(WebElement element) {
@@ -425,7 +425,7 @@ public class WebUI {
     public static WebElement highLightElement(By by, String colorName) {
         // Tô màu border ngoài chính element chỉ định - màu đỏ (có thể đổi màu khác)
         if (driverManager.getDriver() instanceof JavascriptExecutor) {
-            ((JavascriptExecutor) driverManager.getDriver()).executeScript("arguments[0].style.border='3px solid "+ colorName+"'", getWebElement(by));
+            ((JavascriptExecutor) driverManager.getDriver()).executeScript("arguments[0].style.border='3px solid " + colorName + "'", getWebElement(by));
             sleep(TIMEOUT_STEP);
         }
         return getWebElement(by);
@@ -436,7 +436,7 @@ public class WebUI {
     public static boolean verifyEquals(Object actual, Object expected) {
         waitForPageLoaded();
         LogUtils.info("Verify equals: " + actual + " = " + expected);
-        ExtentTestManager.logMessage(Status.PASS,"Verify equals: " + actual + " = " + expected );
+        ExtentTestManager.logMessage(Status.PASS, "Verify equals: " + actual + " = " + expected);
         boolean check = actual.equals(expected);
         return check;
     }
@@ -451,7 +451,7 @@ public class WebUI {
     public static boolean verifyContains(String actual, String expected) {
         waitForPageLoaded();
         LogUtils.info("Verify contains: " + actual + " and " + expected);
-        ExtentTestManager.logMessage(Status.PASS,"Verify contains: " + actual + " and " + expected);
+        ExtentTestManager.logMessage(Status.PASS, "Verify contains: " + actual + " and " + expected);
         boolean check = actual.contains(expected);
         return check;
     }
@@ -471,7 +471,7 @@ public class WebUI {
             WebDriverWait wait = new WebDriverWait(driverManager.getDriver(), Duration.ofSeconds(TIMEOUT_EXPLICIT_WAIT), Duration.ofMillis(500));
             wait.until(ExpectedConditions.visibilityOfElementLocated(by));
         } catch (Throwable error) {
-            LogUtils.error ("Timeout waiting for the element Visible. " + by.toString());
+            LogUtils.error("Timeout waiting for the element Visible. " + by.toString());
             Assert.fail("Timeout waiting for the element Visible. " + by.toString());
 
         }
@@ -482,7 +482,7 @@ public class WebUI {
             WebDriverWait wait = new WebDriverWait(driverManager.getDriver(), Duration.ofSeconds(timeOut), Duration.ofMillis(500));
             wait.until(ExpectedConditions.visibilityOfElementLocated(by));
         } catch (Throwable error) {
-            LogUtils.error ("Timeout waiting for the element Visible. " + by.toString());
+            LogUtils.error("Timeout waiting for the element Visible. " + by.toString());
             Assert.fail("Timeout waiting for the element Visible. " + by.toString());
         }
     }
@@ -530,7 +530,7 @@ public class WebUI {
     }
 
 
-    public static void waitForPageLoaded (WebDriver driver) {
+    public static void waitForPageLoaded(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driverManager.getDriver(), Duration.ofSeconds(TIMEOUT_PAGE_LOAD), Duration.ofMillis(500));
         JavascriptExecutor js = (JavascriptExecutor) driverManager.getDriver();
 
@@ -560,7 +560,7 @@ public class WebUI {
 
     }
 
-    public static void waitForPageLoaded () {
+    public static void waitForPageLoaded() {
         WebDriverWait wait = new WebDriverWait(driverManager.getDriver(), Duration.ofSeconds(TIMEOUT_PAGE_LOAD), Duration.ofMillis(500));
         JavascriptExecutor js = (JavascriptExecutor) driverManager.getDriver();
 
@@ -589,8 +589,8 @@ public class WebUI {
 
     }
 
-    public static void waitForPageLoaded (int timeout) {
-        WebDriverWait wait = new WebDriverWait(driverManager.getDriver(), Duration.ofSeconds( timeout), Duration.ofMillis(500));
+    public static void waitForPageLoaded(int timeout) {
+        WebDriverWait wait = new WebDriverWait(driverManager.getDriver(), Duration.ofSeconds(timeout), Duration.ofMillis(500));
         JavascriptExecutor js = (JavascriptExecutor) driverManager.getDriver();
 
         //Wait for Javascript to load
@@ -619,29 +619,33 @@ public class WebUI {
 
     }
 
-    public static void  switchWindowToClickElement (By element){
+    public static void switchWindowToClickElement() {
         // Lưu lại lớp window đầu tiên - mã ID hơi dài, in ra sẽ thấy :)
         String MainWindow = driverManager.getDriver().getWindowHandle();
         System.out.println("Cửa sổ thứ 1: " + MainWindow);
 
+        sleep(2);
         // Lấy tất cả các mã định danh Tab Window.
         Set<String> windows = driverManager.getDriver().getWindowHandles();
+
+        System.out.println("Số Window: " + windows.size());
 
         //Chuyển hướng đến cửa sổ theo vị trí cụ thể
         String firstWindow = (String) windows.toArray()[0]; //Cửa sổ đầu
         System.out.println("Cửa sổ thứ 1: " + firstWindow);
         String secondWindow = (String) windows.toArray()[1]; //Cửa sổ thứ hai
         System.out.println("Cửa sổ thứ 2: " + secondWindow);
+//        String thirdWindow = (String) windows.toArray()[2]; //Cửa sổ thứ ba
+//        System.out.println("Cửa sổ thứ 3: " + thirdWindow);
 
-        //Chuyển hướng đến cửa sổ thứ 2
+        //Chuyển hướng đến cửa sổ thứ 3
         driverManager.getDriver().switchTo().window(secondWindow);
         sleep(1);
         System.out.println("Đã chuyển đến Tab Window mới");
         System.out.println(driverManager.getDriver().getTitle());
         System.out.println(driverManager.getDriver().getCurrentUrl());
         sleep(1);
-//        System.out.println(driverManager.getDriver().findElement(By.xpath("(//span[normalize-space()='See more on Facebook'])[1]")).getText());
-        sleep(1);
+
         //Tắt cái cửa sổ thứ 2
         driverManager.getDriver().close();
 
@@ -652,7 +656,6 @@ public class WebUI {
         sleep(1);
 
     }
-
 
 
 }

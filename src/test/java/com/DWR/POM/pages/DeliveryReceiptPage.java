@@ -5,9 +5,12 @@ import com.DWR.driver.driverManager;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Set;
+
+import static com.DWR.Keywords.WebUI.sleep;
 
 
 public class DeliveryReceiptPage extends CommonPage {
@@ -27,7 +30,7 @@ public class DeliveryReceiptPage extends CommonPage {
     private By customerName = By.xpath("//input[@id='CustomerName']");
 
     private By selectDeliveryDate = By.xpath("//div[@class='form-line selectlist']/child::input[@id=\"DeliveryDate\"]");
-    private By itemDeliveryDate = By.xpath("//div[@aria-label='"+currentDay()+"']");
+    private By itemDeliveryDate = By.xpath("//div[@aria-label='" + currentDay() + "']");
     private By billCode = By.xpath("//input[@id='BillCode']");
     private By numberProduct = By.xpath("//input[@id='NumberProduct']");
 
@@ -46,12 +49,12 @@ public class DeliveryReceiptPage extends CommonPage {
     private By headerDeliveryReceipt = By.xpath("//h2[contains(text(),'Danh Sách Phiếu Giao Hàng')]");
 
     //Element Search
-    private  By searchCustomerName = By.xpath("//input[@id='customer_name']");
-    private  By searchCode = By.xpath("//input[@id='Code']");
-    private  By searchType = By.xpath("(//div/label[text()='Loại phiếu']/parent::div)/following-sibling::div//span[@role='combobox']");
-    private  By searchDepositStatus = By.xpath("(//div/label[text()='Trạng thái phiếu cọc']/parent::div)/following-sibling::div//span[@role='combobox']");
+    private By searchCustomerName = By.xpath("//input[@id='customer_name']");
+    private By searchCode = By.xpath("//input[@id='Code']");
+    private By searchType = By.xpath("(//div/label[text()='Loại phiếu']/parent::div)/following-sibling::div//span[@role='combobox']");
+    private By searchDepositStatus = By.xpath("(//div/label[text()='Trạng thái phiếu cọc']/parent::div)/following-sibling::div//span[@role='combobox']");
 
-    private  By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
+    private By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
 
     private By deliveryReceiptCode = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[3]");
 
@@ -67,7 +70,7 @@ public class DeliveryReceiptPage extends CommonPage {
 
     //Hàm xử lý cho trang DeliveryReceiptPage
 
-    public String currentDay (){
+    public String currentDay() {
         // Lấy ngày hôm nay
         LocalDate ngayHienTai = LocalDate.now();
 
@@ -85,237 +88,238 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.clickElement(buttonAddNew);
     }
 
-    public void enterDataAddNewCOD_No () {
+    public void enterDataAddNewCOD_No() {
 
         WebUI.clickElement(CODCheckBox);
         WebUI.clickElement(noDepositCheckBox);
-        WebUI.setText(customerCode,"3003228094" );
+        WebUI.setText(customerCode, "3003228094");
         WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
         WebUI.waitForPageLoaded();
 
         WebUI.clickElement(customerName);
         WebUI.clearText(customerName);
-        WebUI.setText(customerName,"Rosy Dương");
+        WebUI.setText(customerName, "Rosy Dương");
 
         WebUI.clickElement(selectDeliveryDate);
-        WebUI.sleep(3);
+        sleep(3);
         WebUI.clickElement(itemDeliveryDate);
-        WebUI.sleep(3);
+        sleep(3);
 
-        WebUI.setText(billCode,"HD6512381" );
+        WebUI.setText(billCode, "HD6512381");
         WebUI.clickElement(numberProduct);
-        WebUI.setText(numberProduct,"1" );
-        WebUI.sleep(2);
+        WebUI.setText(numberProduct, "1");
+        sleep(2);
         WebUI.clickElement(selectSKU);
         WebUI.waitForPageLoaded();
-        WebUI.setText(SearchSKU,"023" );
-        WebUI.sleep(2);
+        WebUI.setText(SearchSKU, "023");
+        sleep(2);
         WebUI.pressENTER();
-        WebUI.sleep(5);
-        WebUI.setText(quayHang,"A" );
-        WebUI.sleep(1);
-        WebUI.setText(nganhHang,"FL" );
-        WebUI.sleep(1);
-        WebUI.setText(quanity,"1" );
-        WebUI.sleep(1);
-        WebUI.setText(price,"560000" );
-        WebUI.sleep(1);
-        WebUI.setText(discount,"10" );
-        WebUI.sleep(1);
+        sleep(5);
+        WebUI.setText(quayHang, "A");
+        sleep(1);
+        WebUI.setText(nganhHang, "FL");
+        sleep(1);
+        WebUI.setText(quanity, "1");
+        sleep(1);
+        WebUI.setText(price, "560000");
+        sleep(1);
+        WebUI.setText(discount, "10");
+        sleep(1);
 
         WebUI.scrollToElement(driverManager.getDriver().findElement(savebutton));
-        WebUI.sleep(2);
+        sleep(2);
 
         WebUI.clickElement(savebutton);
         WebUI.waitForPageLoaded();
 
-        Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt),"Failed login");
+        Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt), "Failed login");
 
 
     }
 
-    public void enterDataAddNewCOD_Yes () {
+    public void enterDataAddNewCOD_Yes() {
 
         WebUI.clickElement(CODCheckBox);
         WebUI.clickElement(yesDepositCheckBox);
-        WebUI.setText(customerCode,"3003228094" );
+        WebUI.setText(customerCode, "3003228094");
         WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
         WebUI.waitForPageLoaded();
 
         WebUI.clickElement(customerName);
         WebUI.clearText(customerName);
-        WebUI.setText(customerName,"Rosy Dương");
+        WebUI.setText(customerName, "Rosy Dương");
 
         WebUI.clickElement(selectDeliveryDate);
-        WebUI.sleep(3);
+        sleep(3);
         WebUI.clickElement(itemDeliveryDate);
-        WebUI.sleep(3);
+        sleep(3);
 
-        WebUI.setText(billCode,"HD6512381" );
+        WebUI.setText(billCode, "HD6512381");
         WebUI.clickElement(numberProduct);
-        WebUI.setText(numberProduct,"1" );
-        WebUI.sleep(2);
+        WebUI.setText(numberProduct, "1");
+        sleep(2);
         WebUI.clickElement(selectSKU);
         WebUI.waitForPageLoaded();
-        WebUI.setText(SearchSKU,"023" );
-        WebUI.sleep(2);
+        WebUI.setText(SearchSKU, "023");
+        sleep(2);
         WebUI.pressENTER();
-        WebUI.sleep(5);
-        WebUI.setText(quayHang,"A" );
-        WebUI.sleep(1);
-        WebUI.setText(nganhHang,"FL" );
-        WebUI.sleep(1);
-        WebUI.setText(quanity,"1" );
-        WebUI.sleep(1);
-        WebUI.setText(price,"560000" );
-        WebUI.sleep(1);
-        WebUI.setText(discount,"10" );
-        WebUI.sleep(1);
+        sleep(5);
+        WebUI.setText(quayHang, "A");
+        sleep(1);
+        WebUI.setText(nganhHang, "FL");
+        sleep(1);
+        WebUI.setText(quanity, "1");
+        sleep(1);
+        WebUI.setText(price, "560000");
+        sleep(1);
+        WebUI.setText(discount, "10");
+        sleep(1);
 
         WebUI.scrollToElement(driverManager.getDriver().findElement(savebutton));
-        WebUI.sleep(2);
+        sleep(2);
 
         WebUI.clickElement(savebutton);
         WebUI.waitForPageLoaded();
 
-        Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt),"Failed login");
+        Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt), "Failed login");
 
 
     }
 
-    public void enterDataAddNewCDO () {
+    public void enterDataAddNewCDO() {
 
         WebUI.clickElement(CDOCheckBox);
-        WebUI.setText(customerCode,"3003228094" );
+        WebUI.setText(customerCode, "3003228094");
         WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
         WebUI.waitForPageLoaded();
 
         WebUI.clickElement(customerName);
         WebUI.clearText(customerName);
-        WebUI.setText(customerName,"Rosy Dương");
+        WebUI.setText(customerName, "Rosy Dương");
 
         WebUI.clickElement(selectDeliveryDate);
-        WebUI.sleep(3);
+        sleep(3);
         WebUI.clickElement(itemDeliveryDate);
-        WebUI.sleep(3);
+        sleep(3);
 
-        WebUI.setText(billCode,"HD6512381" );
+        WebUI.setText(billCode, "HD6512381");
         WebUI.clickElement(numberProduct);
-        WebUI.setText(numberProduct,"1" );
-        WebUI.sleep(2);
+        WebUI.setText(numberProduct, "1");
+        sleep(2);
         WebUI.clickElement(selectSKU);
         WebUI.waitForPageLoaded();
-        WebUI.setText(SearchSKU,"023" );
-        WebUI.sleep(2);
+        WebUI.setText(SearchSKU, "023");
+        sleep(2);
         WebUI.pressENTER();
-        WebUI.sleep(5);
-        WebUI.setText(quayHang,"A" );
-        WebUI.sleep(1);
-        WebUI.setText(nganhHang,"FL" );
-        WebUI.sleep(1);
-        WebUI.setText(quanity,"1" );
-        WebUI.sleep(1);
-        WebUI.setText(price,"560000" );
-        WebUI.sleep(1);
-        WebUI.setText(discount,"10" );
-        WebUI.sleep(1);
+        sleep(5);
+        WebUI.setText(quayHang, "A");
+        sleep(1);
+        WebUI.setText(nganhHang, "FL");
+        sleep(1);
+        WebUI.setText(quanity, "1");
+        sleep(1);
+        WebUI.setText(price, "560000");
+        sleep(1);
+        WebUI.setText(discount, "10");
+        sleep(1);
 
         WebUI.scrollToElement(driverManager.getDriver().findElement(savebutton));
-        WebUI.sleep(2);
+        sleep(2);
 
         WebUI.clickElement(savebutton);
         WebUI.waitForPageLoaded();
 
-        Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt),"Failed login");
+        Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt), "Failed login");
 
 
     }
 
-    public void searchRecept (String type, String name, String deposit){
+    public void searchRecept(String type, String name, String deposit) {
 //        WebUI.waitForPageLoaded();
-        WebUI.sleep(3);
+        sleep(3);
         WebUI.clickElement(searchType);
-        WebUI.sleep(1);
-        WebUI.clickElement(By.xpath("//ul/li[normalize-space()='"+ type +"']"));
-        WebUI.sleep(1);
+        sleep(1);
+        WebUI.clickElement(By.xpath("//ul/li[normalize-space()='" + type + "']"));
+        sleep(1);
 
         WebUI.clickElement(searchCustomerName);
         WebUI.setText(searchCustomerName, name);
 
-        if (deposit == "Yes"){
+        if (deposit == "Yes") {
             WebUI.clickElement(searchDepositStatus);
-            WebUI.sleep(1);
+            sleep(1);
             WebUI.clickElement(By.xpath("//ul/li[normalize-space()='Có']"));
-            WebUI.sleep(1);
+            sleep(1);
         } else if (deposit == "No") {
             WebUI.clickElement(searchDepositStatus);
-            WebUI.sleep(1);
+            sleep(1);
             WebUI.clickElement(By.xpath("//ul/li[normalize-space()='Không']"));
-            WebUI.sleep(1);
-        }else {
+            sleep(1);
+        } else {
 
         }
 
         WebUI.clickElement(searchButton);
-        WebUI.sleep(3);
+        sleep(3);
 
     }
 
-    public void searchRecept (String code){
+    public void searchRecept(String code) {
         WebUI.waitForPageLoaded();
         WebUI.clickElement(searchCode);
-        WebUI.sleep(1);
-        WebUI.setText(searchCode,code);
-        WebUI.sleep(1);
+        sleep(1);
+        WebUI.setText(searchCode, code);
+        sleep(1);
 
 
         WebUI.clickElement(searchButton);
-        WebUI.sleep(3);
+        sleep(3);
 
     }
 
-    public String getDeliveryReceiptCodeOfFistItemInTable (){
+    public String getDeliveryReceiptCodeOfFistItemInTable() {
         //get Delivery Receipt Code Of Fist Item In Table
         String DeliveryReceiptCode = WebUI.getElementText(deliveryReceiptCode);
-        return  DeliveryReceiptCode;
+        return DeliveryReceiptCode;
     }
 
-    public  void clickIconSend (){
+    public void clickIconSend() {
         WebUI.clickElement(iconSendOfFirstItem);
-        WebUI.sleep(2);
+        sleep(2);
         WebUI.clickElement(buttonYes);
-        WebUI.sleep(5);
+        sleep(5);
     }
 
-    public  void clickIconApprove (){
+    public void clickIconApprove() {
         WebUI.clickElement(iconApproveOfFirstItem);
-        WebUI.sleep(2);
+        sleep(2);
         WebUI.clickElement(ApproveConfirmButton);
-        WebUI.sleep(5);
+        sleep(5);
     }
 
-    public  void clickIconPrint (){
+    public void clickIconPrint() {
         WebUI.clickElement(iconPrintOfFirstItem);
-        WebUI.sleep(2);
+        sleep(2);
         WebUI.clickElement(buttonYes);
-        WebUI.sleep(5);
+        sleep(5);
     }
 
-    public  void switchNewWindowToClick (){
-        WebUI.switchWindowToClickElement(PrintButtonInWindown);
+    public void closePrintDialog() {
+        try {
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_TAB);
+            robot.keyRelease(KeyEvent.VK_TAB);
+            sleep(1);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            sleep(1);
+        } catch (AWTException e) {
+            throw new RuntimeException(e);
+        }
+
+        WebUI.switchWindowToClickElement();
+
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

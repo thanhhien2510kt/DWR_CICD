@@ -2,7 +2,6 @@ package com.DWR.POM.testcases;
 
 import com.DWR.Common.BaseTest;
 import com.DWR.Keywords.WebUI;
-import com.DWR.helpers.ExcelHelper;
 import org.testng.annotations.Test;
 
 public class DeliveryReceiptTest extends BaseTest {
@@ -102,7 +101,7 @@ public class DeliveryReceiptTest extends BaseTest {
         // B3: G4 Op - in đơn
         getDeliveryReceiptPage().clickIconPrint();
         WebUI.sleep(3);
-        getDeliveryReceiptPage().switchNewWindowToClick();
+        getDeliveryReceiptPage().closePrintDialog();  // EM XỬ LÝ TẮT CÁI DIALOG Ở ĐÂY NHA THẦY
         WebUI.sleep(5);
 
 
