@@ -25,6 +25,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 
 public class WebUI {
 
@@ -617,5 +618,42 @@ public class WebUI {
         }
 
     }
+
+    public static void  switchWindowToClickElement (By element){
+        // Lưu lại lớp window đầu tiên - mã ID hơi dài, in ra sẽ thấy :)
+        String MainWindow = driverManager.getDriver().getWindowHandle();
+        System.out.println("Cửa sổ thứ 1: " + MainWindow);
+
+        // Lấy tất cả các mã định danh Tab Window.
+        Set<String> windows = driverManager.getDriver().getWindowHandles();
+
+        //Chuyển hướng đến cửa sổ theo vị trí cụ thể
+        String firstWindow = (String) windows.toArray()[0]; //Cửa sổ đầu
+        System.out.println("Cửa sổ thứ 1: " + firstWindow);
+        String secondWindow = (String) windows.toArray()[1]; //Cửa sổ thứ hai
+        System.out.println("Cửa sổ thứ 2: " + secondWindow);
+
+        //Chuyển hướng đến cửa sổ thứ 2
+        driverManager.getDriver().switchTo().window(secondWindow);
+        sleep(1);
+        System.out.println("Đã chuyển đến Tab Window mới");
+        System.out.println(driverManager.getDriver().getTitle());
+        System.out.println(driverManager.getDriver().getCurrentUrl());
+        sleep(1);
+//        System.out.println(driverManager.getDriver().findElement(By.xpath("(//span[normalize-space()='See more on Facebook'])[1]")).getText());
+        sleep(1);
+        //Tắt cái cửa sổ thứ 2
+        driverManager.getDriver().close();
+
+        // Chuyển hướng về lại tab chính ban đầu (Main Window)
+        driverManager.getDriver().switchTo().window(MainWindow);
+        System.out.println("Đã chuyển về lớp Window chính: " + driverManager.getDriver().getCurrentUrl());
+
+        sleep(1);
+
+    }
+
+
+
 }
 

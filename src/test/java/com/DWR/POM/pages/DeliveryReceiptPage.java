@@ -7,6 +7,7 @@ import org.testng.Assert;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Set;
 
 
 public class DeliveryReceiptPage extends CommonPage {
@@ -62,6 +63,7 @@ public class DeliveryReceiptPage extends CommonPage {
 
     private By iconPrintOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Print']");
 
+    private By PrintButtonInWindown = By.xpath("//button[normalize-space()='In']");
 
     //Hàm xử lý cho trang DeliveryReceiptPage
 
@@ -230,7 +232,8 @@ public class DeliveryReceiptPage extends CommonPage {
     }
 
     public void searchRecept (String type, String name, String deposit){
-        WebUI.waitForPageLoaded();
+//        WebUI.waitForPageLoaded();
+        WebUI.sleep(3);
         WebUI.clickElement(searchType);
         WebUI.sleep(1);
         WebUI.clickElement(By.xpath("//ul/li[normalize-space()='"+ type +"']"));
@@ -297,6 +300,11 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.clickElement(buttonYes);
         WebUI.sleep(5);
     }
+
+    public  void switchNewWindowToClick (){
+        WebUI.switchWindowToClickElement(PrintButtonInWindown);
+    }
+
 
 
 

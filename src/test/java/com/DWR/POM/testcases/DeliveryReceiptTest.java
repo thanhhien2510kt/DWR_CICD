@@ -101,6 +101,11 @@ public class DeliveryReceiptTest extends BaseTest {
 
         // B3: G4 Op - in đơn
         getDeliveryReceiptPage().clickIconPrint();
+        WebUI.sleep(3);
+        getDeliveryReceiptPage().switchNewWindowToClick();
+        WebUI.sleep(5);
+
+
 
 
 
