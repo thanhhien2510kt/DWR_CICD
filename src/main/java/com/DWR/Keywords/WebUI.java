@@ -117,6 +117,23 @@ public class WebUI {
 
         WebUI.sleep(1);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // Nhấn Enter
         rb.keyPress(KeyEvent.VK_ENTER);
         rb.keyRelease(KeyEvent.VK_ENTER);
@@ -387,6 +404,17 @@ public class WebUI {
         }
     }
 
+    public static boolean pressTAB() {
+        try {
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_TAB);
+            robot.keyRelease(KeyEvent.VK_TAB);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     public static boolean pressESC() {
         try {
             Robot robot = new Robot();
@@ -403,6 +431,28 @@ public class WebUI {
             Robot robot = new Robot();
             robot.keyPress(KeyEvent.VK_F11);
             robot.keyRelease(KeyEvent.VK_F11);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public static boolean pressDOWN() {
+        try {
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_DOWN);
+            robot.keyRelease(KeyEvent.VK_DOWN);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public static boolean pressUP() {
+        try {
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_UP);
+            robot.keyRelease(KeyEvent.VK_UP);
             return true;
         } catch (Exception e) {
             return false;
@@ -619,7 +669,8 @@ public class WebUI {
 
     }
 
-    public static void switchWindowToClickElement() {
+    public static void switchToWindow() {
+
         // Lưu lại lớp window đầu tiên - mã ID hơi dài, in ra sẽ thấy :)
         String MainWindow = driverManager.getDriver().getWindowHandle();
         System.out.println("Cửa sổ thứ 1: " + MainWindow);
@@ -635,10 +686,10 @@ public class WebUI {
         System.out.println("Cửa sổ thứ 1: " + firstWindow);
         String secondWindow = (String) windows.toArray()[1]; //Cửa sổ thứ hai
         System.out.println("Cửa sổ thứ 2: " + secondWindow);
-//        String thirdWindow = (String) windows.toArray()[2]; //Cửa sổ thứ ba
-//        System.out.println("Cửa sổ thứ 3: " + thirdWindow);
+        //String thirdWindow = (String) windows.toArray()[2]; //Cửa sổ thứ ba
+        //System.out.println("Cửa sổ thứ 3: " + thirdWindow);
 
-        //Chuyển hướng đến cửa sổ thứ 3
+        //Chuyển hướng đến cửa sổ thứ 2
         driverManager.getDriver().switchTo().window(secondWindow);
         sleep(1);
         System.out.println("Đã chuyển đến Tab Window mới");

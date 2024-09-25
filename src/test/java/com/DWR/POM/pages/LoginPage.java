@@ -88,7 +88,7 @@ public class LoginPage extends CommonPage {
     }
 
     public void Logout (String username){
-        WebUI.waitForPageLoaded();
+        WebUI.waitForElementClickable(By.xpath("//span[normalize-space()='"+ username +"']"));
         WebUI.clickElement(By.xpath("//span[normalize-space()='"+ username +"']"));
         WebUI.clickElement(optionLogout);
         WebUI.sleep(2);

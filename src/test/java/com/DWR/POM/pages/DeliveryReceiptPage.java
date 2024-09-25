@@ -66,7 +66,13 @@ public class DeliveryReceiptPage extends CommonPage {
 
     private By iconPrintOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Print']");
 
-    private By PrintButtonInWindown = By.xpath("//button[normalize-space()='In']");
+    private By iconCallBackOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Callback']");
+    private By callBackConfirmButton = By.xpath("//button[@id='btnCallBack']");
+
+    private By chooseStatus = By.xpath("//select[@id='choose_status']");
+
+    private By toastMessage = By.xpath("//div[@id='toast-container']//button[normalize-space()='×']");
+
 
     //Hàm xử lý cho trang DeliveryReceiptPage
 
@@ -109,6 +115,7 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.clickElement(numberProduct);
         WebUI.setText(numberProduct, "1");
         sleep(2);
+
         WebUI.clickElement(selectSKU);
         WebUI.waitForPageLoaded();
         WebUI.setText(SearchSKU, "023");
@@ -305,20 +312,35 @@ public class DeliveryReceiptPage extends CommonPage {
     }
 
     public void closePrintDialog() {
-        try {
-            Robot robot = new Robot();
-            robot.keyPress(KeyEvent.VK_TAB);
-            robot.keyRelease(KeyEvent.VK_TAB);
-            sleep(1);
-            robot.keyPress(KeyEvent.VK_ENTER);
-            robot.keyRelease(KeyEvent.VK_ENTER);
-            sleep(1);
-        } catch (AWTException e) {
-            throw new RuntimeException(e);
-        }
 
-        WebUI.switchWindowToClickElement();
+        WebUI.pressTAB();
+        WebUI.pressENTER();
+        WebUI.switchToWindow();
 
+    }
+
+    public void clickIconCallBack (){
+        WebUI.clickElement(iconCallBackOfFirstItem);
+        WebUI.sleep(2);
+    }
+
+    public void clickIconCallBack_exportGoods (){
+        WebUI.clickElement(callBackConfirmButton);
+        WebUI.sleep(2);
+    }
+
+    public void clickIconCallBack_cancelReceipt (){
+        WebUI.clickElement(chooseStatus);
+        WebUI.sleep(2);
+        WebUI.pressDOWN();
+        WebUI.pressENTER();
+        WebUI.clickElement(callBackConfirmButton);
+    }
+
+    public void closeToastMessage (){
+        WebUI.sleep(1);
+        WebUI.waitForElementClickable(toastMessage);
+        WebUI.clickElement(toastMessage);
     }
 
 

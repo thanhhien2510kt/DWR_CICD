@@ -101,12 +101,26 @@ public class DeliveryReceiptTest extends BaseTest {
         // B3: G4 Op - in đơn
         getDeliveryReceiptPage().clickIconPrint();
         WebUI.sleep(3);
-        getDeliveryReceiptPage().closePrintDialog();  // EM XỬ LÝ TẮT CÁI DIALOG Ở ĐÂY NHA THẦY
+        getDeliveryReceiptPage().closePrintDialog();
         WebUI.sleep(5);
 
+        //B4: G1 MMD - xuất hàng
+        getLoginPage().Logout("G4_FL");
+        getLoginPage().LoginCRM_Excel(10,10);
+        clickDeliveryReceiptPage();
+        getDeliveryReceiptPage().searchRecept(code);
+        getDeliveryReceiptPage().clickIconCallBack();
+        getDeliveryReceiptPage().clickIconCallBack_exportGoods();
+        getDeliveryReceiptPage().closeToastMessage();
 
-
-
+        //B5: G2 OP - Hủy CDO
+        getLoginPage().Logout("G1_MMD");
+        getLoginPage().LoginCRM_Excel(2,2);
+        clickDeliveryReceiptPage();
+        getDeliveryReceiptPage().searchRecept(code);
+        getDeliveryReceiptPage().clickIconCallBack();
+        getDeliveryReceiptPage().clickIconCallBack_cancelReceipt();
+        getDeliveryReceiptPage().closeToastMessage();
 
     }
 

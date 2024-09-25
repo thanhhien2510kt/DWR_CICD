@@ -1,4 +1,98 @@
 package com.DWR.POM.pages;
 
-public class WarantyReceiptPage {
+import com.DWR.Keywords.WebUI;
+import com.DWR.driver.driverManager;
+import org.openqa.selenium.By;
+import org.testng.Assert;
+
+import static com.DWR.Keywords.WebUI.sleep;
+import static com.DWR.Keywords.WebUI.waitForPageLoaded;
+
+public class WarantyReceiptPage extends CommonPage {
+    //Element Add
+    private By buttonAddNew = By.xpath("//i[normalize-space()='add']");
+
+    private By customerName = By.xpath("//input[@id='customer_name']");
+    private By customerAddress = By.xpath("//input[@id='customer_address']");
+    private By customerPhone = By.xpath("//input[@id='customer_phone']");
+    private By productnumber = By.xpath("//input[@id='number_product']");
+    private By billCode = By.xpath("//input[@id='bill_code']");
+    private By purchaseOrderCode = By.xpath("//input[@id='purchase_order_code']");
+
+    private By selectSKU = By.xpath("//span[normalize-space()='Chọn mã sản phẩm']");
+    private By SearchSKU = By.xpath("//input[@placeholder='Nhập từ khóa tìm kiếm']");
+    private By quayHang = By.xpath("//tbody//th[4]/input");
+    private By nganhHang = By.xpath("//tbody//th[5]/input");
+    private By brand = By.xpath("//tbody//th[6]/input");
+    private By form = By.xpath("//tbody//th[7]/input");
+    private By seri = By.xpath("//tbody//th[8]/input");
+    private By note = By.xpath("//tbody//th[9]/input");
+    private By replacementContent = By.xpath("//tbody//th[10]/input");
+
+
+    private By savebutton = By.xpath("//button[contains(text(),'Lưu')]");
+    private By headerWarantyReceipt = By.xpath("//h2[contains(text(),'Danh sách phiếu tiếp nhận bảo hành')]");
+
+
+    //Hàm xử lý cho trang WarantyReceiptPage
+    public void clickAddNewButton() {
+        WebUI.clickElement(buttonAddNew);
+    }
+
+    public void enterDataAddNewWarrantyReceipt() {
+        WebUI.waitForPageLoaded();
+
+        WebUI.clickElement(customerName);
+        WebUI.setText(customerName, "Rosy Dương");
+        WebUI.sleep(1);
+
+        WebUI.clickElement(customerAddress);
+        WebUI.setText(customerAddress, "54 Lưu Nhân Chú, Tam Kỳ, Quảng Nam");
+        WebUI.sleep(1);
+
+        WebUI.clickElement(customerPhone);
+        WebUI.setText(customerPhone, "0343177956");
+        WebUI.sleep(1);
+
+        WebUI.clickElement(productnumber);
+        WebUI.setText(productnumber, "1");
+        WebUI.sleep(1);
+
+        WebUI.clickElement(billCode);
+        WebUI.setText(billCode, "HD123456789");
+        WebUI.sleep(1);
+
+        WebUI.clickElement(purchaseOrderCode);
+        WebUI.setText(purchaseOrderCode, "123456789");
+        WebUI.sleep(1);
+
+        WebUI.clickElement(selectSKU);
+        WebUI.waitForPageLoaded();
+        WebUI.setText(SearchSKU, "023");
+        sleep(2);
+        WebUI.pressENTER();
+        sleep(4);
+        WebUI.setText(quayHang, "A");
+        sleep(1);
+        WebUI.setText(nganhHang, "HL");
+        sleep(1);
+        WebUI.setText(brand, "Dell");
+        sleep(1);
+        WebUI.setText(form, "Hộp");
+        sleep(1);
+        WebUI.setText(seri, "123456789");
+        sleep(1);
+        WebUI.setText(note, "Không");
+        sleep(1);
+        WebUI.setText(replacementContent, "Pin");
+
+
+        WebUI.clickElement(savebutton);
+        WebUI.waitForPageLoaded();
+
+        Assert.assertTrue(WebUI.checkElementExist(headerWarantyReceipt), "Failed login");
+
+
+    }
+
 }

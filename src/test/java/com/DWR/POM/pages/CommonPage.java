@@ -10,6 +10,7 @@ public class CommonPage {
     private DashboardPage dashboardPage;
     private DeliveryReceiptPage deliveryReceiptPage;
     private DepositReceiptPage depositReceiptPage;
+    private WarantyReceiptPage warantyReceiptPage;
 
     public LoginPage getLoginPage() {
         if(loginPage == null){
@@ -39,15 +40,26 @@ public class CommonPage {
         return depositReceiptPage;
     }
 
+    public WarantyReceiptPage getWarantyReceiptPage() {
+        if(warantyReceiptPage == null){
+            warantyReceiptPage = new WarantyReceiptPage();
+        }
+        return warantyReceiptPage;
+    }
+
     //hàm xây dựng
     public CommonPage (){
 
     }
 
     public By menuDWR = By.xpath("//button[normalize-space()='DWR']");
+
     public By menuDeliveryInfo = By.xpath("//span[normalize-space()='Thông tin giao hàng']");
     public By menuDeliveryReceiptPage = By.xpath("//a[normalize-space()='Phiếu giao hàng']");
     public By menuDepositReceipt = By.xpath("//a[contains(text(),'Phiếu thu tiền cọc')]");
+
+    public By menuWarantyInfo = By.xpath("//span[contains(text(),'Thông tin bảo hành')]");
+    public By menuWarantyReceipt = By.xpath("//a[contains(text(),'Tiếp nhận bảo hành')]");
 
     public DashboardPage clickMenuDWR(){
         WebUI.waitForPageLoaded();
@@ -69,6 +81,14 @@ public class CommonPage {
         WebUI.clickElement(menuDepositReceipt,3);
 
         return new DepositReceiptPage();
+    }
+
+    public WarantyReceiptPage clickWarantyReceiptPage(){
+        WebUI.waitForPageLoaded();
+        WebUI.clickElement(menuWarantyInfo,3);
+        WebUI.clickElement(menuWarantyReceipt,3);
+
+        return new WarantyReceiptPage();
     }
 
 
