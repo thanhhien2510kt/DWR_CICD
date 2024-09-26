@@ -279,6 +279,7 @@ public class WebUI {
     }
 
 
+
     @Step("Set text of element {0} ")
     public static String getElementText(By by) {
         waitForElementVisible(by);
@@ -335,6 +336,20 @@ public class WebUI {
         JavascriptExecutor js = (JavascriptExecutor) driverManager.getDriver();
         js.executeScript("window.scrollTo(" + X + "," + Y + ");");
     }
+
+
+    public static void scrollPageDownAndUp()  {
+
+        Actions action = new Actions(driverManager.getDriver());
+
+        sleep(1000);
+        // Scroll down
+        action.keyDown(Keys.END).perform();
+        action.keyUp(Keys.END).perform();
+        sleep(2000);
+
+    }
+
 
     public static boolean moveToElement(By toElement) {
         try {
