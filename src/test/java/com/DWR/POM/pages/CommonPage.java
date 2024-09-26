@@ -11,6 +11,7 @@ public class CommonPage {
     private DeliveryReceiptPage deliveryReceiptPage;
     private DepositReceiptPage depositReceiptPage;
     private WarantyReceiptPage warantyReceiptPage;
+    private RefundRecieptPage refundRecieptPage;
 
     public LoginPage getLoginPage() {
         if(loginPage == null){
@@ -47,6 +48,13 @@ public class CommonPage {
         return warantyReceiptPage;
     }
 
+    public RefundRecieptPage getRefundRecieptPage() {
+        if(refundRecieptPage == null){
+            refundRecieptPage = new RefundRecieptPage();
+        }
+        return refundRecieptPage;
+    }
+
     //hàm xây dựng
     public CommonPage (){
 
@@ -60,6 +68,9 @@ public class CommonPage {
 
     public By menuWarantyInfo = By.xpath("//span[contains(text(),'Thông tin bảo hành')]");
     public By menuWarantyReceipt = By.xpath("//a[contains(text(),'Tiếp nhận bảo hành')]");
+
+    public By menuRefundInfo = By.xpath("//span[contains(text(),'Thông tin đổi trả')]");
+    public By menuRefundReceipt = By.xpath("//a[@href='/dwr/GoodsReturn/index']");
 
     public DashboardPage clickMenuDWR(){
         WebUI.waitForPageLoaded();
@@ -89,6 +100,14 @@ public class CommonPage {
         WebUI.clickElement(menuWarantyReceipt,3);
 
         return new WarantyReceiptPage();
+    }
+
+    public RefundRecieptPage clickRefundRecieptPage(){
+        WebUI.waitForPageLoaded();
+        WebUI.clickElement(menuRefundInfo,3);
+        WebUI.clickElement(menuRefundReceipt,3);
+
+        return new RefundRecieptPage();
     }
 
 

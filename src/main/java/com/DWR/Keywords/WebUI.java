@@ -258,6 +258,26 @@ public class WebUI {
         ExtentTestManager.logMessage(Status.PASS, "Click element: " + by);
     }
 
+    @Step("Check Element {0} is checked or not")
+    public static Boolean checkElementIsChecked(By by) {
+        Boolean isSelected = getWebElement(by).isSelected();
+        LogUtils.info("Check Element"+ by +"  is checked or not");
+        ExtentTestManager.logMessage(Status.PASS, "Check Element"+ by +"  is checked or not " );
+        return isSelected;
+    }
+
+    @Step("Click checkbox {0} ")
+    public static void clickCheckBox(By by1, By by2) {
+        Boolean isSelected =checkElementIsChecked(by1);
+        //Nếu chưa được check thì click vào ô check box đó
+        if(isSelected == false)
+        {
+            getWebElement(by2).click();
+        }
+        LogUtils.info("Click checkbox: " + by2);
+        ExtentTestManager.logMessage(Status.PASS, "Click checkbox " + by2);
+    }
+
 
     @Step("Set text of element {0} ")
     public static String getElementText(By by) {
