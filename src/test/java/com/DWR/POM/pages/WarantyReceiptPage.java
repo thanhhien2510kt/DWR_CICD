@@ -29,10 +29,16 @@ public class WarantyReceiptPage extends CommonPage {
     private By note = By.xpath("//tbody//th[9]/input");
     private By replacementContent = By.xpath("//tbody//th[10]/input");
 
-
     private By savebutton = By.xpath("//button[contains(text(),'Lưu')]");
     private By headerWarantyReceipt = By.xpath("//h2[contains(text(),'Danh sách phiếu tiếp nhận bảo hành')]");
 
+    // Element Search
+    private By searchCustomerName = By.xpath("//input[@id='customer_name']");
+    private By searchStatus = By.xpath("(//label[contains(text(),'Trạng thái phiếu')]//parent::div)//following-sibling::div//span[@role='combobox']");
+
+    private By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
+
+    private By iconPrintOfFirstItem = By.xpath("//table[@id='storetable']/tbody[1]/tr[1]/td[8]//button[@title='Print']");
 
     //Hàm xử lý cho trang WarantyReceiptPage
     public void clickAddNewButton() {
@@ -95,4 +101,23 @@ public class WarantyReceiptPage extends CommonPage {
 
     }
 
+    public void searchWarrantyReceipt (String customerName){
+        WebUI.waitForPageLoaded();
+        WebUI.clickElement(searchCustomerName);
+        WebUI.setText(searchCustomerName,customerName);
+        WebUI.clickElement(searchStatus);
+        WebUI.pressUP();
+        WebUI.pressENTER();
+
+        WebUI.clickElement(searchButton);
+        WebUI.sleep(2);
+    }
+
+    public void clickIconPrint (){
+        WebUI.clickElement(iconPrintOfFirstItem);
+        WebUI.sleep(3);
+        WebUI.pressENTER();
+        WebUI.switchToWindow();
+
+    }
 }

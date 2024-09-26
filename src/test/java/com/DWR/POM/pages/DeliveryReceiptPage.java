@@ -242,7 +242,7 @@ public class DeliveryReceiptPage extends CommonPage {
     }
 
     public void searchRecept(String type, String name, String deposit) {
-//        WebUI.waitForPageLoaded();
+
         sleep(3);
         WebUI.clickElement(searchType);
         sleep(1);
@@ -285,7 +285,7 @@ public class DeliveryReceiptPage extends CommonPage {
     }
 
     public String getDeliveryReceiptCodeOfFistItemInTable() {
-        //get Delivery Receipt Code Of Fist Item In Table
+
         String DeliveryReceiptCode = WebUI.getElementText(deliveryReceiptCode);
         return DeliveryReceiptCode;
     }

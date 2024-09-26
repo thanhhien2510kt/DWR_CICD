@@ -18,4 +18,19 @@ public class WarantyReceiptTest extends BaseTest {
         getWarantyReceiptPage().enterDataAddNewWarrantyReceipt();
 
     }
+    @Test
+    public void printWarantyReceipt (){
+        //Login
+        getLoginPage().LoginCRM_Excel(1, 1);
+        clickWarantyReceiptPage();
+
+        //search phiếu
+        getWarantyReceiptPage().searchWarrantyReceipt("Rosy Dương");
+
+        // print
+        getWarantyReceiptPage().clickIconPrint();
+
+    }
+
+
 }
