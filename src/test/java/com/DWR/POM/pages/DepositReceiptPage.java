@@ -55,8 +55,8 @@ public class DepositReceiptPage extends CommonPage{
         WebUI.clickElement(cashAmount);
         WebUI.setText(cashAmount, "500000");
 
-        WebUI.clickElement(writeInWords);
-        WebUI.setText(writeInWords, "Năm trăm ngàn đồng chẵn");
+//        WebUI.clickElement(writeInWords);
+//        WebUI.setText(writeInWords, "Năm trăm ngàn đồng chẵn");
 
         WebUI.clickElement(saveButton);
         WebUI.waitForPageLoaded();

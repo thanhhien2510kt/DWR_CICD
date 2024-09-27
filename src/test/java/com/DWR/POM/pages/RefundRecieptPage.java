@@ -34,8 +34,6 @@ public class RefundRecieptPage {
     private By specialType = By.xpath("//label[contains(text(),'Đặc biệt')]");
 
 
-    private By saveButton = By.xpath("//button[contains(text(),'Lưu')]");
-
     private By addButton_invoid = By.xpath("//table[@id='bill_infor_table']/thead/tr/th[7]//i[normalize-space()='add']");
     private By SKU_invoid = By.xpath("//table[@id='bill_infor_table']/tbody/tr/th[1]//span[contains(text(),'Chọn mã sản phẩm')]");
     private By quantity_invoid = By.xpath("//table[@id='bill_infor_table']/tbody/tr/th[3]//input[@name='product_quantity']");
@@ -51,6 +49,8 @@ public class RefundRecieptPage {
 
     private By note = By.xpath("//input[@id='note']");
 
+    private By saveButton = By.xpath("//button[contains(text(),'Lưu')]");
+    private By headerRefundReceipt = By.xpath("//h2[contains(text(),'Danh sách phiếu đổi trả')]");
 
     // Hàm xử lý cho trang RefundRecieptPage
     public String currentDay() {
@@ -119,7 +119,7 @@ public class RefundRecieptPage {
         WebUI.sleep(1);
 
         WebUI.clickElement(SKU_invoid);
-        WebUI.sleep(2);
+        WebUI.sleep(3);
         WebUI.pressENTER();
 
         WebUI.clickElement(quantity_invoid);
@@ -139,7 +139,7 @@ public class RefundRecieptPage {
             WebUI.sleep(1);
 
             WebUI.clickElement(SKU_update);
-            WebUI.sleep(2);
+            WebUI.sleep(3);
             WebUI.pressENTER();
 
             WebUI.clickElement(quantity_update);
@@ -161,29 +161,9 @@ public class RefundRecieptPage {
         WebUI.setText(note, "Không");
 
         WebUI.clickElement(saveButton);
+        WebUI.waitForPageLoaded();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //WebUI.clickElement(savebutton);
-        //WebUI.waitForPageLoaded();
-
-        //Assert.assertTrue(WebUI.checkElementExist(headerWarantyReceipt), "Failed login");
+        Assert.assertTrue(WebUI.checkElementExist(headerRefundReceipt), "Failed create");
 
 
     }
