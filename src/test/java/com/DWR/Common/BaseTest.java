@@ -5,6 +5,7 @@ import com.DWR.POM.pages.CommonPage;
 import com.DWR.driver.driverManager;
 import com.DWR.helpers.CaptureHelper;
 import com.DWR.helpers.PropertiesHelper;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;

@@ -10,6 +10,7 @@ import java.awt.event.KeyEvent;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import static com.DWR.Keywords.WebUI.getWebElement;
 import static com.DWR.Keywords.WebUI.sleep;
 
 
@@ -145,6 +146,7 @@ public class DeliveryReceiptPage extends CommonPage {
     }
 
     public void enterDataAddNewCOD_Yes() {
+        WebUI.zoomConcept("80%", "Chrome");
 
         WebUI.clickElement(CODCheckBox);
         WebUI.clickElement(yesDepositCheckBox);
@@ -165,6 +167,10 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.clickElement(numberProduct);
         WebUI.setText(numberProduct, "1");
         sleep(2);
+
+//        WebUI.scrollToElement(getWebElement(savebutton));
+//        sleep(2);
+
         WebUI.clickElement(selectSKU);
         WebUI.waitForPageLoaded();
         WebUI.setText(SearchSKU, "023");

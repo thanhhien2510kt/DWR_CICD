@@ -34,6 +34,25 @@ public class WebUI {
     private static double TIMEOUT_STEP = ConfigData.TIMEOUT_STEP;
     private static int TIMEOUT_PAGE_LOAD = ConfigData.TIMEOUT_PAGE_LOAD;
 
+    public static void zoomConcept(String percent, String browser) {
+        JavascriptExecutor js = (JavascriptExecutor) driverManager.getDriver();
+        switch (browser){
+            case "Chrome":
+                String zoomChrome = "document.body.style.zoom='"+percent+"'";
+                js.executeScript(zoomChrome);
+            case "Safari":
+                String zoomSafari = "document.body.style.zoom='"+percent+"'";
+                js.executeScript(zoomSafari);
+            case "Edge":
+                String zoomEdge = "document.body.style.zoom='"+percent+"'";
+                js.executeScript(zoomEdge);
+            case "Firefox":
+                String zoomFirefox = "document.body.style.MozTransform='scale("+percent+")'";  //scale(0.5)= 50%
+                js.executeScript(zoomFirefox);
+        }
+
+    }
+
     @Step("Check Data {1} In Table By Column {2}")
     public static void checkDataInTableByColumn_contains(int column, String value, String columnName) {
 
@@ -116,21 +135,6 @@ public class WebUI {
         rb.keyRelease(KeyEvent.VK_V);
 
         WebUI.sleep(1);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

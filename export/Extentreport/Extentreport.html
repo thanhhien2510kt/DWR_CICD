@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Extent Report | DWR</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Sep 27, 2024 06:29:01 PM</span></a>
+<a href="#"><span class="badge badge-primary">Sep 28, 2024 03:22:21 PM</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">testAddNewDeliveryReceipt_COD_Yes</p>
+            <p class="name">addNewWarantyDeliveryReceipt</p>
             <p class="text-sm">
-              <span>6:29:01 PM</span> / <span>00:00:52:664</span>
+              <span>3:22:22 PM</span> / <span>00:00:35:345</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testAddNewDeliveryReceipt_COD_Yes</h5>
-<span class='badge badge-success'>09.27.2024 6:29:01 PM</span>
-<span class='badge badge-danger'>09.27.2024 6:29:54 PM</span>
-<span class='badge badge-default'>00:00:52:664</span>
+<h5 class="test-status text-pass">addNewWarantyDeliveryReceipt</h5>
+<span class='badge badge-success'>09.28.2024 3:22:22 PM</span>
+<span class='badge badge-danger'>09.28.2024 3:22:57 PM</span>
+<span class='badge badge-default'>00:00:35:345</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -106,247 +106,380 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:06 PM</td>
+        <td>3:22:27 PM</td>
         <td>
           Open URL: http://20.24.110.171
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:06 PM</td>
+        <td>3:22:27 PM</td>
         <td>
           Set text: G1_FL on element By.xpath: //input[@id='Username']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:06 PM</td>
+        <td>3:22:27 PM</td>
         <td>
           Set text: Tv@123 on element By.xpath: //input[@id='Password']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:06 PM</td>
+        <td>3:22:27 PM</td>
         <td>
           Click element: By.xpath: //button[@id='btnLogin']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:08 PM</td>
+        <td>3:22:29 PM</td>
         <td>
           Click element: By.xpath: //button[normalize-space()='DWR']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:10 PM</td>
+        <td>3:22:31 PM</td>
         <td>
-          Click element: By.xpath: //span[normalize-space()='Thông tin giao hàng']
+          Click element: By.xpath: //span[contains(text(),'Thông tin bảo hành')]
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:11 PM</td>
+        <td>3:22:32 PM</td>
         <td>
-          Click element: By.xpath: //a[normalize-space()='Phiếu giao hàng']
+          Click element: By.xpath: //a[contains(text(),'Xuất hàng bảo hành')]
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:14 PM</td>
+        <td>3:22:33 PM</td>
         <td>
           Click element: By.xpath: //i[normalize-space()='add']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:14 PM</td>
+        <td>3:22:33 PM</td>
         <td>
-          Click element: By.xpath: //label[normalize-space()='COD']
+          Check ElementBy.xpath: //input[@id='from_aeon']  is checked or not 
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:15 PM</td>
+        <td>3:22:33 PM</td>
         <td>
-          Click element: By.xpath: //label[@for='deposit_yes']
+          Click checkbox By.xpath: //label[normalize-space()='Kho AEON']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:15 PM</td>
+        <td>3:22:34 PM</td>
         <td>
-          Set text: 3003228094 on element By.xpath: //input[@id='CustomerCode']
+          Click element: By.xpath: (//label[contains(text(),'Mã cửa hàng')]/parent::div)/following-sibling::div//span[contains(text(),'Chọn store')]
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:15 PM</td>
+        <td>3:22:37 PM</td>
         <td>
-          Click element: By.xpath: //label[contains(text(),'Mã thẻ thành viên')]
+          Click element: By.xpath: //input[@id='address']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:16 PM</td>
+        <td>3:22:38 PM</td>
         <td>
-          Click element: By.xpath: //input[@id='CustomerName']
+          Set text: 30 Đ. Tân Thắng, Sơn Kỳ, Tân Phú, Hồ Chí Minh on element By.xpath: //input[@id='address']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:16 PM</td>
+        <td>3:22:39 PM</td>
         <td>
-          Clear text on element By.xpath: //input[@id='CustomerName']
+          Click element: By.xpath: //input[@id='shipping_date']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:16 PM</td>
+        <td>3:22:40 PM</td>
         <td>
-          Set text: Rosy Dương on element By.xpath: //input[@id='CustomerName']
+          Click element: By.xpath: //input[@id='customer_name']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:16 PM</td>
+        <td>3:22:40 PM</td>
         <td>
-          Click element: By.xpath: //div[@class='form-line selectlist']/child::input[@id="DeliveryDate"]
+          Set text: Rosy Dương on element By.xpath: //input[@id='customer_name']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:19 PM</td>
+        <td>3:22:41 PM</td>
         <td>
-          Click element: By.xpath: //div[@aria-label='27/09/2024']
+          Click element: By.xpath: //input[@id='customer_card_number']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:22 PM</td>
+        <td>3:22:41 PM</td>
         <td>
-          Set text: HD6512381 on element By.xpath: //input[@id='BillCode']
+          Set text: 206066049 on element By.xpath: //input[@id='customer_card_number']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:22 PM</td>
+        <td>3:22:42 PM</td>
         <td>
-          Click element: By.xpath: //input[@id='NumberProduct']
+          Click element: By.xpath: //input[@id='customer_phone']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:22 PM</td>
+        <td>3:22:42 PM</td>
         <td>
-          Set text: 1 on element By.xpath: //input[@id='NumberProduct']
+          Set text: 0343177955 on element By.xpath: //input[@id='customer_phone']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:24 PM</td>
+        <td>3:22:43 PM</td>
         <td>
-          Click element: By.xpath: //span[normalize-space()='Chọn mã sản phẩm']
+          Click element: By.xpath: //input[@id='customer_license_plate_number']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:25 PM</td>
+        <td>3:22:43 PM</td>
         <td>
-          Set text: 023 on element By.xpath: //input[@placeholder='Nhập từ khóa tìm kiếm']
+          Set text: 123456789 on element By.xpath: //input[@id='customer_license_plate_number']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:32 PM</td>
+        <td>3:22:44 PM</td>
         <td>
-          Set text: A on element By.xpath: //tbody//th[4]/input
+          Click element: By.xpath: //input[@id='number_product']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:33 PM</td>
+        <td>3:22:44 PM</td>
         <td>
-          Set text: FL on element By.xpath: //tbody//th[5]/input
+          Set text: 1 on element By.xpath: //input[@id='number_product']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:34 PM</td>
+        <td>3:22:45 PM</td>
         <td>
-          Set text: 1 on element By.xpath: //tbody//th[6]/input
+          Click element: By.xpath: //tbody//th[2]//span[contains(text(),'Chọn mã sản phẩm')]
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:35 PM</td>
+        <td>3:22:51 PM</td>
         <td>
-          Set text: 560000 on element By.xpath: //tbody//th[7]/input
+          Click element: By.xpath: //tbody//th[4]/input[@name='prd_counter']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:36 PM</td>
+        <td>3:22:51 PM</td>
         <td>
-          Set text: 10 on element By.xpath: //tbody//th[8]/input
+          Set text: A on element By.xpath: //tbody//th[4]/input[@name='prd_counter']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:39 PM</td>
+        <td>3:22:52 PM</td>
+        <td>
+          Click element: By.xpath: //tbody//th[5]/input[@name='prd_department']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:22:52 PM</td>
+        <td>
+          Set text: FL on element By.xpath: //tbody//th[5]/input[@name='prd_department']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:22:53 PM</td>
+        <td>
+          Click element: By.xpath: //tbody//th[6]/input[@name='prd_quantity']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:22:53 PM</td>
+        <td>
+          Set text: 1 on element By.xpath: //tbody//th[6]/input[@name='prd_quantity']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:22:54 PM</td>
+        <td>
+          Click element: By.xpath: //tbody//th[7]/input[@name='prd_seri']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:22:54 PM</td>
+        <td>
+          Set text: 1234566789 on element By.xpath: //tbody//th[7]/input[@name='prd_seri']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:22:55 PM</td>
         <td>
           Click element: By.xpath: //button[contains(text(),'Lưu')]
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:42 PM</td>
+        <td>3:22:57 PM</td>
         <td>
-          Get text: 270920240021
+          addNewWarantyDeliveryReceipt is passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">sendWarantyDeliveryReceipt</p>
+            <p class="text-sm">
+              <span>3:22:58 PM</span> / <span>00:00:14:848</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">sendWarantyDeliveryReceipt</h5>
+<span class='badge badge-success'>09.28.2024 3:22:58 PM</span>
+<span class='badge badge-danger'>09.28.2024 3:23:13 PM</span>
+<span class='badge badge-default'>00:00:14:848</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:23:02 PM</td>
+        <td>
+          Open URL: http://20.24.110.171
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:42 PM</td>
+        <td>3:23:02 PM</td>
         <td>
-          Click element: By.xpath: //input[@id='Code']
+          Set text: G1_FL on element By.xpath: //input[@id='Username']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:43 PM</td>
+        <td>3:23:02 PM</td>
         <td>
-          Set text: 270920240021 on element By.xpath: //input[@id='Code']
+          Set text: Tv@123 on element By.xpath: //input[@id='Password']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:44 PM</td>
+        <td>3:23:02 PM</td>
+        <td>
+          Click element: By.xpath: //button[@id='btnLogin']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:23:05 PM</td>
+        <td>
+          Click element: By.xpath: //button[normalize-space()='DWR']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:23:06 PM</td>
+        <td>
+          Click element: By.xpath: //span[contains(text(),'Thông tin bảo hành')]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:23:07 PM</td>
+        <td>
+          Click element: By.xpath: //a[contains(text(),'Xuất hàng bảo hành')]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:23:08 PM</td>
+        <td>
+          Click element: By.xpath: //input[@id='customer_name']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:23:08 PM</td>
+        <td>
+          Set text: Rosy Dương on element By.xpath: //input[@id='customer_name']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:23:08 PM</td>
+        <td>
+          Click element: By.xpath: (//label[contains(text(),'Trạng thái phiếu')]//parent::div)//following-sibling::div//span[@role='combobox']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:23:08 PM</td>
         <td>
           Click element: By.xpath: //span[contains(text(),'Tìm kiếm')]
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:47 PM</td>
+        <td>3:23:12 PM</td>
         <td>
-          Click element: By.xpath: //table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Send']
+          Click element: By.xpath: //table[@id='wd_table']/tbody[1]/tr[1]/td[11]//button[@title='Send']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:49 PM</td>
+        <td>3:23:13 PM</td>
         <td>
-          Click element: By.xpath: //button[contains(text(),'Đồng ý')]
+          Click element: By.xpath: //button[@id='btnApprove']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>6:29:54 PM</td>
+        <td>3:23:13 PM</td>
         <td>
-          testAddNewDeliveryReceipt_COD_Yes is passed.
+          sendWarantyDeliveryReceipt is passed.
         </td>
       </tr>
   </tbody>
@@ -368,19 +501,19 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Sep 27, 2024 06:29:01 PM</h3>
+<h3>Sep 28, 2024 03:22:21 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Sep 27, 2024 06:29:54 PM</h3>
+<h3>Sep 28, 2024 03:23:13 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>1</h3>
+<h3>2</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -403,7 +536,7 @@
 </div>
 <div class="card-footer">
 <div><small data-tooltip='100%'>
-<b>1</b> tests passed
+<b>2</b> tests passed
 </small>
 </div>
 <div>
@@ -425,7 +558,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>35</b> events passed</small></div>
+<div><small data-tooltip='100%'><b>49</b> events passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> events failed,
 <b data-tooltip='%'>0</b> others
@@ -444,7 +577,7 @@
 </div></div>
 <script>
 var timeline = {
-"testAddNewDeliveryReceipt_COD_Yes":52.664
+"addNewWarantyDeliveryReceipt":35.345,"sendWarantyDeliveryReceipt":14.848
 };
 </script>
 <div class="row">
@@ -479,7 +612,7 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
+passParent: 2,
 failParent: 0,
 warningParent: 0,
 skipParent: 0,
@@ -496,7 +629,7 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 35,
+passEvents: 49,
 failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,

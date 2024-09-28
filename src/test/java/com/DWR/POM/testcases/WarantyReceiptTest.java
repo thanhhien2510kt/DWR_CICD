@@ -29,6 +29,10 @@ public class WarantyReceiptTest extends BaseTest {
 
         // print - đang lỗi
         //getWarantyReceiptPage().clickIconPrint();
+        //Enter: đồng ý in
+        //Enter: save file
+        //< : đồng y lặp file name
+        //Enter
 
     }
 
