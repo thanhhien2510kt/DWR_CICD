@@ -2,6 +2,7 @@ package com.DWR.POM.pages;
 
 import com.DWR.Keywords.WebUI;
 import com.DWR.driver.driverManager;
+import com.DWR.helpers.SystemHelper;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
@@ -28,7 +29,13 @@ public class DeliveryReceiptPage extends CommonPage {
     private By customerCode = By.xpath("//input[@id='CustomerCode']");
     private By customerCodeLable = By.xpath("//label[contains(text(),'Mã thẻ thành viên')]");
 
+    private By customerPhone = By.xpath("//input[@id='CustomerPhone']");
     private By customerName = By.xpath("//input[@id='CustomerName']");
+    private By provinceName = By.xpath("//span[contains(text(),'Thành phố/Tỉnh')]");
+    private By districtrName = By.xpath("//span[contains(text(),'Quận/Huyện')]");
+    private By wardName = By.xpath("//span[contains(text(),'Phường/Xã')]");
+    private By customerAddress = By.xpath("//input[@id='CustomerAddress']");
+
 
     private By selectDeliveryDate = By.xpath("//div[@class='form-line selectlist']/child::input[@id=\"DeliveryDate\"]");
     private By itemDeliveryDate = By.xpath("//div[@aria-label='" + currentDay() + "']");
@@ -44,10 +51,11 @@ public class DeliveryReceiptPage extends CommonPage {
     private By quanity = By.xpath("//tbody//th[6]/input");
     private By price = By.xpath("//tbody//th[7]/input");
     private By discount = By.xpath("//tbody//th[8]/input");
+    private By chooseFileButton = By.xpath("(//label[contains(text(),'Đính kèm receipt và hình ảnh quà tặng kèm theo')]/parent::div)/following-sibling::div//input[@id='file']");
 
     private By savebutton = By.xpath("//button[contains(text(),'Lưu')]");
 
-    private By headerDeliveryReceipt = By.xpath("//h2[contains(text(),'Danh Sách Phiếu Giao Hàng')]");
+    private By headerDeliveryReceipt = By.xpath("//h2[normalize-space()='Danh Sách Phiếu Giao Hàng']");
 
     //Element Search
     private By searchCustomerName = By.xpath("//input[@id='customer_name']");
@@ -95,8 +103,15 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.clickElement(buttonAddNew);
     }
 
-    public void enterDataAddNewCOD_No() {
+    public void uploadFile (){
+        String filePath = SystemHelper.getCurrentDir() + "src\\test\\resources\\TestData\\BOOKING APP.pdf";
+        WebUI.setText(chooseFileButton,filePath);
+        WebUI.sleep(2);
 
+    }
+
+    public void enterDataAddNewCOD_No() {
+        WebUI.zoomConcept("80%","Chrome");
         WebUI.clickElement(CODCheckBox);
         WebUI.clickElement(noDepositCheckBox);
         WebUI.setText(customerCode, "3003228094");
@@ -137,6 +152,8 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.scrollToElement(driverManager.getDriver().findElement(savebutton));
         sleep(2);
 
+        uploadFile();
+
         WebUI.clickElement(savebutton);
         WebUI.waitForPageLoaded();
 
@@ -168,8 +185,6 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.setText(numberProduct, "1");
         sleep(2);
 
-//        WebUI.scrollToElement(getWebElement(savebutton));
-//        sleep(2);
 
         WebUI.clickElement(selectSKU);
         WebUI.waitForPageLoaded();
@@ -191,6 +206,8 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.scrollToElement(driverManager.getDriver().findElement(savebutton));
         sleep(2);
 
+        uploadFile();
+
         WebUI.clickElement(savebutton);
         WebUI.waitForPageLoaded();
 
@@ -201,19 +218,41 @@ public class DeliveryReceiptPage extends CommonPage {
 
     public void enterDataAddNewCDO() {
 
+        WebUI.zoomConcept("80%", "Chrome");
         WebUI.clickElement(CDOCheckBox);
-        WebUI.setText(customerCode, "3003228094");
-        WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
-        WebUI.waitForPageLoaded();
+        //WebUI.setText(customerCode, "3000012570");
+        //WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
+        //WebUI.waitForPageLoaded();
+
+        WebUI.clickElement(customerPhone);
+        WebUI.setText(customerPhone,"0908081322");
 
         WebUI.clickElement(customerName);
-        WebUI.clearText(customerName);
+        //WebUI.clearText(customerName);
         WebUI.setText(customerName, "Rosy Dương");
+
+        WebUI.clickElement(provinceName);
+        sleep(1);
+        WebUI.pressENTER();
+        sleep(1);
+
+        WebUI.clickElement(districtrName);
+        sleep(1);
+        WebUI.pressENTER();
+        sleep(1);
+
+        WebUI.clickElement(wardName);
+        sleep(1);
+        WebUI.pressENTER();
+        sleep(1);
 
         WebUI.clickElement(selectDeliveryDate);
         sleep(3);
         WebUI.clickElement(itemDeliveryDate);
         sleep(3);
+
+        WebUI.clickElement(customerAddress);
+        WebUI.setText(customerAddress,"123 Ngô Quyền");
 
         WebUI.setText(billCode, "HD6512381");
         WebUI.clickElement(numberProduct);
@@ -239,8 +278,11 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.scrollToElement(driverManager.getDriver().findElement(savebutton));
         sleep(2);
 
+        uploadFile();
+
         WebUI.clickElement(savebutton);
         WebUI.waitForPageLoaded();
+        WebUI.sleep(2);
 
         Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt), "Failed login");
 

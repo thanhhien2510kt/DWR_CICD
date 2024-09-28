@@ -36,7 +36,23 @@ public class WarantyDeliveryPage extends CommonPage {
     private By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
 
     private By iconSendOfFirstItem = By.xpath("//table[@id='wd_table']/tbody[1]/tr[1]/td[11]//button[@title='Send']");
+    private By iconPrintOfFirstItem = By.xpath("//table[@id='wd_table']/tbody[1]/tr[1]/td[11]//button[@title='In phiếu']");
+    private By iconDetailOfFirstItem = By.xpath("//table[@id='wd_table']/tbody[1]/tr[1]/td[11]//button[@title='Detail']");
+    private By iconAprroveOfFirstItem_1 = By.xpath("//table[@id='wd_table']/tbody[1]/tr[1]/td[11]//button[@title='Phê duyệt lần 1']");
+    private By iconAprroveOfFirstItem_2 = By.xpath("//table[@id='wd_table']/tbody[1]/tr[1]/td[11]//button[@title='Phê duyệt lần 2']");
+    private By iconAprroveOfFirstItem_3 = By.xpath("//table[@id='wd_table']/tbody[1]/tr[1]/td[11]//button[@title='Phê duyệt lần 3']");
     private By approveButton = By.xpath("//button[@id='btnApprove']");
+    private By toastMessage = By.xpath("//div[@id='toast-container']//button[normalize-space()='×']");
+    private By iconWarehose = By.xpath("//i[contains(text(),'warehouse')]");
+    private By stockDate = By.xpath("//input[@id='stock_in_date']");
+    private By itemStockDate = By.xpath("//span[@aria-label='September 29, 2024']");
+    private By iconWarrantySuccessful = By.xpath("//button[@title='Xác nhận sản phẩm đã được bảo hành/sửa chữa']");
+    private By iconWarrantyFailed = By.xpath("//button[@title='Xác nhận sản phẩm chưa được bảo hành/sửa chữa']");
+    private By deliveryDate = By.xpath("//input[@id='delivery_date']");
+    private By itemDeliveryDate_success = By.xpath("//div[contains(@class,'flatpickr-calendar animate')][1]//span[@aria-label='September 29, 2024']");
+    private By itemDeliveryDate_fail = By.xpath("//div[contains(@class,'flatpickr-calendar animate')][2]//span[@aria-label='September 29, 2024']");
+    private By getStatus_success = By.xpath("//span[normalize-space()='Bảo hành thành công']");
+    private By getStatus_fail = By.xpath("//span[normalize-space()='Bảo hành không thành công']");
 
     //Hàm xử lý cho trang WarantyReceiptPage
     public void clickAddNewButton() {
@@ -128,6 +144,92 @@ public class WarantyDeliveryPage extends CommonPage {
 
     public void clickIconSend (){
         WebUI.clickElement(iconSendOfFirstItem);
+        WebUI.sleep(1);
+        WebUI.clickElement(approveButton);
+
+    }
+
+    public void clickIconDetail (){
+        WebUI.clickElement(iconDetailOfFirstItem);
+        WebUI.sleep(1);
+
+    }
+
+    public void clickIconWarehose (){
+        WebUI.clickElement(iconWarehose);
+        WebUI.sleep(1);
+        WebUI.clickElement(stockDate);
+        WebUI.clickElement(itemStockDate);
+        WebUI.clickElement(approveButton);
+        WebUI.sleep(2);
+
+    }
+
+    public void clickIconWarrantyConfirmation (String status){
+        if(status == "Successful"){
+            WebUI.clickElement(iconWarrantySuccessful);
+            WebUI.sleep(1);
+            WebUI.clickElement(deliveryDate);
+            WebUI.clickElement(itemDeliveryDate_success);
+        }else {
+            WebUI.clickElement(iconWarrantyFailed);
+            WebUI.sleep(1);
+            WebUI.clickElement(deliveryDate);
+            WebUI.clickElement(itemDeliveryDate_fail);
+        }
+
+        WebUI.clickElement(approveButton);
+
+    }
+
+    public void checkStatusAfterCompletion (String status){
+        WebUI.sleep(1);
+        if(status == "Successful"){
+            Assert.assertTrue(WebUI.checkElementExist(getStatus_success), getStatus_success+" không tồn tại");
+        }else {
+            Assert.assertTrue(WebUI.checkElementExist(getStatus_fail), getStatus_fail+" không tồn tại");
+        }
+
+    }
+
+    public void clickIconPrint (){
+        WebUI.clickElement(iconPrintOfFirstItem);
+        WebUI.sleep(1);
+        WebUI.clickElement(approveButton);
+        WebUI.sleep(2);
+        WebUI.pressENTER();
+        WebUI.sleep(1);
+        WebUI.pressENTER();
+        WebUI.sleep(1);
+        WebUI.pressLEFT();
+        WebUI.pressENTER();
+
+
+    }
+
+
+
+    public void closeToastMessage (){
+        WebUI.sleep(1);
+        WebUI.waitForElementClickable(toastMessage);
+        WebUI.clickElement(toastMessage);
+    }
+
+    public void clickApproveButton_1 (){
+        WebUI.clickElement(iconAprroveOfFirstItem_1);
+        WebUI.sleep(1);
+        WebUI.clickElement(approveButton);
+
+    }
+    public void clickApproveButton_2 (){
+        WebUI.clickElement(iconAprroveOfFirstItem_2);
+        WebUI.sleep(1);
+        WebUI.clickElement(approveButton);
+
+    }
+
+    public void clickApproveButton_3 (){
+        WebUI.clickElement(iconAprroveOfFirstItem_3);
         WebUI.sleep(1);
         WebUI.clickElement(approveButton);
 

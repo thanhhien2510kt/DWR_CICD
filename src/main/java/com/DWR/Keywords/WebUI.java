@@ -443,6 +443,28 @@ public class WebUI {
         }
     }
 
+    public static boolean pressRIGHT() {
+        try {
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_RIGHT);
+            robot.keyRelease(KeyEvent.VK_RIGHT);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public static boolean pressLEFT() {
+        try {
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_LEFT);
+            robot.keyRelease(KeyEvent.VK_LEFT);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     public static boolean pressTAB() {
         try {
             Robot robot = new Robot();
