@@ -32,7 +32,7 @@ public class WarantyReceiptTest extends BaseTest {
         getWarantyReceiptPage().sign();
 
         //In
-        getWarantyReceiptPage().clickIconPrint();
+        getWarantyReceiptPage().clickIconPrint();  // lỗi ở đây ạ
     }
 
 

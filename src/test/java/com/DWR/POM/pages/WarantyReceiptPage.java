@@ -38,7 +38,9 @@ public class WarantyReceiptPage extends CommonPage {
 
     private By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
 
-    private By iconPrintOfFirstItem = By.xpath("//table[@id='storetable']/tbody[1]/tr[1]/td[8]//button[@title='In phiếu']");
+    //private By iconPrintOfFirstItem = By.xpath("//table[@id='storetable']/tbody[1]/tr[1]/td[8]//button[@title='In phiếu']");
+    private By iconPrintOfFirstItem = By.xpath("//tbody/tr[1]/td[8]/div[1]/button[2]");
+
     private By signButtonOfFirstItem = By.xpath("//table[@id='storetable']/tbody[1]/tr[1]/td[8]//button[@title='Ký online']");
     private By signArea = By.xpath("//canvas[@id='signature-pad']");
     private By saveSign = By.xpath("//button[@id='save-signature']");
@@ -120,12 +122,15 @@ public class WarantyReceiptPage extends CommonPage {
         WebUI.zoomConcept("70%", "Chrome");
         WebUI.clickElement(signButtonOfFirstItem);
         WebUI.switchToWindow(signArea,saveSign);
-        WebUI.sleep(3);
-        WebUI.waitForPageLoaded();
-
+        WebUI.sleep(2);
     }
 
     public void clickIconPrint (){
+        WebUI.waitForPageLoaded();
+        String MainWindowAfter2 = driverManager.getDriver().getWindowHandle();
+        System.out.println("Quay lại cửa sổ thứ 1 tại hàm clickIconPrint: " + MainWindowAfter2);
+        sleep(2);
+        WebUI.checkElementExist(iconPrintOfFirstItem);
         WebUI.clickElement(iconPrintOfFirstItem);
         WebUI.sleep(3);
         WebUI.pressENTER();

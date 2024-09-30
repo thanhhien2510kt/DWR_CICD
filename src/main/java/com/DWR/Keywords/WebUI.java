@@ -821,7 +821,7 @@ public class WebUI {
         scrollToElement(getWebElement(element2));
         sleep(2);
         draw(getWebElement(element1));
-        sleep(1);
+        sleep(2);
         WebUI.clickElement(element2);
 
         //Tắt cái cửa sổ thứ 2
@@ -830,6 +830,8 @@ public class WebUI {
         // Chuyển hướng về lại tab chính ban đầu (Main Window)
         driverManager.getDriver().switchTo().window(MainWindow);
         System.out.println("Đã chuyển về lớp Window chính: " + driverManager.getDriver().getCurrentUrl());
+        String MainWindowAfter = driverManager.getDriver().getWindowHandle();
+        System.out.println("Quay lại cửa sổ thứ 1: " + MainWindowAfter);
 
         sleep(1);
 
