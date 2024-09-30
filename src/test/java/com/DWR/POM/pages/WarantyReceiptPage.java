@@ -38,7 +38,10 @@ public class WarantyReceiptPage extends CommonPage {
 
     private By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
 
-    private By iconPrintOfFirstItem = By.xpath("//table[@id='storetable']/tbody[1]/tr[1]/td[8]//button[@title='Print']");
+    private By iconPrintOfFirstItem = By.xpath("//table[@id='storetable']/tbody[1]/tr[1]/td[8]//button[@title='In phiếu']");
+    private By signButtonOfFirstItem = By.xpath("//table[@id='storetable']/tbody[1]/tr[1]/td[8]//button[@title='Ký online']");
+    private By signArea = By.xpath("//canvas[@id='signature-pad']");
+    private By saveSign = By.xpath("//button[@id='save-signature']");
 
     //Hàm xử lý cho trang WarantyReceiptPage
     public void clickAddNewButton() {
@@ -114,8 +117,11 @@ public class WarantyReceiptPage extends CommonPage {
     }
 
     public void sign (){
-
-
+        WebUI.zoomConcept("70%", "Chrome");
+        WebUI.clickElement(signButtonOfFirstItem);
+        WebUI.switchToWindow(signArea,saveSign);
+        WebUI.sleep(3);
+        WebUI.waitForPageLoaded();
 
     }
 
@@ -128,6 +134,8 @@ public class WarantyReceiptPage extends CommonPage {
         WebUI.sleep(1);
         WebUI.pressLEFT();
         WebUI.pressENTER();
+        WebUI.sleep(1);
+        WebUI.switchToWindow();
 
     }
 }

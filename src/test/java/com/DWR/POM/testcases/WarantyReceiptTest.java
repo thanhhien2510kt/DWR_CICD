@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class WarantyReceiptTest extends BaseTest {
 
-    @Test
+    @Test(priority = 1)
     public void addNewWarantyReceipt() {
         //Login
         getLoginPage().LoginCRM_Excel(1, 1);
@@ -18,8 +18,9 @@ public class WarantyReceiptTest extends BaseTest {
         getWarantyReceiptPage().enterDataAddNewWarrantyReceipt();
 
     }
-    @Test
-    public void printWarantyReceipt (){
+
+    @Test(priority = 2)
+    public void signAndPrint (){
         //Login
         getLoginPage().LoginCRM_Excel(1, 1);
         clickWarantyReceiptPage();
@@ -27,14 +28,14 @@ public class WarantyReceiptTest extends BaseTest {
         //search phiếu
         getWarantyReceiptPage().searchWarrantyReceipt("Rosy Dương");
 
-        // print - đang lỗi
-        //getWarantyReceiptPage().clickIconPrint();
-        //Enter: đồng ý in
-        //Enter: save file
-        //< : đồng y lặp file name
-        //Enter
+        //Ký
+        getWarantyReceiptPage().sign();
 
+        //In
+        getWarantyReceiptPage().clickIconPrint();
     }
+
+
 
 
 }

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Suite_AddNew_sign_print_warrantyReceipt" verbose="1"  >
+
+    <test name="Suite_AddNew_sign_print_warrantyReceipt">
+        <classes>
+            <class name="com.DWR.POM.testcases.WarantyReceiptTest">
+
+            </class>
+
+        </classes>
+    </test>
+</suite>

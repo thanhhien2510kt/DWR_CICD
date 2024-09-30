@@ -432,6 +432,26 @@ public class WebUI {
         }
     }
 
+    public static boolean draw (WebElement element){
+        try {
+            Actions action = new Actions(driverManager.getDriver());
+            action.moveToElement(element)
+                    .clickAndHold()
+                    .moveByOffset(0, 50) // Đường dọc bên trái
+                    .moveByOffset(20, 0) // Đường ngang phía trên
+                    .moveByOffset(0, -50) // Đường dọc bên phải
+                    .moveByOffset(30, 0) // Đường ngang phía dưới
+                    .moveByOffset(0, 50) // Đường dọc bên phải
+                    .release()
+                    .perform();
+            WebUI.sleep(3);
+            return true;
+        } catch (Exception e) {
+            LogUtils.error(e.getMessage());
+            return false;
+        }
+    }
+
     public static boolean pressENTER() {
         try {
             Robot robot = new Robot();
@@ -757,6 +777,52 @@ public class WebUI {
         System.out.println(driverManager.getDriver().getTitle());
         System.out.println(driverManager.getDriver().getCurrentUrl());
         sleep(1);
+
+        //Tắt cái cửa sổ thứ 2
+        driverManager.getDriver().close();
+
+        // Chuyển hướng về lại tab chính ban đầu (Main Window)
+        driverManager.getDriver().switchTo().window(MainWindow);
+        System.out.println("Đã chuyển về lớp Window chính: " + driverManager.getDriver().getCurrentUrl());
+
+        sleep(1);
+
+    }
+
+    public static void switchToWindow(By element1, By element2) {
+
+        // Lưu lại lớp window đầu tiên - mã ID hơi dài, in ra sẽ thấy :)
+        String MainWindow = driverManager.getDriver().getWindowHandle();
+        System.out.println("Cửa sổ thứ 1: " + MainWindow);
+
+        sleep(2);
+        // Lấy tất cả các mã định danh Tab Window.
+        Set<String> windows = driverManager.getDriver().getWindowHandles();
+
+        System.out.println("Số Window: " + windows.size());
+
+        //Chuyển hướng đến cửa sổ theo vị trí cụ thể
+        String firstWindow = (String) windows.toArray()[0]; //Cửa sổ đầu
+        System.out.println("Cửa sổ thứ 1: " + firstWindow);
+        String secondWindow = (String) windows.toArray()[1]; //Cửa sổ thứ hai
+        System.out.println("Cửa sổ thứ 2: " + secondWindow);
+        //String thirdWindow = (String) windows.toArray()[2]; //Cửa sổ thứ ba
+        //System.out.println("Cửa sổ thứ 3: " + thirdWindow);
+
+        //Chuyển hướng đến cửa sổ thứ 2
+        driverManager.getDriver().switchTo().window(secondWindow);
+        sleep(1);
+        System.out.println("Đã chuyển đến Tab Window mới");
+        System.out.println(driverManager.getDriver().getTitle());
+        System.out.println(driverManager.getDriver().getCurrentUrl());
+        sleep(1);
+
+        //xử lý ở trình duyệt thứ 2
+        scrollToElement(getWebElement(element2));
+        sleep(2);
+        draw(getWebElement(element1));
+        sleep(1);
+        WebUI.clickElement(element2);
 
         //Tắt cái cửa sổ thứ 2
         driverManager.getDriver().close();
