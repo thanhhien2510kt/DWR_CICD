@@ -115,7 +115,7 @@ public class WarantyReceiptPage extends CommonPage {
 
     public void sign (){
 
-        
+
 
     }
 

@@ -18,11 +18,10 @@ public class RefundRecieptPage {
     private By exchangeType = By.xpath("//label[@for='exchange_type']");
     private By checkboxGoodsreturnType = By.xpath("//input[@id='goodsreturn_type']");
     private By goodsreturnType = By.xpath("//label[@for='goodsreturn_type']");
+    private By storeCode = By.xpath("(//label[normalize-space()='Mã cửa hàng']/parent::div)/following-sibling::div//span[@role='combobox']");
     private By customerName = By.xpath("//input[@id='customer_name']");
     private By customerPhone = By.xpath("//input[@id='customer_phone']");
-    private By deliveryDate = By.xpath("//input[@id='delivery_date']");
-    private By itemDeliveryDate = By.xpath("//div[@aria-label='"+currentDay()+"']");
-    private By moneyReceive = By.xpath("//input[@id='money_receive']");
+    private By invoiceCode = By.xpath("//input[@id='invoice_code']");
     private By boughtDate = By.xpath("//input[@id='bought_date']");
     private By itemBoughtDate = By.xpath("//div[@aria-label='"+currentDay()+"']");
     private By reasonReturn = By.xpath("//textarea[@id='reason_return']");
@@ -80,22 +79,23 @@ public class RefundRecieptPage {
             WebUI.clickCheckBox(checkboxGoodsreturnType,goodsreturnType);
         }
 
+        WebUI.clickElement(storeCode);
+        WebUI.sleep(2);
+        WebUI.pressENTER();
+
         WebUI.clickElement(customerName);
         WebUI.setText(customerName,"Rosy Dương");
 
         WebUI.clickElement(customerPhone);
         WebUI.setText(customerPhone,"0343177955");
 
-        WebUI.clickElement(deliveryDate);
-        WebUI.clickElement(itemDeliveryDate);
-
         WebUI.clickElement(boughtDate);
         WebUI.sleep(1);
         WebUI.pressENTER();
         //WebUI.clickElement(itemBoughtDate);
 
-        WebUI.clickElement(moneyReceive);
-        WebUI.setText(moneyReceive,"2000000");
+        WebUI.clickElement(invoiceCode);
+        WebUI.setText(invoiceCode,"HD241821321");
 
 
         WebUI.clickElement(reasonReturn);

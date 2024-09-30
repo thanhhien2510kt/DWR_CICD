@@ -8,13 +8,13 @@
         <classes>
             <class name="com.DWR.POM.testcases.RefundRecieptTest">
                 <parameter name="type" value="Đổi hàng" />
-                <parameter name="situation" value="Normal" />
+                <parameter name="situation" value="Special" />
                 <parameter name="paymentMethodPriorToReturn" value="Chuyển khoản" />
                 <parameter name="refundMethod" value="Tiền mặt" />
                 <parameter name="price_before" value="6000000" />
                 <parameter name="price_after" value="5000000" />
                 <methods>
-                    <include name="addNewRefundReceipt"/>
+                    <include name="addNewRefundReceipt_param"/>
                 </methods>
             </class>
 
