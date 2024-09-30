@@ -133,7 +133,7 @@ public class DeliveryReceiptPage extends CommonPage {
         sleep(2);
 
         WebUI.clickElement(selectSKU);
-        WebUI.waitForPageLoaded();
+        WebUI.sleep(3);
         WebUI.setText(SearchSKU, "023");
         sleep(2);
         WebUI.pressENTER();

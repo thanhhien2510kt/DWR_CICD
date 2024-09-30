@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class WarantyDeliveryTest extends BaseTest {
     @Test(priority = 1)
-    public void addNewWarantyDeliveryReceipt() {
+    public void addNewWarantyDeliveryReceipt_AEON() {
         //Login
         getLoginPage().LoginCRM_Excel(1, 1);
         clickWarantyDeliveryPage();
@@ -15,6 +15,19 @@ public class WarantyDeliveryTest extends BaseTest {
         WebUI.waitForPageLoaded();
         getWarantyDeliveryPage().clickAddNewButton();
         getWarantyDeliveryPage().enterDataAddNewWarrantyDeliveryReceipt("Kho AEON");
+
+    }
+
+    @Test
+    public void addNewWarantyDeliveryReceipt_KH() {
+        //Login
+        getLoginPage().LoginCRM_Excel(1, 1);
+        clickWarantyDeliveryPage();
+
+        //Tạo phiếu xuất hàng bảo hành
+        WebUI.waitForPageLoaded();
+        getWarantyDeliveryPage().clickAddNewButton();
+        getWarantyDeliveryPage().enterDataAddNewWarrantyDeliveryReceipt("Khách hàng");
 
     }
 

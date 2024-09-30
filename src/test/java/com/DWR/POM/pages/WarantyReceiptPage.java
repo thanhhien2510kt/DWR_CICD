@@ -113,11 +113,21 @@ public class WarantyReceiptPage extends CommonPage {
         WebUI.sleep(2);
     }
 
+    public void sign (){
+
+        
+
+    }
+
     public void clickIconPrint (){
         WebUI.clickElement(iconPrintOfFirstItem);
         WebUI.sleep(3);
         WebUI.pressENTER();
-        WebUI.switchToWindow();
+        WebUI.sleep(1);
+        WebUI.pressENTER();
+        WebUI.sleep(1);
+        WebUI.pressLEFT();
+        WebUI.pressENTER();
 
     }
 }

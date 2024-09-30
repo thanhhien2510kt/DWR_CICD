@@ -10,6 +10,7 @@ public class WarantyDeliveryPage extends CommonPage {
     //Element Add
     private By buttonAddNew = By.xpath("//i[normalize-space()='add']");
     private By inputTypeOfGoods = By.xpath("//input[@id='from_aeon']");
+    private By warrantyCode = By.xpath("//span[contains(text(),'Mã phiếu tiếp nhận bảo hành')]");
     private By storeCode = By.xpath("(//label[contains(text(),'Mã cửa hàng')]/parent::div)/following-sibling::div//span[contains(text(),'Chọn store')]");
     private By storeAddress = By.xpath("//input[@id='address']");
     private By shippingDate = By.xpath("//input[@id='shipping_date']");
@@ -63,9 +64,42 @@ public class WarantyDeliveryPage extends CommonPage {
         WebUI.waitForPageLoaded();
         WebUI.zoomConcept("80%", "Chrome");
 
-        WebUI.clickCheckBox(inputTypeOfGoods,By.xpath("//label[normalize-space()='"+TypeOfGoods+"']"));
-        WebUI.sleep(1);
+        if(TypeOfGoods == "Kho AEON"){
+            WebUI.clickCheckBox(inputTypeOfGoods,By.xpath("//label[normalize-space()='"+TypeOfGoods+"']"));
+            WebUI.sleep(1);
 
+            WebUI.clickElement(numberProduct);
+            WebUI.setText(numberProduct, "1");
+            WebUI.sleep(1);
+
+            WebUI.clickElement(SKU);
+            WebUI.sleep(2);
+            WebUI.pressENTER();
+            WebUI.sleep(3);
+
+            WebUI.clickElement(quayHang);
+            WebUI.setText(quayHang, "A");
+            WebUI.sleep(1);
+
+            WebUI.clickElement(nganhHang);
+            WebUI.setText(nganhHang, "FL");
+            WebUI.sleep(1);
+
+            WebUI.clickElement(quantity);
+            WebUI.setText(quantity, "1");
+            WebUI.sleep(1);
+
+            WebUI.clickElement(seri);
+            WebUI.setText(seri, "1234566789");
+            WebUI.sleep(1);
+        }
+
+        if(TypeOfGoods == "Khách hàng"){
+            WebUI.clickElement(warrantyCode);
+            WebUI.sleep(2);
+            WebUI.pressENTER();
+
+        }
         WebUI.clickElement(storeCode);
         WebUI.sleep(1);
         WebUI.pressDOWN();
@@ -96,30 +130,6 @@ public class WarantyDeliveryPage extends CommonPage {
         WebUI.setText(customerLicensePlateNumber, "123456789");
         WebUI.sleep(1);
 
-        WebUI.clickElement(numberProduct);
-        WebUI.setText(numberProduct, "1");
-        WebUI.sleep(1);
-
-        WebUI.clickElement(SKU);
-        WebUI.sleep(2);
-        WebUI.pressENTER();
-        WebUI.sleep(3);
-
-        WebUI.clickElement(quayHang);
-        WebUI.setText(quayHang, "A");
-        WebUI.sleep(1);
-
-        WebUI.clickElement(nganhHang);
-        WebUI.setText(nganhHang, "FL");
-        WebUI.sleep(1);
-
-        WebUI.clickElement(quantity);
-        WebUI.setText(quantity, "1");
-        WebUI.sleep(1);
-
-        WebUI.clickElement(seri);
-        WebUI.setText(seri, "1234566789");
-        WebUI.sleep(1);
 
         WebUI.clickElement(saveButton);
         WebUI.waitForPageLoaded();

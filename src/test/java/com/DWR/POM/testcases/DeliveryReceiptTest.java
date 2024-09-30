@@ -40,7 +40,6 @@ public class DeliveryReceiptTest extends BaseTest {
 
     }
 
-
     @Test
     public void testAddNewDeliveryReceipt_COD_No (){
         //Login
