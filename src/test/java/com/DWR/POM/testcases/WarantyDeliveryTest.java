@@ -5,7 +5,7 @@ import com.DWR.Keywords.WebUI;
 import org.testng.annotations.Test;
 
 public class WarantyDeliveryTest extends BaseTest {
-    @Test(priority = 1)
+    @Test
     public void addNewWarantyDeliveryReceipt_AEON() {
         //Login
         getLoginPage().LoginCRM_Excel(1, 1);
@@ -18,7 +18,7 @@ public class WarantyDeliveryTest extends BaseTest {
 
     }
 
-    @Test
+    @Test (priority = 1)
     public void addNewWarantyDeliveryReceipt_KH() {
         //Login
         getLoginPage().LoginCRM_Excel(1, 1);

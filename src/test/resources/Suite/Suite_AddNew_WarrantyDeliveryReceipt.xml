@@ -8,20 +8,12 @@
 
         <classes>
             <class name="com.DWR.POM.testcases.WarantyDeliveryTest">
-                <methods>
-                    <include name="addNewWarantyDeliveryReceipt"/>
-                </methods>
+
 
 
             </class>
 
-            <class name="com.DWR.POM.testcases.WarantyDeliveryTest">
 
-                <methods>
-                    <include name="sendWarantyDeliveryReceipt"/>
-                </methods>
-
-            </class>
 
         </classes>
     </test>

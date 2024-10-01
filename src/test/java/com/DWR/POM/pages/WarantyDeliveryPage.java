@@ -36,7 +36,9 @@ public class WarantyDeliveryPage extends CommonPage {
 
     private By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
 
-    private By iconSendOfFirstItem = By.xpath("//table[@id='wd_table']/tbody[1]/tr[1]/td[11]//button[@title='Send']");
+    //private By iconSendOfFirstItem = By.xpath("//table[@id='wd_table']/tbody[1]/tr[1]/td[11]//button[@title='Send']");
+    private By iconSendOfFirstItem = By.xpath("//tbody/tr[1]/td[11]/div[1]/button[4]/i[1]");
+
     private By iconPrintOfFirstItem = By.xpath("//table[@id='wd_table']/tbody[1]/tr[1]/td[11]//button[@title='In phiếu']");
     private By iconDetailOfFirstItem = By.xpath("//table[@id='wd_table']/tbody[1]/tr[1]/td[11]//button[@title='Detail']");
     private By iconAprroveOfFirstItem_1 = By.xpath("//table[@id='wd_table']/tbody[1]/tr[1]/td[11]//button[@title='Phê duyệt lần 1']");
@@ -107,7 +109,7 @@ public class WarantyDeliveryPage extends CommonPage {
         WebUI.sleep(2);
 
         WebUI.clickElement(storeAddress);
-        WebUI.setText(storeAddress, "30 Đ. Tân Thắng, Sơn Kỳ, Tân Phú, Hồ Chí Minh");
+        //WebUI.setText(storeAddress, "30 Đ. Tân Thắng, Sơn Kỳ, Tân Phú, Hồ Chí Minh");
         WebUI.sleep(1);
 
         WebUI.clickElement(shippingDate);
