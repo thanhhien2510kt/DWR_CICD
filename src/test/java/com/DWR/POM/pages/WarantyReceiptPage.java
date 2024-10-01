@@ -5,8 +5,7 @@ import com.DWR.driver.driverManager;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
-import static com.DWR.Keywords.WebUI.sleep;
-import static com.DWR.Keywords.WebUI.waitForPageLoaded;
+import static com.DWR.Keywords.WebUI.*;
 
 public class WarantyReceiptPage extends CommonPage {
     //Element Add
@@ -40,6 +39,7 @@ public class WarantyReceiptPage extends CommonPage {
 
     //private By iconPrintOfFirstItem = By.xpath("//table[@id='storetable']/tbody[1]/tr[1]/td[8]//button[@title='In phiếu']");
     private By iconPrintOfFirstItem = By.xpath("//tbody/tr[1]/td[8]/div[1]/button[2]");
+    private By statusOfFirstItem = By.xpath("//tbody/tr[1]/td[7]");
 
     private By signButtonOfFirstItem = By.xpath("//table[@id='storetable']/tbody[1]/tr[1]/td[8]//button[@title='Ký online']");
     private By signArea = By.xpath("//canvas[@id='signature-pad']");
@@ -129,18 +129,15 @@ public class WarantyReceiptPage extends CommonPage {
         WebUI.waitForPageLoaded();
         String MainWindowAfter2 = driverManager.getDriver().getWindowHandle();
         System.out.println("Quay lại cửa sổ thứ 1 tại hàm clickIconPrint: " + MainWindowAfter2);
-        sleep(2);
+        sleep(3);
         WebUI.checkElementExist(iconPrintOfFirstItem);
         WebUI.clickElement(iconPrintOfFirstItem);
         WebUI.sleep(3);
         WebUI.pressENTER();
         WebUI.sleep(1);
-        WebUI.pressENTER();
-        WebUI.sleep(1);
-        WebUI.pressLEFT();
-        WebUI.pressENTER();
-        WebUI.sleep(1);
-        WebUI.switchToWindow();
+        WebUI.clickElement(searchButton);
+        WebUI.sleep(2);
+        WebUI.assertEquals(getElementText(statusOfFirstItem),"Chờ xuất hàng đi bảo hành/ sửa chữa", "Print không thành công");
 
     }
 }

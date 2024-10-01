@@ -6,9 +6,17 @@
     <test name="Suite_AddNew_sign_print_warrantyReceipt">
         <classes>
             <class name="com.DWR.POM.testcases.WarantyReceiptTest">
-
             </class>
+        </classes>
+    </test>
 
+    <test name="Suite_AddNew_WarrantyDeliveryReceipt">
+        <classes>
+            <class name="com.DWR.POM.testcases.WarantyDeliveryTest">
+                <methods>
+                    <include name="addNewWarantyDeliveryReceipt_KH"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

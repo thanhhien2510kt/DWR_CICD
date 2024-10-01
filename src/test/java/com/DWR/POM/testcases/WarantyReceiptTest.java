@@ -14,13 +14,14 @@ public class WarantyReceiptTest extends BaseTest {
 
         //Tạo phiếu tiếp nhận
         WebUI.waitForPageLoaded();
+        WebUI.sleep(2);
         getWarantyReceiptPage().clickAddNewButton();
         getWarantyReceiptPage().enterDataAddNewWarrantyReceipt();
 
     }
 
     @Test(priority = 2)
-    public void signAndPrint (){
+    public void sign (){
         //Login
         getLoginPage().LoginCRM_Excel(1, 1);
         clickWarantyReceiptPage();
@@ -30,6 +31,17 @@ public class WarantyReceiptTest extends BaseTest {
 
         //Ký
         getWarantyReceiptPage().sign();
+
+    }
+
+    @Test(priority = 3)
+    public void print (){
+        //Login
+        getLoginPage().LoginCRM_Excel(1, 1);
+        clickWarantyReceiptPage();
+
+        //search phiếu
+        getWarantyReceiptPage().searchWarrantyReceipt("Rosy Dương");
 
         //In
         getWarantyReceiptPage().clickIconPrint();  // lỗi ở đây ạ
