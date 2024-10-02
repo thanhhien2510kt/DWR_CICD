@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Suit_COD_Yes" verbose="1"  >
+
+    <test name="Suit_COD_Yes" parallel="classes">
+        <classes>
+            <class name="com.DWR.POM.testcases.DepositReceiptTest">
+                <methods>
+                    <include name="AddNewDepositReceipt"/>
+                </methods>
+            </class>
+            <class name="com.DWR.POM.testcases.DepositReceiptTest">
+                <methods>
+                    <include name="AddNewDepositReceipt"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>

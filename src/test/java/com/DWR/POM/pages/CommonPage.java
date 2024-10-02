@@ -98,8 +98,11 @@ public class CommonPage {
     public DepositReceiptPage clickDepositReceiptPage(){
         WebUI.waitForPageLoaded();
         WebUI.clickElement(menuDeliveryInfo,3);
+        if(!WebUI.checkElementDisplay(menuDepositReceipt)){
+            WebUI.clickElement(menuDeliveryInfo,3);
+            WebUI.clickElement(menuDepositReceipt,3);
+        }
         WebUI.clickElement(menuDepositReceipt,3);
-
         return new DepositReceiptPage();
     }
 

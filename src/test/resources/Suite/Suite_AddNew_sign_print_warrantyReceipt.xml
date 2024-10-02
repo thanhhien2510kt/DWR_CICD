@@ -15,6 +15,8 @@
             <class name="com.DWR.POM.testcases.WarantyDeliveryTest">
                 <methods>
                     <include name="addNewWarantyDeliveryReceipt_KH"/>
+                    <include name="sendWarantyDeliveryReceipt"/>
+                    <include name="approveFlow"/>
                 </methods>
             </class>
         </classes>

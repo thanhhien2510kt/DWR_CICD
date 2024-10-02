@@ -27,6 +27,13 @@ public class DepositReceiptPage extends CommonPage{
 
     private By headerDepositReceipt = By.xpath("//h2[contains(text(),'Danh sách phiếu thu tiền cọc')]");
 
+    //search
+    private By searchByCustomerName = By.xpath("//input[@id='customer_name']");
+    private By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
+
+    private By buttonEditOfFistItem = By.xpath("//table[@id='deposittable']//tbody[1]/tr[1]/td[10]//button[@title='Edit']");
+    private By selectDeliveryCode = By.xpath("//label[contains(text(),'Mã phiếu giao hàng')]/following-sibling::div//span[@role='combobox']");
+    private By updateButton = By.xpath("//button[contains(text(),'Lưu')]");
 
     //Hàm xử lý cho trang DepositReceiptPage
     public void clickAddNewButton() {
@@ -34,7 +41,32 @@ public class DepositReceiptPage extends CommonPage{
         WebUI.clickElement(buttonAddNew);
     }
 
-    public void enterDataAddNewDeposit (String deliveryNumber) {
+    public void clickEditButton() {
+        WebUI.waitForPageLoaded();
+        WebUI.zoomConcept("80%", "Chrome");
+        WebUI.clickElement(buttonEditOfFistItem);
+    }
+
+    public void linkToDeliveryCode() {
+        WebUI.waitForPageLoaded();
+        WebUI.clickElement(selectDeliveryCode);
+        WebUI.sleep(1);
+        WebUI.pressENTER();
+        WebUI.sleep(1);
+        WebUI.clickElement(updateButton);
+        WebUI.sleep(2);
+    }
+
+    public void search(String customerName) {
+        WebUI.waitForPageLoaded();
+        WebUI.clickElement(searchByCustomerName);
+        WebUI.setText(searchByCustomerName, customerName);
+        WebUI.clickElement(searchButton);
+    }
+
+
+
+    public void enterDataAddNewDeposit () {
 
         WebUI.setText(customerCode,"3003228094" );
         WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
@@ -44,10 +76,10 @@ public class DepositReceiptPage extends CommonPage{
         WebUI.clearText(customerName);
         WebUI.setText(customerName, "Rosy Dương");
 
-        WebUI.clickElement(deliveryCode);
-        WebUI.setText(deliveryCodeSearch,deliveryNumber);
-        WebUI.pressENTER();
-        WebUI.sleep(1);
+        //WebUI.clickElement(deliveryCode);
+        //WebUI.setText(deliveryCodeSearch,deliveryNumber);
+        //WebUI.pressENTER();
+        //WebUI.sleep(1);
 
         WebUI.clickElement(paymentReason);
         WebUI.setText(paymentReason, "Cọc tiền mua hàng");
@@ -55,8 +87,8 @@ public class DepositReceiptPage extends CommonPage{
         WebUI.clickElement(cashAmount);
         WebUI.setText(cashAmount, "500000");
 
-//        WebUI.clickElement(writeInWords);
-//        WebUI.setText(writeInWords, "Năm trăm ngàn đồng chẵn");
+        //WebUI.clickElement(writeInWords);
+        //WebUI.setText(writeInWords, "Năm trăm ngàn đồng chẵn");
 
         WebUI.clickElement(saveButton);
         WebUI.waitForPageLoaded();

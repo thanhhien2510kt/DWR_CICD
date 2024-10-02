@@ -29,7 +29,8 @@ public class DeliveryReceiptPage extends CommonPage {
     private By customerCode = By.xpath("//input[@id='CustomerCode']");
     private By customerCodeLable = By.xpath("//label[contains(text(),'Mã thẻ thành viên')]");
 
-    private By customerPhone = By.xpath("//input[@id='CustomerPhone']");
+    private By customerPhone1 = By.xpath("//input[@id='CustomerPhone']");
+    private By customerPhone2 = By.xpath("//input[@id='CustomerPhone2']");
     private By customerName = By.xpath("//input[@id='CustomerName']");
     private By provinceName = By.xpath("//span[contains(text(),'Thành phố/Tỉnh')]");
     private By districtrName = By.xpath("//span[contains(text(),'Quận/Huyện')]");
@@ -118,6 +119,9 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
         WebUI.waitForPageLoaded();
 
+        WebUI.clickElement(customerPhone2);
+        WebUI.setText(customerPhone2,"0908081322");
+
         WebUI.clickElement(customerName);
         WebUI.clearText(customerName);
         WebUI.setText(customerName, "Rosy Dương");
@@ -170,6 +174,9 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.setText(customerCode, "3003228094");
         WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
         WebUI.waitForPageLoaded();
+
+        WebUI.clickElement(customerPhone2);
+        WebUI.setText(customerPhone2,"0908081322");
 
         WebUI.clickElement(customerName);
         WebUI.clearText(customerName);
@@ -224,8 +231,11 @@ public class DeliveryReceiptPage extends CommonPage {
         //WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
         //WebUI.waitForPageLoaded();
 
-        WebUI.clickElement(customerPhone);
-        WebUI.setText(customerPhone,"0908081322");
+        WebUI.clickElement(customerPhone1);
+        WebUI.setText(customerPhone1,"0908081322");
+
+        WebUI.clickElement(customerPhone2);
+        WebUI.setText(customerPhone2,"0908081322");
 
         WebUI.clickElement(customerName);
         //WebUI.clearText(customerName);

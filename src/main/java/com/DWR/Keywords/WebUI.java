@@ -224,6 +224,20 @@ public class WebUI {
         }
     }
 
+    @Step("Check Element {0} Display ")
+    public static boolean checkElementDisplay(By by) {
+        sleep(2);
+        WebElement element = driverManager.getDriver().findElement(by);
+
+        if (element.isDisplayed()) {
+            LogUtils.info("checkElementDisplay: " + true + " --- " + by);
+            return true;
+        } else {
+            LogUtils.error("checkElementDisplay: " + false + " --- " + by);
+            return false;
+        }
+    }
+
     @Step("Open URL: {0}")
     public static void openURL(String url) {
         driverManager.getDriver().get(url);
