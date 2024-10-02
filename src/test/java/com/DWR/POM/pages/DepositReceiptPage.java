@@ -43,7 +43,7 @@ public class DepositReceiptPage extends CommonPage{
 
     public void clickEditButton() {
         WebUI.waitForPageLoaded();
-        WebUI.zoomConcept("80%", "Chrome");
+        WebUI.zoomConcept("50%", "Chrome");
         WebUI.clickElement(buttonEditOfFistItem);
     }
 
@@ -53,12 +53,15 @@ public class DepositReceiptPage extends CommonPage{
         WebUI.sleep(1);
         WebUI.pressENTER();
         WebUI.sleep(1);
+        WebUI.scrollToElement(WebUI.getWebElement(updateButton));
+        WebUI.sleep(1);
         WebUI.clickElement(updateButton);
         WebUI.sleep(2);
     }
 
     public void search(String customerName) {
         WebUI.waitForPageLoaded();
+        WebUI.sleep(2);
         WebUI.clickElement(searchByCustomerName);
         WebUI.setText(searchByCustomerName, customerName);
         WebUI.clickElement(searchButton);
@@ -67,7 +70,7 @@ public class DepositReceiptPage extends CommonPage{
 
 
     public void enterDataAddNewDeposit () {
-
+        WebUI.zoomConcept("80%", "Chrome");
         WebUI.setText(customerCode,"3003228094" );
         WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
         WebUI.waitForPageLoaded();

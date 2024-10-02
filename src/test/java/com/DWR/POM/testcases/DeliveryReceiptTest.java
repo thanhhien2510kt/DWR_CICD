@@ -52,31 +52,35 @@ public class DeliveryReceiptTest extends BaseTest {
         WebUI.waitForPageLoaded();
         getDeliveryReceiptPage().enterDataAddNewCOD_No();
 
-
+        //send phiếu
+        String code = getDeliveryReceiptPage().getDeliveryReceiptCodeOfFistItemInTable();
+        getDeliveryReceiptPage().searchRecept(code);
+        getDeliveryReceiptPage().clickIconSend();
     }
 
     public String searchDeliveryReceipt (String typeName) {
         String deliveryReceiptCode;
         switch (typeName) {
             case "CDO":
-                testAddNewDeliveryReceipt_CDO();
+
                 //search phiếu vừa tạo
                 getDeliveryReceiptPage().searchRecept("CDO", "Rosy Dương", "Other");
                 break;
 
             case "COD_Yes":
-                testAddNewDeliveryReceipt_COD_Yes();
+
                 //search phiếu vừa tạo
                 getDeliveryReceiptPage().searchRecept("COD", "Rosy Dương", "Yes");
                 break;
 
             case "COD_No":
-                testAddNewDeliveryReceipt_COD_No();
+
                 //search phiếu vừa tạo
                 getDeliveryReceiptPage().searchRecept("COD", "Rosy Dương", "No");
                 break;
 
         }
+
         deliveryReceiptCode = getDeliveryReceiptPage().getDeliveryReceiptCodeOfFistItemInTable();
 
         return deliveryReceiptCode;
@@ -84,6 +88,11 @@ public class DeliveryReceiptTest extends BaseTest {
 
     @Test
     public void approveFlow_CDO (){
+        // Login
+        getLoginPage().LoginCRM_Excel(1,1);
+        clickDeliveryReceiptPage();
+
+        WebUI.sleep(2);
         String code = searchDeliveryReceipt("CDO");
 
         //B1: Send phiếu
@@ -123,7 +132,58 @@ public class DeliveryReceiptTest extends BaseTest {
 
     }
 
+    @Test
+    public void approveFlow_COD (){
+        // Login
+        getLoginPage().LoginCRM_Excel(1,1);
+        clickDeliveryReceiptPage();
 
+        WebUI.sleep(2);
+
+        String code = searchDeliveryReceipt("COD_No");
+
+        //B1: Send phiếu
+        //getDeliveryReceiptPage().searchRecept(code);
+        //getDeliveryReceiptPage().clickIconSend();
+
+        //B1 G2 Cashier duyệt kiểm soát
+        getLoginPage().Logout("G1_FL");
+        getLoginPage().LoginCRM_Excel(8,8);
+        clickDeliveryReceiptPage();
+        getDeliveryReceiptPage().searchRecept(code);
+        getDeliveryReceiptPage().clickIconApprove();
+
+        // B2: G4 OP - phê duyệt
+        getLoginPage().Logout("G2_Cashier");
+        getLoginPage().LoginCRM_Excel(4,4);
+        clickDeliveryReceiptPage();
+        getDeliveryReceiptPage().searchRecept(code);
+        getDeliveryReceiptPage().clickIconApprove();
+
+        // B3: G4 Op - in đơn
+        getDeliveryReceiptPage().clickIconPrint();
+        WebUI.sleep(3);
+        getDeliveryReceiptPage().closePrintDialog();
+        WebUI.sleep(5);
+
+        //B4: G1 MMD - xuất hàng
+        getLoginPage().Logout("G4_FL");
+        getLoginPage().LoginCRM_Excel(10,10);
+        clickDeliveryReceiptPage();
+        getDeliveryReceiptPage().searchRecept(code);
+        getDeliveryReceiptPage().clickIconCallBack();
+        getDeliveryReceiptPage().clickIconCallBack_exportGoods();
+        getDeliveryReceiptPage().closeToastMessage();
+
+        //B5: G2 OP - Hủy CDO
+        getLoginPage().Logout("G1_MMD");
+        getLoginPage().LoginCRM_Excel(2,2);
+        clickDeliveryReceiptPage();
+        getDeliveryReceiptPage().searchRecept(code);
+        getDeliveryReceiptPage().clickIconCallBack();
+        getDeliveryReceiptPage().clickIconCallBack_cancelReceipt();
+
+    }
 
 
 

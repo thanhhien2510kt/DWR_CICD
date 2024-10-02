@@ -11,8 +11,7 @@ import java.awt.event.KeyEvent;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import static com.DWR.Keywords.WebUI.getWebElement;
-import static com.DWR.Keywords.WebUI.sleep;
+import static com.DWR.Keywords.WebUI.*;
 
 
 public class DeliveryReceiptPage extends CommonPage {
@@ -331,6 +330,8 @@ public class DeliveryReceiptPage extends CommonPage {
 
     public void searchRecept(String code) {
         WebUI.waitForPageLoaded();
+        WebUI.zoomConcept("80%", "Chrome");
+        WebUI.sleep(1);
         WebUI.clickElement(searchCode);
         sleep(1);
         WebUI.setText(searchCode, code);
@@ -356,6 +357,7 @@ public class DeliveryReceiptPage extends CommonPage {
     }
 
     public void clickIconApprove() {
+        WebUI.zoomConcept("50%", "Chrome");
         WebUI.clickElement(iconApproveOfFirstItem);
         sleep(2);
         WebUI.clickElement(ApproveConfirmButton);
@@ -363,6 +365,7 @@ public class DeliveryReceiptPage extends CommonPage {
     }
 
     public void clickIconPrint() {
+        WebUI.zoomConcept("50%", "Chrome");
         WebUI.clickElement(iconPrintOfFirstItem);
         sleep(2);
         WebUI.clickElement(buttonYes);
@@ -378,6 +381,7 @@ public class DeliveryReceiptPage extends CommonPage {
     }
 
     public void clickIconCallBack (){
+        WebUI.zoomConcept("50%", "Chrome");
         WebUI.clickElement(iconCallBackOfFirstItem);
         WebUI.sleep(2);
     }
