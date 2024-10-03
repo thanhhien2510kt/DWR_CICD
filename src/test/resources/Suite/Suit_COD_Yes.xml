@@ -14,7 +14,7 @@
             <class name="com.DWR.POM.testcases.DepositReceiptTest">
                 <methods>
                     <include name="AddNewDepositReceipt"/>
-<!--                    <include name="linkToDeliveryCode"/>-->
+                    <include name="linkToDeliveryCode"/>
                 </methods>
             </class>
 
