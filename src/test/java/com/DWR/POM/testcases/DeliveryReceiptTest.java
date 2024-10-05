@@ -139,7 +139,7 @@ public class DeliveryReceiptTest extends BaseTest {
 
         WebUI.sleep(2);
 
-        String code = searchDeliveryReceipt("COD_No");
+        String code = searchDeliveryReceipt("COD_Yes");
 
         //B1: Send phiếu
         //getDeliveryReceiptPage().searchRecept(code);

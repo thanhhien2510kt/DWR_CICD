@@ -78,7 +78,6 @@ public class DeliveryReceiptPage extends CommonPage {
 
     private By iconCallBackOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Callback']");
     private By callBackConfirmButton = By.xpath("//button[@id='btnCallBack']");
-
     private By chooseStatus = By.xpath("//select[@id='choose_status']");
 
     private By toastMessage = By.xpath("//div[@id='toast-container']//button[normalize-space()='×']");
@@ -280,9 +279,9 @@ public class DeliveryReceiptPage extends CommonPage {
         sleep(1);
         WebUI.setText(quanity, "1");
         sleep(1);
-        WebUI.setText(price, "560000");
+        WebUI.setText(price, "91000000");
         sleep(1);
-        WebUI.setText(discount, "10");
+        WebUI.setText(discount, "0");
         sleep(1);
 
         WebUI.scrollToElement(driverManager.getDriver().findElement(savebutton));
