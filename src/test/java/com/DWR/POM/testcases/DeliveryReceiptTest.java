@@ -2,6 +2,7 @@ package com.DWR.POM.testcases;
 
 import com.DWR.Common.BaseTest;
 import com.DWR.Keywords.WebUI;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DeliveryReceiptTest extends BaseTest {
@@ -88,14 +89,12 @@ public class DeliveryReceiptTest extends BaseTest {
 
     @Test
     public void approveFlow_CDO (){
-        // Login
-        getLoginPage().LoginCRM_Excel(1,1);
-        clickDeliveryReceiptPage();
 
+        testAddNewDeliveryReceipt_CDO();
+        
+        //B1: Send phiếu
         WebUI.sleep(2);
         String code = searchDeliveryReceipt("CDO");
-
-        //B1: Send phiếu
         getDeliveryReceiptPage().searchRecept(code);
         getDeliveryReceiptPage().clickIconSend();
 
@@ -185,6 +184,23 @@ public class DeliveryReceiptTest extends BaseTest {
 
     }
 
+    @Test
+    public void checkCancellationReceipt (){
+        testAddNewDeliveryReceipt_COD_No();
+        WebUI.sleep(1);
 
+        // compare status after n+8 days = 8 minutes
+        WebUI.sleep(480);
+        getDeliveryReceiptPage().clickSearchButton();
+        WebUI.sleep(2);
+        String getStatus = getDeliveryReceiptPage().getStatus();
+
+        if(getStatus != "Đang giao hàng" || getStatus != "Giao hàng thành công" || getStatus != "Từ chối" || getStatus != "Đã hủy"  ){
+            // Assert.assertTrue(condition, message); condition phải trar về true or false
+            Assert.assertTrue(getStatus.contains("Chờ hủy") , "Error! Phiếu không chuyển sang tự hủy");
+        }
+
+
+    }
 
 }

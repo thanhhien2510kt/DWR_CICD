@@ -11,6 +11,8 @@ public class WarantyReceiptPage extends CommonPage {
     //Element Add
     private By buttonAddNew = By.xpath("//i[normalize-space()='add']");
 
+    private By storeCode = By.xpath("(//div/label[text()='Mã cửa hàng']/parent::div)/following-sibling::div//span[@role='combobox']");
+
     private By customerName = By.xpath("//input[@id='customer_name']");
     private By customerAddress = By.xpath("//input[@id='customer_address']");
     private By customerPhone = By.xpath("//input[@id='customer_phone']");
@@ -52,6 +54,12 @@ public class WarantyReceiptPage extends CommonPage {
 
     public void enterDataAddNewWarrantyReceipt() {
         WebUI.waitForPageLoaded();
+
+        WebUI.clickElement(storeCode);
+        WebUI.sleep(1);
+        WebUI.pressDOWN();
+        WebUI.pressENTER();
+        WebUI.sleep(1);
 
         WebUI.clickElement(customerName);
         WebUI.setText(customerName, "Rosy Dương");
@@ -98,6 +106,8 @@ public class WarantyReceiptPage extends CommonPage {
         WebUI.setText(replacementContent, "Pin");
 
 
+        WebUI.scrollToElement(getWebElement(savebutton));
+        WebUI.sleep(1);
         WebUI.clickElement(savebutton);
         WebUI.waitForPageLoaded();
 

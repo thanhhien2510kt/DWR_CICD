@@ -30,7 +30,7 @@ public class RefundRecieptTest extends BaseTest {
     @Test
     public void addNewRefundReceipt ()  {
         //Login
-        getLoginPage().LoginCRM_Excel(1, 1);
+        getLoginPage().LoginCRM_Excel(13, 13);
         clickRefundRecieptPage();
 
         //Tạo phiếu tiếp nhận
@@ -40,7 +40,7 @@ public class RefundRecieptTest extends BaseTest {
                 "Trả hàng",
                 "Special",
                 "COD", "Tiền mặt",
-                "550000", "1000000");
+                "1550000", "1000000");
         WebUI.sleep(3);
     }
 
@@ -83,6 +83,7 @@ public class RefundRecieptTest extends BaseTest {
 
 
     }
+
 
 
 

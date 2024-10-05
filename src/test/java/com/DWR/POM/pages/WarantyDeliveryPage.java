@@ -4,6 +4,7 @@ import com.DWR.Keywords.WebUI;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
+import static com.DWR.Keywords.WebUI.getWebElement;
 import static com.DWR.Keywords.WebUI.sleep;
 
 public class WarantyDeliveryPage extends CommonPage {
@@ -168,6 +169,8 @@ public class WarantyDeliveryPage extends CommonPage {
     }
 
     public void clickIconWarehose (){
+        WebUI.scrollToElement(getWebElement(iconWarehose));
+        WebUI.sleep(1);
         WebUI.clickElement(iconWarehose);
         WebUI.sleep(1);
         WebUI.clickElement(stockDate);
@@ -179,11 +182,15 @@ public class WarantyDeliveryPage extends CommonPage {
 
     public void clickIconWarrantyConfirmation (String status){
         if(status == "Successful"){
+            WebUI.scrollToElement(getWebElement(iconWarrantySuccessful));
+            WebUI.sleep(1);
             WebUI.clickElement(iconWarrantySuccessful);
             WebUI.sleep(1);
             WebUI.clickElement(deliveryDate);
             WebUI.clickElement(itemDeliveryDate_success);
         }else {
+            WebUI.scrollToElement(getWebElement(iconWarrantyFailed));
+            WebUI.sleep(1);
             WebUI.clickElement(iconWarrantyFailed);
             WebUI.sleep(1);
             WebUI.clickElement(deliveryDate);

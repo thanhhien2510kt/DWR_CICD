@@ -153,6 +153,7 @@ public class RefundRecieptPage {
 
     public void enterDataAddNewRefundReciept(String type, String situation, String paymentMethodPriorToReturn, String refundMethod, String price_before, String price_after )  {
         WebUI.waitForPageLoaded();
+        WebUI.zoomConcept("70%", "Chrome");
 
         if (type == "Đổi hàng"){
             WebUI.clickCheckBox(checkboxExchangeType,exchangeType);

@@ -66,6 +66,7 @@ public class DeliveryReceiptPage extends CommonPage {
     private By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
 
     private By deliveryReceiptCode = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[3]");
+    private By deliveryReceiptStatus = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[11]");
 
     private By iconSendOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Send']");
     private By buttonYes = By.xpath("//button[contains(text(),'Đồng ý')]");
@@ -347,6 +348,16 @@ public class DeliveryReceiptPage extends CommonPage {
 
         String DeliveryReceiptCode = WebUI.getElementText(deliveryReceiptCode);
         return DeliveryReceiptCode;
+    }
+
+    public String getStatus() {
+
+        String getStatus = WebUI.getElementText(deliveryReceiptStatus);
+        return getStatus;
+    }
+
+    public void clickSearchButton() {
+        WebUI.clickElement(searchButton);
     }
 
     public void clickIconSend() {
