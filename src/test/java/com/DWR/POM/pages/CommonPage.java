@@ -9,6 +9,7 @@ public class CommonPage {
     private LoginPage loginPage;
     private DashboardPage dashboardPage;
     private DeliveryReceiptPage deliveryReceiptPage;
+    private CancelledDeliveryReceiptPage cancelledDeliveryReceiptPage;
     private DepositReceiptPage depositReceiptPage;
     private WarantyReceiptPage warantyReceiptPage;
     private RefundRecieptPage refundRecieptPage;
@@ -33,6 +34,13 @@ public class CommonPage {
             deliveryReceiptPage = new DeliveryReceiptPage();
         }
         return deliveryReceiptPage;
+    }
+
+    public CancelledDeliveryReceiptPage getCancelledDeliveryReceiptPage() {
+        if(cancelledDeliveryReceiptPage == null){
+            cancelledDeliveryReceiptPage = new CancelledDeliveryReceiptPage();
+        }
+        return cancelledDeliveryReceiptPage;
     }
 
     public DepositReceiptPage getDepositReceiptPage() {
@@ -72,6 +80,7 @@ public class CommonPage {
 
     public By menuDeliveryInfo = By.xpath("//span[normalize-space()='Thông tin giao hàng']");
     public By menuDeliveryReceiptPage = By.xpath("//a[normalize-space()='Phiếu giao hàng']");
+    public By menuCancelledDeliveryReceiptPage = By.xpath("//a[normalize-space()='Phiếu giao hàng bị hủy']");
     public By menuDepositReceipt = By.xpath("//a[contains(text(),'Phiếu thu tiền cọc')]");
 
     public By menuWarantyInfo = By.xpath("//span[contains(text(),'Thông tin bảo hành')]");
@@ -92,6 +101,13 @@ public class CommonPage {
         WebUI.waitForPageLoaded();
         WebUI.clickElement(menuDeliveryInfo,3);
         WebUI.clickElement(menuDeliveryReceiptPage,3);
+        return new DeliveryReceiptPage();
+    }
+
+    public DeliveryReceiptPage clickCancelledDeliveryReceiptPage(){
+        WebUI.waitForPageLoaded();
+        WebUI.clickElement(menuDeliveryInfo,3);
+        WebUI.clickElement(menuCancelledDeliveryReceiptPage,3);
         return new DeliveryReceiptPage();
     }
 

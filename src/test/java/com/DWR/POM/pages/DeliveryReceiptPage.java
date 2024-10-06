@@ -64,6 +64,7 @@ public class DeliveryReceiptPage extends CommonPage {
     private By searchDepositStatus = By.xpath("(//div/label[text()='Trạng thái phiếu cọc']/parent::div)/following-sibling::div//span[@role='combobox']");
 
     private By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
+    private By detailButton = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Detail']");
 
     private By deliveryReceiptCode = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[3]");
     private By deliveryReceiptStatus = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[11]");
@@ -82,6 +83,9 @@ public class DeliveryReceiptPage extends CommonPage {
 
     private By toastMessage = By.xpath("//div[@id='toast-container']//button[normalize-space()='×']");
 
+    // Element in detail page
+    private By totalPrice = By.xpath("//input[@id='total_price']");
+    private By returnButton = By.xpath("//button[contains(text(),'Quay lại')]");
 
     //Hàm xử lý cho trang DeliveryReceiptPage
 
@@ -279,7 +283,7 @@ public class DeliveryReceiptPage extends CommonPage {
         sleep(1);
         WebUI.setText(quanity, "1");
         sleep(1);
-        WebUI.setText(price, "91000000");
+        WebUI.setText(price, "3000000");
         sleep(1);
         WebUI.setText(discount, "0");
         sleep(1);
@@ -349,15 +353,36 @@ public class DeliveryReceiptPage extends CommonPage {
         return DeliveryReceiptCode;
     }
 
-    public String getStatus() {
+    public String getStatusOfFistItemInTable() {
 
         String getStatus = WebUI.getElementText(deliveryReceiptStatus);
+        return getStatus;
+    }
+
+    public String getTotalPriceOfFistItemInTable() {
+
+        WebUI.scrollToElement(getWebElement(totalPrice));
+        WebUI.sleep(1);
+        String getStatus = WebUI.getElementAttribute(totalPrice, "value");
         return getStatus;
     }
 
     public void clickSearchButton() {
         WebUI.clickElement(searchButton);
     }
+
+    public void clickDetailButton() {
+        WebUI.clickElement(detailButton);
+        WebUI.sleep(2);
+    }
+
+    public void clickReturnButton() {
+        WebUI.scrollToElement(getWebElement(returnButton));
+        WebUI.sleep(1);
+        WebUI.clickElement(returnButton);
+        WebUI.sleep(2);
+    }
+
 
     public void clickIconSend() {
         WebUI.clickElement(iconSendOfFirstItem);
