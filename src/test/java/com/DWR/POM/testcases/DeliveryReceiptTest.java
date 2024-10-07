@@ -140,7 +140,7 @@ public class DeliveryReceiptTest extends BaseTest {
 
         //B1 G2 Cashier duyệt kiểm soát
         getLoginPage().Logout("G1_FL");
-        getLoginPage().LoginCRM_Excel(8,8);
+        getLoginPage().LoginCRM_Excel(7,7);
         clickDeliveryReceiptPage();
         getDeliveryReceiptPage().searchRecept(code);
         getDeliveryReceiptPage().clickIconApprove();
