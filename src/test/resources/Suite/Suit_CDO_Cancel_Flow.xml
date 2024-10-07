@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Suit_CDO_Cancel_Flow" verbose="1"  >
+
+    <test name="Suit_CDO1">
+        <classes>
+            <class name="com.DWR.POM.testcases.DeliveryReceiptTest">
+                <methods>
+                    <include name="approveFlow_CDO" />
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="Suit_CDO2">
+        <classes>
+            <class name="com.DWR.POM.testcases.CancelledDeliveryReceiptTest">
+                <methods>
+                    <include name="cancellation_CDO" />
+                    <include name="cancellationFlow_CDO" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>
+

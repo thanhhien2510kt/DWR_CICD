@@ -123,7 +123,6 @@ public class DeliveryReceiptTest extends BaseTest {
 
     }
 
-
     @Test
     public void approveFlow_COD (){
         // Login
@@ -167,13 +166,6 @@ public class DeliveryReceiptTest extends BaseTest {
         getDeliveryReceiptPage().clickIconCallBack_exportGoods();
         getDeliveryReceiptPage().closeToastMessage();
 
-        //B5: G2 OP - Hủy CDO
-        getLoginPage().Logout("G1_MMD");
-        getLoginPage().LoginCRM_Excel(2,2);
-        clickDeliveryReceiptPage();
-        getDeliveryReceiptPage().searchRecept(code);
-        getDeliveryReceiptPage().clickIconCallBack();
-        getDeliveryReceiptPage().clickIconCallBack_cancelReceipt();
 
     }
 
@@ -188,7 +180,7 @@ public class DeliveryReceiptTest extends BaseTest {
         WebUI.sleep(2);
         String getStatus = getDeliveryReceiptPage().getStatusOfFistItemInTable();
 
-        if(getStatus != "Đang giao hàng" || getStatus != "Giao hàng thành công" || getStatus != "Từ chối" || getStatus != "Đã hủy"  ){
+        if(getStatus != "Giao hàng thành công" || getStatus != "Từ chối" || getStatus != "Đã hủy"  ){
             // Assert.assertTrue(condition, message); condition phải trar về true or false
             Assert.assertTrue(getStatus.contains("Chờ hủy") , "Error! Phiếu không chuyển sang tự hủy");
         }

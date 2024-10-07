@@ -1,0 +1,55 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Suit_COD_Yes_CancelFlow" verbose="1"   >
+
+    <test name="Suit_COD_Yes_CancelFlow" >
+        <classes>
+            <class name="com.DWR.POM.testcases.DeliveryReceiptTest">
+                <methods>
+                    <include name="testAddNewDeliveryReceipt_COD_Yes"/>
+                </methods>
+            </class>
+
+
+
+
+        </classes>
+    </test>
+
+    <test name="Suit_COD_Yes_CancelFlow1">
+        <classes>
+            <class name="com.DWR.POM.testcases.DepositReceiptTest" >
+                <methods>
+                    <include name="AddNewDepositReceipt"  />
+                    <include name="linkToDeliveryCode"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Suit_COD_Yes_CancelFlow2">
+        <classes>
+            <class name="com.DWR.POM.testcases.DeliveryReceiptTest">
+                <methods>
+                    <include name="approveFlow_COD"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Suit_COD_Yes_CancelFlow3">
+        <classes>
+            <class name="com.DWR.POM.testcases.CancelledDeliveryReceiptTest">
+                <methods>
+                    <include name="cancellation" />
+                    <include name="cancellationFlow_CDO" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+
+</suite>
