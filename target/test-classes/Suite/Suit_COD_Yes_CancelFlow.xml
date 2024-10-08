@@ -10,10 +10,6 @@
                     <include name="testAddNewDeliveryReceipt_COD_Yes"/>
                 </methods>
             </class>
-
-
-
-
         </classes>
     </test>
 
@@ -28,7 +24,8 @@
         </classes>
     </test>
 
-    <test name="Suit_COD_Yes_CancelFlow2">
+    <test name="Suit_COD_Ye
+    s_CancelFlow2">
         <parameter name="type" value="COD_Yes"></parameter>
         <classes>
             <class name="com.DWR.POM.testcases.DeliveryReceiptTest">

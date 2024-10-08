@@ -14,14 +14,14 @@ public class CancelledDeliveryReceiptTest extends BaseTest {
         // G2 OP - Hủy CDO
         getLoginPage().LoginCRM_Excel(2,2);
         clickDeliveryReceiptPage();
-        getDeliveryReceiptPage().searchRecept(type, "Rosy Dương", deposit);
+        getCancelledDeliveryReceiptPage().searchRecept(type, "Rosy Dương", deposit);
 
-        getDeliveryReceiptPage().clickIconCallBack();
-        getDeliveryReceiptPage().clickIconCallBack_cancelReceipt();
-        getDeliveryReceiptPage().closeToastMessage();
+        getCancelledDeliveryReceiptPage().clickIconCallBack();
+        getCancelledDeliveryReceiptPage().clickIconCallBack_cancelReceipt(type);
+        getCancelledDeliveryReceiptPage().closeToastMessage();
 
         // check status
-        String status = getDeliveryReceiptPage().getStatusOfFistItemInTable();
+        String status = getCancelledDeliveryReceiptPage().getStatusOfFistItemInTable();
         Assert.assertTrue(status.contains("Chờ hủy") , "Error! Phiếu không chuyển sang tự hủy");
 
 
@@ -73,6 +73,19 @@ public class CancelledDeliveryReceiptTest extends BaseTest {
             getCancelledDeliveryReceiptPage().searchRecept(type, "Rosy Dương", deposit);
             getCancelledDeliveryReceiptPage().clickIconApprove();
         }
+        // G1 đến G3 CS xác nhận hủy
+
+    }
+
+    @Test(priority = 3)
+    @Parameters({"type","deposit"})
+    public void confirmCancellation (String type, String deposit){
+        // G1 đến G3 CS xác nhận hủy
+        getLoginPage().LoginCRM_Excel(13,13);
+        getCancelledDeliveryReceiptPage();
+
+        getCancelledDeliveryReceiptPage().searchRecept(type, "Rosy Dương", deposit);
+        getCancelledDeliveryReceiptPage().clickIconApprove();
 
     }
 

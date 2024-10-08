@@ -14,7 +14,7 @@
         </classes>
     </test>
 
-    <test name="Suit_COD_No_CancelFlow2">
+    <test name="Suit_CDO_CancelFlow2">
         <parameter name="type" value="CDO"></parameter>
         <parameter name="deposit" value="Other"></parameter>
         <classes>
@@ -22,6 +22,7 @@
                 <methods>
                     <include name="cancellation" />
                     <include name="cancellationFlow" />
+                    <include name="confirmCancellation" />
                 </methods>
             </class>
         </classes>

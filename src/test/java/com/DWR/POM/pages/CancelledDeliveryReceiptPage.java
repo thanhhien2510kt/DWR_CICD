@@ -425,10 +425,13 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
         WebUI.sleep(2);
     }
 
-    public void clickIconCallBack_cancelReceipt (){
+    public void clickIconCallBack_cancelReceipt (String type){
         WebUI.clickElement(chooseStatus);
         WebUI.sleep(2);
-        WebUI.pressDOWN();
+        if ( type == "CDO"){
+            WebUI.pressDOWN();
+            System.out.println("Ở đây");
+        }
         WebUI.pressENTER();
         WebUI.clickElement(callBackConfirmButton);
     }

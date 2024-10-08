@@ -429,7 +429,7 @@ public class DeliveryReceiptPage extends CommonPage {
     public void clickIconCallBack_cancelReceipt (){
         WebUI.clickElement(chooseStatus);
         WebUI.sleep(2);
-        //WebUI.pressDOWN();
+        WebUI.pressDOWN();
         WebUI.pressENTER();
         WebUI.clickElement(callBackConfirmButton);
         WebUI.sleep(2);
