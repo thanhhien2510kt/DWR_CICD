@@ -10,8 +10,8 @@ import java.util.Map;
 public class RefundRecieptTest extends BaseTest {
 
     @Test
-    @Parameters({"type", "situation", "paymentMethodPriorToReturn", "refundMethod", "price_before", "price_after"})
-    public void addNewRefundReceipt_param (String type, String situation, String paymentMethodPriorToReturn, String refundMethod, String price_before, String price_after) {
+    @Parameters({"type", "term","situation", "paymentMethodPriorToReturn", "refundMethod", "price_before", "price_after"})
+    public void addNewRefundReceipt_param (String type, String term, String situation, String paymentMethodPriorToReturn, String refundMethod, String price_before, String price_after) {
         //Login
         getLoginPage().LoginCRM_Excel(1, 1);
         clickRefundRecieptPage();
@@ -21,6 +21,7 @@ public class RefundRecieptTest extends BaseTest {
         getRefundRecieptPage().clickAddNewButton();
         getRefundRecieptPage().enterDataAddNewRefundReciept(
                 type,
+                term,
                 situation,
                 paymentMethodPriorToReturn, refundMethod,
                 price_before, price_after);
@@ -37,10 +38,11 @@ public class RefundRecieptTest extends BaseTest {
         WebUI.sleep(2);
         getRefundRecieptPage().clickAddNewButton();
         getRefundRecieptPage().enterDataAddNewRefundReciept(
-                "Trả hàng",
-                "Special",
+                "Đổi hàng",
+                "Khác",
+                "Normal",
                 "COD", "Tiền mặt",
-                "1550000", "1000000");
+                "1000000", "500000");
         WebUI.sleep(3);
     }
 

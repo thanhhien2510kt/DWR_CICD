@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Suit_COD_No_CancelFlow" verbose="1"   >
+
+    <test name="Suit_COD_No_CancelFlow1" >
+        <parameter name="type" value="COD_No"></parameter>
+        <classes>
+            <class name="com.DWR.POM.testcases.DeliveryReceiptTest">
+                <methods>
+                    <include name="testAddNewDeliveryReceipt_COD_No"/>
+                    <include name="approveFlow_COD"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+
+    <test name="Suit_COD_No_CancelFlow4">
+        <parameter name="type" value="COD"></parameter>
+        <parameter name="deposit" value="No"></parameter>
+        <classes>
+            <class name="com.DWR.POM.testcases.CancelledDeliveryReceiptTest">
+                <methods>
+                    <include name="cancellation" />
+                    <include name="cancellationFlow" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+
+</suite>

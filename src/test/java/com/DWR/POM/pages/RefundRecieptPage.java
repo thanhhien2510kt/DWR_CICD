@@ -26,6 +26,8 @@ public class RefundRecieptPage {
     private By invoiceCode = By.xpath("//input[@id='invoice_code']");
     private By boughtDate = By.xpath("//input[@id='bought_date']");
     private By itemBoughtDate = By.xpath("//div[@aria-label='"+currentDay()+"']");
+    private By ReturnAndExchangeTerms = By.xpath("//label[contains(text(),'Đổi hàng cùng loại cùng giá')]");
+    private By checkboxReturnAndExchangeTerms = By.xpath("//input[@id='returns_same']");
     private By reasonReturn = By.xpath("//textarea[@id='reason_return']");
 
     private By checkboxNormal = By.xpath("//input[@id='exchange_return_payment_default']");
@@ -151,11 +153,11 @@ public class RefundRecieptPage {
 
 
 
-    public void enterDataAddNewRefundReciept(String type, String situation, String paymentMethodPriorToReturn, String refundMethod, String price_before, String price_after )  {
+    public void enterDataAddNewRefundReciept(String type, String term, String situation, String paymentMethodPriorToReturn, String refundMethod, String price_before, String price_after )  {
         WebUI.waitForPageLoaded();
         WebUI.zoomConcept("70%", "Chrome");
 
-        if (type == "Đổi hàng"){
+        if (type == "Đổi hàng" ){
             WebUI.clickCheckBox(checkboxExchangeType,exchangeType);
         }else {
             WebUI.clickCheckBox(checkboxGoodsreturnType,goodsreturnType);
@@ -215,7 +217,25 @@ public class RefundRecieptPage {
         WebUI.setText(seri_invoid,"123456789");
         WebUI.sleep(2);
 
-        if(type == "Đổi hàng"){
+        if(type == "Đổi hàng" & term == "Đổi hàng cùng loại cùng giá"){
+            WebUI.clickCheckBox(checkboxReturnAndExchangeTerms, ReturnAndExchangeTerms );
+
+            WebUI.clickElement(addButton_update);
+            WebUI.sleep(1);
+
+            WebUI.clickElement(quantity_update);
+            WebUI.setText(quantity_update,"1");
+            WebUI.sleep(1);
+
+
+            WebUI.clickElement(seri_update);
+            WebUI.setText(seri_update,"123456789");
+
+        } else if (type == "Đổi hàng" & term == "Đổi hàng khác loại khác giá" ) {
+            WebUI.clickCheckBox(
+                    By.xpath("//input[@id='returns_difference']"),
+                    By.xpath("//label[contains(text(),'"+term+"')]")
+                    );
 
             WebUI.clickElement(addButton_update);
             WebUI.sleep(1);
@@ -233,8 +253,31 @@ public class RefundRecieptPage {
 
             WebUI.clickElement(seri_update);
             WebUI.setText(seri_update,"123456789");
+        } else if (type == "Đổi hàng" & term == "Khác" ) {
+            WebUI.clickCheckBox(
+                    By.xpath("//input[@id='returns_other']"),
+                    By.xpath("//input[@id='returns_other']/following-sibling::label")
+            );
+            WebUI.sleep(1);
 
+            WebUI.clickElement(addButton_update);
+            WebUI.sleep(1);
+
+            WebUI.clickElement(SKU_update);
+            WebUI.sleep(3);
+            WebUI.pressENTER();
+
+            WebUI.clickElement(quantity_update);
+            WebUI.setText(quantity_update,"1");
+
+            WebUI.clickElement(price_update);
+            WebUI.setText(price_update,price_after);
+            WebUI.sleep(2);
+
+            WebUI.clickElement(seri_update);
+            WebUI.setText(seri_update,"123456789");
         }
+
 
         WebUI.scrollToElementOnBottom(saveButton);
         WebUI.sleep(2);

@@ -2,12 +2,14 @@ package com.DWR.POM.testcases;
 
 import com.DWR.Common.BaseTest;
 import com.DWR.Keywords.WebUI;
+import com.beust.jcommander.Parameter;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class DeliveryReceiptTest extends BaseTest {
 
-    @Test
+    @Test(priority = 1)
     public void testAddNewDeliveryReceipt_CDO (){
         //Login
         getLoginPage().LoginCRM_Excel(1,1);
@@ -87,7 +89,7 @@ public class DeliveryReceiptTest extends BaseTest {
         return deliveryReceiptCode;
     }
 
-    @Test
+    @Test(priority = 2)
     public void approveFlow_CDO (){
 
         testAddNewDeliveryReceipt_CDO();
@@ -124,14 +126,15 @@ public class DeliveryReceiptTest extends BaseTest {
     }
 
     @Test
-    public void approveFlow_COD (){
+    @Parameters({"type"})
+    public void approveFlow_COD (String type){
         // Login
         getLoginPage().LoginCRM_Excel(1,1);
         clickDeliveryReceiptPage();
 
         WebUI.sleep(2);
 
-        String code = searchDeliveryReceipt("COD_Yes");
+        String code = searchDeliveryReceipt(type);
 
         //B1: Send phiếu
         //getDeliveryReceiptPage().searchRecept(code);

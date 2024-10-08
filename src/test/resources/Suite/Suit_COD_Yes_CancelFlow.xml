@@ -29,6 +29,7 @@
     </test>
 
     <test name="Suit_COD_Yes_CancelFlow2">
+        <parameter name="type" value="COD_Yes"></parameter>
         <classes>
             <class name="com.DWR.POM.testcases.DeliveryReceiptTest">
                 <methods>
@@ -39,11 +40,13 @@
     </test>
 
     <test name="Suit_COD_Yes_CancelFlow3">
+        <parameter name="type" value="COD"></parameter>
+        <parameter name="deposit" value="Yes"></parameter>
         <classes>
             <class name="com.DWR.POM.testcases.CancelledDeliveryReceiptTest">
                 <methods>
-                    <include name="cancellation_COD" />
-                    <include name="cancellationFlow_COD" />
+                    <include name="cancellation" />
+                    <include name="cancellationFlow" />
                 </methods>
             </class>
         </classes>

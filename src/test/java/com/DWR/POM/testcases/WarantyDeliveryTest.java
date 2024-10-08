@@ -64,7 +64,7 @@ public class WarantyDeliveryTest extends BaseTest {
 
         //G4 phê duyệt lần 3
         getLoginPage().Logout("G4_FL");
-        getLoginPage().LoginCRM_Excel(12, 12);
+        getLoginPage().LoginCRM_Excel(11, 11);
         clickWarantyDeliveryPage();
         getWarantyDeliveryPage().searchWarrantyDeliveryReceipt("Rosy Dương");
         getWarantyDeliveryPage().clickApproveButton_3 ();
@@ -79,7 +79,7 @@ public class WarantyDeliveryTest extends BaseTest {
 
         //G3 MMD nhập kho
         getLoginPage().Logout("G1_FL");
-        getLoginPage().LoginCRM_Excel(12, 12);
+        getLoginPage().LoginCRM_Excel(11, 11);
         clickWarantyDeliveryPage();
         getWarantyDeliveryPage().searchWarrantyDeliveryReceipt("Rosy Dương");
         getWarantyDeliveryPage().clickIconDetail();
