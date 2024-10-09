@@ -141,8 +141,8 @@ public class DeliveryReceiptPage extends CommonPage {
 
         WebUI.clickElement(selectSKU);
         WebUI.sleep(3);
-        WebUI.setText(SearchSKU, "023");
-        sleep(2);
+        //WebUI.setText(SearchSKU, "023");
+        //sleep(2);
         WebUI.pressENTER();
         sleep(5);
         WebUI.setText(quayHang, "A");
@@ -247,17 +247,17 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.clickElement(provinceName);
         sleep(1);
         WebUI.pressENTER();
-        sleep(1);
+        sleep(2);
 
         WebUI.clickElement(districtrName);
         sleep(1);
         WebUI.pressENTER();
-        sleep(1);
+        sleep(2);
 
         WebUI.clickElement(wardName);
         sleep(1);
         WebUI.pressENTER();
-        sleep(1);
+        sleep(2);
 
         WebUI.clickElement(selectDeliveryDate);
         sleep(3);

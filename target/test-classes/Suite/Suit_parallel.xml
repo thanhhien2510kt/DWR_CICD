@@ -3,16 +3,16 @@
 
 <suite name="Suit_COD_Yes" verbose="1"  >
 
-    <test name="Suit_COD_Yes" parallel="classes">
+    <test name="Suit_COD_Yes" parallel="methods">
         <classes>
-            <class name="com.DWR.POM.testcases.DepositReceiptTest">
+            <class name="com.DWR.POM.testcases.DeliveryReceiptTest">
                 <methods>
-                    <include name="AddNewDepositReceipt"/>
+                    <include name="testAddNewDeliveryReceipt_CDO"/>
                 </methods>
             </class>
-            <class name="com.DWR.POM.testcases.DepositReceiptTest">
+            <class name="com.DWR.POM.testcases.DeliveryReceiptTest">
                 <methods>
-                    <include name="AddNewDepositReceipt"/>
+                    <include name="testAddNewDeliveryReceipt_COD_No"/>
                 </methods>
             </class>
 
