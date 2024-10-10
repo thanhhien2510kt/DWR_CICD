@@ -173,13 +173,39 @@ public class DeliveryReceiptTest extends BaseTest {
     }
 
     @Test
-    public void checkCancellationReceipt (){
+    public void checkCancellationReceipt_8p (){
         testAddNewDeliveryReceipt_COD_No();
         WebUI.sleep(1);
 
         // compare status after n+8 days = 8 minutes
         WebUI.sleep(480);
-        getDeliveryReceiptPage().clickSearchButton();
+        getDeliveryReceiptPage().searchRecept("COD", "Rosy Dương", "No");
+        WebUI.sleep(2);
+        String getStatus = getDeliveryReceiptPage().getStatusOfFistItemInTable();
+
+        if(getStatus != "Giao hàng thành công" || getStatus != "Từ chối" || getStatus != "Đã hủy"  ){
+            // Assert.assertTrue(condition, message); condition phải trar về true or false
+            Assert.assertTrue(getStatus.contains("Chờ hủy") , "Error! Phiếu không chuyển sang tự hủy");
+        }
+
+
+    }
+    @Test
+    public void checkCancellationReceipt_4p (){
+        //Login
+        getLoginPage().LoginCRM_Excel(1,1);
+        clickDeliveryReceiptPage();
+
+        //tạo phiếu COD (không cọc)
+        WebUI.sleep(3);
+        getDeliveryReceiptPage().clickAddNewButton();
+        WebUI.waitForPageLoaded();
+        getDeliveryReceiptPage().enterDataAddNewCOD_No();
+        WebUI.sleep(1);
+
+        // compare status after n+8 days = 8 minutes
+        WebUI.sleep(240);
+        getDeliveryReceiptPage().searchRecept("COD", "Rosy Dương", "No");
         WebUI.sleep(2);
         String getStatus = getDeliveryReceiptPage().getStatusOfFistItemInTable();
 
