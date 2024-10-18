@@ -22,8 +22,8 @@ public class WarantyDeliveryPage extends CommonPage {
     private By numberProduct = By.xpath("//input[@id='number_product']");
 
     private By SKU = By.xpath("//tbody//th[2]//span[contains(text(),'Chọn mã sản phẩm')]");
-    private By quayHang = By.xpath("//tbody//th[4]/input[@name='prd_counter']");
-    private By nganhHang = By.xpath("//tbody//th[5]/input[@name='prd_department']");
+    private By quayHang = By.xpath("//tbody//th[4]//span");
+    private By nganhHang = By.xpath("//tbody//th[5]//span");
     private By quantity = By.xpath("//tbody//th[6]/input[@name='prd_quantity']");
     private By seri = By.xpath("//tbody//th[7]/input[@name='prd_seri']");
 
@@ -80,12 +80,15 @@ public class WarantyDeliveryPage extends CommonPage {
             WebUI.pressENTER();
             WebUI.sleep(3);
 
+
             WebUI.clickElement(quayHang);
-            WebUI.setText(quayHang, "A");
+            sleep(1);
+            WebUI.pressENTER();
             WebUI.sleep(1);
 
             WebUI.clickElement(nganhHang);
-            WebUI.setText(nganhHang, "FL");
+            sleep(1);
+            WebUI.pressENTER();
             WebUI.sleep(1);
 
             WebUI.clickElement(quantity);

@@ -11,6 +11,7 @@ public class LoginTest extends BaseTest {
     private ExcelHelper excelHelper;
     @Test
     public void testLoginSucess (){
+        getLoginPage().LoginCRM_Excel(1,1);
         loginPage  = new LoginPage();
 
         ExcelHelper excelHelper = new ExcelHelper();

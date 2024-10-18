@@ -46,8 +46,8 @@ public class DeliveryReceiptPage extends CommonPage {
     private By SearchSKU = By.xpath("//input[@placeholder='Nhập từ khóa tìm kiếm']");
     private By itemSKU = By.xpath("//span[@title='02478333']");
 
-    private By quayHang = By.xpath("//tbody//th[4]/input");
-    private By nganhHang = By.xpath("//tbody//th[5]/input");
+    private By quayHang = By.xpath("//tbody//th[4]//span");
+    private By nganhHang = By.xpath("//tbody//th[5]//span");
     private By quanity = By.xpath("//tbody//th[6]/input");
     private By price = By.xpath("//tbody//th[7]/input");
     private By discount = By.xpath("//tbody//th[8]/input");
@@ -145,9 +145,11 @@ public class DeliveryReceiptPage extends CommonPage {
         //sleep(2);
         WebUI.pressENTER();
         sleep(5);
-        WebUI.setText(quayHang, "A");
+        WebUI.clickElement(quayHang);
         sleep(1);
-        WebUI.setText(nganhHang, "FL");
+        WebUI.pressENTER();
+        sleep(1);
+        WebUI.clickElement(nganhHang);
         sleep(1);
         WebUI.setText(quanity, "1");
         sleep(1);
@@ -201,10 +203,12 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.setText(SearchSKU, "023");
         sleep(2);
         WebUI.pressENTER();
-        sleep(5);
-        WebUI.setText(quayHang, "A");
+        sleep(4);
+        WebUI.clickElement(quayHang);
         sleep(1);
-        WebUI.setText(nganhHang, "FL");
+        WebUI.pressENTER();
+        sleep(1);
+        WebUI.clickElement(nganhHang);
         sleep(1);
         WebUI.setText(quanity, "1");
         sleep(1);
@@ -277,10 +281,13 @@ public class DeliveryReceiptPage extends CommonPage {
         sleep(2);
         WebUI.pressENTER();
         sleep(5);
-        WebUI.setText(quayHang, "A");
+        WebUI.clickElement(quayHang);
         sleep(1);
-        WebUI.setText(nganhHang, "FL");
+        WebUI.pressENTER();
         sleep(1);
+        WebUI.clickElement(nganhHang);
+        sleep(1);
+        WebUI.pressENTER();
         WebUI.setText(quanity, "1");
         sleep(1);
         WebUI.setText(price, "3000000");
