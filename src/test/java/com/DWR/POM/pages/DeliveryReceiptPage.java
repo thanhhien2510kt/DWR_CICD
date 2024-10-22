@@ -151,6 +151,8 @@ public class DeliveryReceiptPage extends CommonPage {
         sleep(1);
         WebUI.clickElement(nganhHang);
         sleep(1);
+        WebUI.pressENTER();
+        sleep(1);
         WebUI.setText(quanity, "1");
         sleep(1);
         WebUI.setText(price, "560000");

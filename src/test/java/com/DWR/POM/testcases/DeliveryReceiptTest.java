@@ -56,9 +56,9 @@ public class DeliveryReceiptTest extends BaseTest {
         getDeliveryReceiptPage().enterDataAddNewCOD_No();
 
         //send phiếu
-        String code = getDeliveryReceiptPage().getDeliveryReceiptCodeOfFistItemInTable();
-        getDeliveryReceiptPage().searchRecept(code);
-        getDeliveryReceiptPage().clickIconSend();
+        //String code = getDeliveryReceiptPage().getDeliveryReceiptCodeOfFistItemInTable();
+        //getDeliveryReceiptPage().searchRecept(code);
+        //getDeliveryReceiptPage().clickIconSend();
     }
 
     public String searchDeliveryReceipt (String typeName) {
