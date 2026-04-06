@@ -17,6 +17,11 @@ import org.testng.annotations.*;
 
 public class BaseTest extends CommonPage {
 
+    /*
+    Hàm createDriver chạy trước mỗi test method.
+    Lấy tham số browser từ file testng.xml.
+    Nếu không truyền thì dùng mặc định "chrome"
+    * */
     @BeforeMethod
     @Parameters({"browser"})
     public void createDriver(@Optional("chrome") String browser) {
@@ -28,7 +33,7 @@ public class BaseTest extends CommonPage {
             driver = setupDriver(browser);
         }
 
-        driverManager.setDriver(driver); // gán giá trị driver và trong thread local
+        driverManager.setDriver(driver); // gán giá trị driver vào trong thread local
     }
 
     public WebDriver setupDriver(String browserName) {
@@ -76,5 +81,19 @@ public class BaseTest extends CommonPage {
         driverManager.quit();
     }
 
-
+    /*
+    * Sau mỗi test (@AfterMethod), gọi driverManager.quit() để:
+    * Đóng browser (driver.quit()).
+    * Xóa driver khỏi ThreadLocal.
+    * */
 }
+
+
+/*
+Class BaseTest chịu trách nhiệm:
+- Trước mỗi test → tạo driver theo config (config.properties hoặc testng.xml).
+- Lưu driver vào driverManager (ThreadLocal).
+- Sau mỗi test → đóng browser.
+- Dùng chung listener để log/report.
+*/
+

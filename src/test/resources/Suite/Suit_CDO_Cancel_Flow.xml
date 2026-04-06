@@ -1,28 +1,25 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 
-<suite name="Suit_CDO_CancelFlow" verbose="1"   >
+<suite name="Suit_CDO_Cancel_Flow" verbose="1"   >
 
-    <test name="Suit_CDO_CancelFlow1" >
+    <test name="Add Approve and Confirm Delivery Flow">
+        <parameter name="type" value="CDO"/>
         <classes>
             <class name="com.DWR.POM.testcases.DeliveryReceiptTest">
                 <methods>
+                    <include name="testAddNewDeliveryReceipt_CDO"/>
                     <include name="approveFlow_CDO"/>
+                    <include name="cancellation"/>
                 </methods>
             </class>
 
-        </classes>
-    </test>
-
-    <test name="Suit_CDO_CancelFlow2">
-        <parameter name="type" value="CDO"></parameter>
-        <parameter name="deposit" value="Other"></parameter>
-        <classes>
             <class name="com.DWR.POM.testcases.CancelledDeliveryReceiptTest">
+                <parameter name="type" value="CDO"/>
+                <parameter name="deposit" value="Other"/>
                 <methods>
-                    <include name="cancellation" />
-                    <include name="cancellationFlow" />
-                    <include name="confirmCancellation" />
+                    <include name="cancellationFlow"/>
+                    <include name="confirmCancellation"/>
                 </methods>
             </class>
         </classes>

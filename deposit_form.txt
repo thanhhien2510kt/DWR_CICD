@@ -1,0 +1,1889 @@
+<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head>
+    <title>Booking App</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">:host,:root{--fa-font-solid:normal 900 1em/1 "Font Awesome 6 Solid";--fa-font-regular:normal 400 1em/1 "Font Awesome 6 Regular";--fa-font-light:normal 300 1em/1 "Font Awesome 6 Light";--fa-font-thin:normal 100 1em/1 "Font Awesome 6 Thin";--fa-font-duotone:normal 900 1em/1 "Font Awesome 6 Duotone";--fa-font-brands:normal 400 1em/1 "Font Awesome 6 Brands"}svg:not(:host).svg-inline--fa,svg:not(:root).svg-inline--fa{overflow:visible;box-sizing:content-box}.svg-inline--fa{display:var(--fa-display,inline-block);height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-2xs{vertical-align:.1em}.svg-inline--fa.fa-xs{vertical-align:0}.svg-inline--fa.fa-sm{vertical-align:-.0714285705em}.svg-inline--fa.fa-lg{vertical-align:-.2em}.svg-inline--fa.fa-xl{vertical-align:-.25em}.svg-inline--fa.fa-2xl{vertical-align:-.3125em}.svg-inline--fa.fa-pull-left{margin-right:var(--fa-pull-margin,.3em);width:auto}.svg-inline--fa.fa-pull-right{margin-left:var(--fa-pull-margin,.3em);width:auto}.svg-inline--fa.fa-li{width:var(--fa-li-width,2em);top:.25em}.svg-inline--fa.fa-fw{width:var(--fa-fw-width,1.25em)}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:var(--fa-counter-background-color,#ff253a);border-radius:var(--fa-counter-border-radius,1em);box-sizing:border-box;color:var(--fa-inverse,#fff);line-height:var(--fa-counter-line-height,1);max-width:var(--fa-counter-max-width,5em);min-width:var(--fa-counter-min-width,1.5em);overflow:hidden;padding:var(--fa-counter-padding,.25em .5em);right:var(--fa-right,0);text-overflow:ellipsis;top:var(--fa-top,0);-webkit-transform:scale(var(--fa-counter-scale,.25));transform:scale(var(--fa-counter-scale,.25));-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:var(--fa-bottom,0);right:var(--fa-right,0);top:auto;-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:var(--fa-bottom,0);left:var(--fa-left,0);right:auto;top:auto;-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{top:var(--fa-top,0);right:var(--fa-right,0);-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:var(--fa-left,0);right:auto;top:var(--fa-top,0);-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:top left;transform-origin:top left}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-2xs{font-size:.625em;line-height:.1em;vertical-align:.225em}.fa-xs{font-size:.75em;line-height:.0833333337em;vertical-align:.125em}.fa-sm{font-size:.875em;line-height:.0714285718em;vertical-align:.0535714295em}.fa-lg{font-size:1.25em;line-height:.05em;vertical-align:-.075em}.fa-xl{font-size:1.5em;line-height:.0416666682em;vertical-align:-.125em}.fa-2xl{font-size:2em;line-height:.03125em;vertical-align:-.1875em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:var(--fa-li-margin,2.5em);padding-left:0}.fa-ul>li{position:relative}.fa-li{left:calc(var(--fa-li-width,2em) * -1);position:absolute;text-align:center;width:var(--fa-li-width,2em);line-height:inherit}.fa-border{border-color:var(--fa-border-color,#eee);border-radius:var(--fa-border-radius,.1em);border-style:var(--fa-border-style,solid);border-width:var(--fa-border-width,.08em);padding:var(--fa-border-padding,.2em .25em .15em)}.fa-pull-left{float:left;margin-right:var(--fa-pull-margin,.3em)}.fa-pull-right{float:right;margin-left:var(--fa-pull-margin,.3em)}.fa-beat{-webkit-animation-name:fa-beat;animation-name:fa-beat;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,ease-in-out);animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-bounce{-webkit-animation-name:fa-bounce;animation-name:fa-bounce;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,cubic-bezier(.28,.84,.42,1));animation-timing-function:var(--fa-animation-timing,cubic-bezier(.28,.84,.42,1))}.fa-fade{-webkit-animation-name:fa-fade;animation-name:fa-fade;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1));animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-beat-fade{-webkit-animation-name:fa-beat-fade;animation-name:fa-beat-fade;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1));animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-flip{-webkit-animation-name:fa-flip;animation-name:fa-flip;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,ease-in-out);animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-shake{-webkit-animation-name:fa-shake;animation-name:fa-shake;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,linear);animation-timing-function:var(--fa-animation-timing,linear)}.fa-spin{-webkit-animation-name:fa-spin;animation-name:fa-spin;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,2s);animation-duration:var(--fa-animation-duration,2s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,linear);animation-timing-function:var(--fa-animation-timing,linear)}.fa-spin-reverse{--fa-animation-direction:reverse}.fa-pulse,.fa-spin-pulse{-webkit-animation-name:fa-spin;animation-name:fa-spin;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,steps(8));animation-timing-function:var(--fa-animation-timing,steps(8))}@media (prefers-reduced-motion:reduce){.fa-beat,.fa-beat-fade,.fa-bounce,.fa-fade,.fa-flip,.fa-pulse,.fa-shake,.fa-spin,.fa-spin-pulse{-webkit-animation-delay:-1ms;animation-delay:-1ms;-webkit-animation-duration:1ms;animation-duration:1ms;-webkit-animation-iteration-count:1;animation-iteration-count:1;transition-delay:0s;transition-duration:0s}}@-webkit-keyframes fa-beat{0%,90%{-webkit-transform:scale(1);transform:scale(1)}45%{-webkit-transform:scale(var(--fa-beat-scale,1.25));transform:scale(var(--fa-beat-scale,1.25))}}@keyframes fa-beat{0%,90%{-webkit-transform:scale(1);transform:scale(1)}45%{-webkit-transform:scale(var(--fa-beat-scale,1.25));transform:scale(var(--fa-beat-scale,1.25))}}@-webkit-keyframes fa-bounce{0%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}10%{-webkit-transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0);transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0)}30%{-webkit-transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em));transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em))}50%{-webkit-transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0);transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0)}57%{-webkit-transform:scale(1,1) translateY(var(--fa-bounce-rebound,-.125em));transform:scale(1,1) translateY(var(--fa-bounce-rebound,-.125em))}64%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}100%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}}@keyframes fa-bounce{0%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}10%{-webkit-transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0);transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0)}30%{-webkit-transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em));transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em))}50%{-webkit-transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0);transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0)}57%{-webkit-transform:scale(1,1) translateY(var(--fa-bounce-rebound,-.125em));transform:scale(1,1) translateY(var(--fa-bounce-rebound,-.125em))}64%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}100%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}}@-webkit-keyframes fa-fade{50%{opacity:var(--fa-fade-opacity,.4)}}@keyframes fa-fade{50%{opacity:var(--fa-fade-opacity,.4)}}@-webkit-keyframes fa-beat-fade{0%,100%{opacity:var(--fa-beat-fade-opacity,.4);-webkit-transform:scale(1);transform:scale(1)}50%{opacity:1;-webkit-transform:scale(var(--fa-beat-fade-scale,1.125));transform:scale(var(--fa-beat-fade-scale,1.125))}}@keyframes fa-beat-fade{0%,100%{opacity:var(--fa-beat-fade-opacity,.4);-webkit-transform:scale(1);transform:scale(1)}50%{opacity:1;-webkit-transform:scale(var(--fa-beat-fade-scale,1.125));transform:scale(var(--fa-beat-fade-scale,1.125))}}@-webkit-keyframes fa-flip{50%{-webkit-transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg));transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg))}}@keyframes fa-flip{50%{-webkit-transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg));transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg))}}@-webkit-keyframes fa-shake{0%{-webkit-transform:rotate(-15deg);transform:rotate(-15deg)}4%{-webkit-transform:rotate(15deg);transform:rotate(15deg)}24%,8%{-webkit-transform:rotate(-18deg);transform:rotate(-18deg)}12%,28%{-webkit-transform:rotate(18deg);transform:rotate(18deg)}16%{-webkit-transform:rotate(-22deg);transform:rotate(-22deg)}20%{-webkit-transform:rotate(22deg);transform:rotate(22deg)}32%{-webkit-transform:rotate(-12deg);transform:rotate(-12deg)}36%{-webkit-transform:rotate(12deg);transform:rotate(12deg)}100%,40%{-webkit-transform:rotate(0);transform:rotate(0)}}@keyframes fa-shake{0%{-webkit-transform:rotate(-15deg);transform:rotate(-15deg)}4%{-webkit-transform:rotate(15deg);transform:rotate(15deg)}24%,8%{-webkit-transform:rotate(-18deg);transform:rotate(-18deg)}12%,28%{-webkit-transform:rotate(18deg);transform:rotate(18deg)}16%{-webkit-transform:rotate(-22deg);transform:rotate(-22deg)}20%{-webkit-transform:rotate(22deg);transform:rotate(22deg)}32%{-webkit-transform:rotate(-12deg);transform:rotate(-12deg)}36%{-webkit-transform:rotate(12deg);transform:rotate(12deg)}100%,40%{-webkit-transform:rotate(0);transform:rotate(0)}}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}.fa-rotate-by{-webkit-transform:rotate(var(--fa-rotate-angle,none));transform:rotate(var(--fa-rotate-angle,none))}.fa-stack{display:inline-block;vertical-align:middle;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0;z-index:var(--fa-stack-z-index,auto)}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:var(--fa-inverse,#fff)}.fa-sr-only,.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.fa-sr-only-focusable:not(:focus),.sr-only-focusable:not(:focus){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fa-duotone.fa-inverse,.fad.fa-inverse{color:var(--fa-inverse,#fff)}</style><link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <base href="/">
+    <!-- FontAwesome JS-->
+    <!-- App CSS -->
+
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <link href="/assets/plugins/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/portal.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <link href="/css/mdb.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="/twitter-bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/datatables.net-bs5/dataTables.bootstrap5.css">
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap-select/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap-sweetalert/sweetalert.css">
+    <link rel="stylesheet" href="/lib/select2//css/select2.min.css">
+    <link rel="stylesheet" href="/lib/animate.css/animate.css">
+    <link rel="stylesheet" href="/assets/plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="/css/style.css?v=M0XX6ydsqsd1f0ZbWajAffKaHyynizjDm7x8IffmmeQ">
+    <script defer="" src="/js/all.min.js"></script>
+    <script src="/js/custom.js?v=1ZGMoCOobUnyPOyDDhQAdtLrZPx8bGIizSMyULOIg-E"></script>
+    <link rel="stylesheet" href="/assets/css/site.css?v=jCIx1ou3VRRyfgi9x_amdRKCBN-HSXcwOaRVmY6PkEc">
+    <link href="/lib/pickadate.js/compressed/themes/classic.css" rel="stylesheet">
+    <link href="/lib/pickadate.js/compressed/themes/classic.date.css" rel="stylesheet">
+    <link href="/lib/pickadate.js/compressed/themes/classic.time.css" rel="stylesheet">
+    <script src="/js/vi_vn.js"></script>
+    <link href="/lib/flatpickr/flatpickr.min.css" rel="stylesheet">
+    <style>
+        #banner {
+            margin-top: -4.3em;
+            margin-left: 1.1em;
+            color: white;
+            margin-right: -7em
+        }
+
+        #title-banner {
+            margin-top: -3.3em;
+            margin-left: 1em;
+            color: white;
+            margin-right: -5em;
+        }
+
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .app-nav-main {
+            position: relative;
+            background: url(/img/pink-love-backgrounds.jpg) no-repeat;
+            background-position: initial;
+            background-size: inherit;
+        }
+
+        #menu-accordion {
+            position: relative;
+        }
+
+        .dataTables_paginate .paginate_button {
+            vertical-align: middle !important;
+            cursor: pointer !important;
+            pointer-events: auto;
+        }
+
+        .dataTables_paginate .material-icons {
+            font-size: 30px !important;
+            margin-top: 2px !important;
+        }
+
+        .dataTables_paginate .disabled {
+            pointer-events: none !important;
+        }
+
+        .dataTables_paginate .paginate_input {
+            width: 105px !important;
+        }
+        a[data-bs-target="#lbl_menu_goodsreturn"] span.nav-icon {
+            -webkit-transform: rotateY(180deg) !important;
+            -moz-transform: rotateY(180deg) !important;
+            -o-transform: rotateY(180deg) !important;
+            -ms-transform: rotateY(180deg) !important;
+            transform: rotateY(180deg) !important;
+        }
+    </style>
+<style>INPUT:-webkit-autofill,SELECT:-webkit-autofill,TEXTAREA:-webkit-autofill{animation-name:onautofillstart}INPUT:not(:-webkit-autofill),SELECT:not(:-webkit-autofill),TEXTAREA:not(:-webkit-autofill){animation-name:onautofillcancel}@keyframes onautofillstart{}@keyframes onautofillcancel{}</style></head>
+
+<body class="app">
+    <div b-xpxzrxkekl="" id="preloader" style="display: none;">
+        <div b-xpxzrxkekl="" class="loader">
+            <svg b-xpxzrxkekl="" class="circular" viewBox="25 25 50 50">
+                <circle b-xpxzrxkekl="" class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <header b-xpxzrxkekl="" class="app-header fixed-top">
+        <div b-xpxzrxkekl="" class="app-header-inner">
+<style>
+    .dropdown-menu-content {
+        max-height: 300px; /* Thi?t l?p chi?u cao t?i ?a */
+        overflow-y: auto; /* B?t cu?n theo chi?u d?c */
+    }
+
+        .dropdown-menu-content p {
+            text-align: center;
+            margin: 0;
+            padding: 10px 0;
+            color: #999;
+        }
+    /* ??m b?o b? trí ?úng cho ph?n thông báo */
+    .info {
+        display: flex;
+        flex-direction: row; /* S?p x?p message và th?i gian theo hàng ngang */
+        justify-content: space-between; /* T?o kho?ng cách gi?a message và th?i gian */
+        align-items: center; /* C?n gi?a theo chi?u d?c */
+        width: 100%; /* ??m b?o chi?m h?t chi?u r?ng có s?n */
+    }
+
+    /* Style cho message */
+    .desc {
+        font-size: 14px;
+        font-weight: 500;
+        color: #333; /* Màu ch? cho message */
+        word-wrap: break-word; /* T? ??ng xu?ng dòng n?u n?i dung quá dài */
+        flex: 1; /* ??m b?o message chi?m không gian còn l?i */
+        margin-right: 10px; /* T?o kho?ng cách gi?a message và th?i gian */
+    }
+
+    /* Style cho th?i gian */
+    .meta {
+        font-size: 12px;
+        color: #999; /* Màu ch? nh? h?n cho th?i gian */
+        white-space: nowrap; /* ??m b?o th?i gian không b? xu?ng dòng */
+    }
+
+    /* Thông báo ch?a ??c */
+    .item.unread {
+        background-color: #f5f5f5; /* Màu n?n nh?t h?n ?? hi?n th? thông báo ch?a ??c */
+        font-weight: bold; /* Làm ??m ch? cho thông báo ch?a ??c */
+    }
+
+    /* Thông báo ?ã ??c */
+    .item.read {
+        background-color: #ffffff; /* Màu n?n tr?ng cho thông báo ?ã ??c */
+        font-weight: normal; /* V?n b?n thông báo ?ã ??c không ??m */
+    }
+
+    /* Thêm m?t s? style khác n?u c?n */
+    .item.unread .desc {
+        color: #000; /* V?n b?n thông báo ch?a ??c có th? màu t?i h?n */
+    }
+
+    .item.read .desc {
+        color: #999; /* V?n b?n thông báo ?ã ??c có th? màu nh?t h?n */
+    }
+
+</style>
+<div class="container-fluid py-2">
+    <div class="app-header-content">
+        <div class="row justify-content-between align-items-center">
+
+            <div class="col-auto" style="padding-right: 15px !important;">
+                <a id="sidepanel-toggler" class="sidepanel-toggler d-inline-block d-xl-none" href="javascript:void(0);" style="color: #fff !important;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+                </a>
+            </div><!--//col-->
+            <div class="search-mobile-trigger d-sm-none col">
+                <svg class="svg-inline--fa fa-magnifying-glass search-mobile-trigger-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"></path></svg><!-- <i class="search-mobile-trigger-icon fas fa-search"></i> Font Awesome fontawesome.com -->
+            </div><!--//col-->
+            <div class="app-search-box col" style="padding: 5px 0;">
+                <h4 style="color:#fff; margin-bottom: 0px !important;">
+                    DELIVERY - WARRANTY - RETURN MANAGEMENT SYSTEM
+                </h4>
+            </div>
+            <!--//app-search-box-->
+
+            <div class="app-utilities col-auto">
+                <div class="app-utility-item app-notifications-dropdown dropdown">
+                    <a class="dropdown-toggle no-toggle-arrow" id="notifications-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" title="Notifications">
+                        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bell icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z"></path>
+                            <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                        </svg>
+                        <span class="icon-badge">45</span>
+                    </a><!--//dropdown-toggle-->
+
+                    <div class="dropdown-menu p-0" aria-labelledby="notifications-dropdown-toggle">
+                        <div class="dropdown-menu-header p-3">
+                            <h5 class="dropdown-menu-title mb-0">Thông báo</h5>
+                        </div><!--//dropdown-menu-title-->
+                        <div class="dropdown-menu-content">
+<!--//item-->
+                        
+                    <div class="item p-3 unread">
+                        <div class="row gx-2 justify-content-between align-items-center">
+                            <div class="col-auto">
+                                <div class="app-icon-holder icon-holder-mono">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bell icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z"></path>
+                                        <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+                                    <div class="desc">Phi?u giao hàng 190320260003 ?ang ch? in ??n hàng</div>
+                                    <div class="meta">19 phút tr??c</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="link-mask" href="dwr/Delivery/index?code=190320260003" onclick="handleNotificationClick('8301655b-7a7e-4d41-97da-5d05cf1e3770')"></a>
+                    </div>
+                    
+                    <div class="item p-3 unread">
+                        <div class="row gx-2 justify-content-between align-items-center">
+                            <div class="col-auto">
+                                <div class="app-icon-holder icon-holder-mono">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bell icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z"></path>
+                                        <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+                                    <div class="desc">Phi?u giao hàng 190320260002 ?ang ch? in ??n hàng</div>
+                                    <div class="meta">31 phút tr??c</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="link-mask" href="dwr/Delivery/index?code=190320260002" onclick="handleNotificationClick('77915061-a815-4638-89be-02760b55d5f2')"></a>
+                    </div>
+                    
+                    <div class="item p-3 unread">
+                        <div class="row gx-2 justify-content-between align-items-center">
+                            <div class="col-auto">
+                                <div class="app-icon-holder icon-holder-mono">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bell icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z"></path>
+                                        <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+                                    <div class="desc">Phi?u giao hàng 180320260006 ?ang ch? in ??n hàng</div>
+                                    <div class="meta">16 gi? tr??c</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="link-mask" href="dwr/Delivery/index?code=180320260006" onclick="handleNotificationClick('25a2ab57-f748-4008-a087-f8975d8d3f24')"></a>
+                    </div>
+                    
+                    <div class="item p-3 unread">
+                        <div class="row gx-2 justify-content-between align-items-center">
+                            <div class="col-auto">
+                                <div class="app-icon-holder icon-holder-mono">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bell icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z"></path>
+                                        <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+                                    <div class="desc">Phi?u giao hàng 180320260005 ?ang ch? in ??n hàng</div>
+                                    <div class="meta">17 gi? tr??c</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="link-mask" href="dwr/Delivery/index?code=180320260005" onclick="handleNotificationClick('a8704185-5b9b-4622-b428-07a3c5d56c68')"></a>
+                    </div>
+                    
+                    <div class="item p-3 unread">
+                        <div class="row gx-2 justify-content-between align-items-center">
+                            <div class="col-auto">
+                                <div class="app-icon-holder icon-holder-mono">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bell icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z"></path>
+                                        <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+                                    <div class="desc">Phi?u giao hàng 180320260004 ?ang ch? in ??n hàng</div>
+                                    <div class="meta">17 gi? tr??c</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="link-mask" href="dwr/Delivery/index?code=180320260004" onclick="handleNotificationClick('bd6a8462-1c75-4af5-8086-57dfc8298eec')"></a>
+                    </div>
+                    </div><!--//dropdown-menu-content-->
+
+                        <div class="dropdown-menu-footer p-2 text-center">
+                            <a href="dwr/Notification/index">View all</a>
+                        </div>
+
+                    </div><!--//dropdown-menu-->
+                </div><!--//app-utility-item-->
+                <div class="app-utility-item app-user-dropdown dropdown">
+                    
+<a href="javascript:void(0)" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" style="height: 35px; display: inline-flex; align-items: center; width: 65px; justify-content: flex-end;">
+    <span style="margin-right: 5px;"><img id="imageLanguage" src="/img/Icon-vi.png"></span>
+</a>
+<ul class="dropdown-menu">
+   
+        <li><a class="dropdown-item" href="javascript:void()" id="english" onclick="ChangeLanguage('en')"><img src="/img/Icon-en-2.png"> Ti?ng Anh</a></li>
+</ul>
+                </div><!--//app-utility-item-->
+
+                <div class="app-utility-item app-user-dropdown dropdown">
+                    <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span id="user-name">G1_FL</span></a>
+                    <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
+                        <li><a class="dropdown-item" href="javascript:void(0);" onclick="Profile()">Thông tin nhân viên</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="javascript:void(0);" onclick="logout()">??ng xu?t</a></li>
+                    </ul>
+                </div><!--//app-user-dropdown-->
+            </div><!--//app-utilities-->
+        </div><!--//row-->
+    </div><!--//app-header-content-->
+</div><!--//container-fluid-->
+<script>
+    var currentPage = 1; // Trang hi?n t?i
+    var isLoading = false; // Tr?ng thái t?i d? li?u
+    var totalPages = 1; // T?ng s? trang, m?c ??nh là 1
+    $(document).ready(function () {
+        const userId = JSON.parse(localStorage.getItem("CurrentUser")).id; // L?y userId t? frontend
+        const name = JSON.parse(localStorage.getItem("CurrentUser")).full_name; // L?y userId t? frontend
+        $("#user-name").html(name);
+        // Kh?i t?o k?t n?i v?i SignalR Hub
+        const domain = DWR_SERVICE; // L?y domain hi?n t?i t? URL
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl(`${domain}/notificationHub?userId=${userId}`) // S? d?ng domain l?y ???c
+            .build();
+
+        connection.on("ReceiveNotification", function (message, url, id) {
+            addNotificationToDropdown(message, url, id);
+        });
+
+        // K?t n?i t?i Hub
+        connection.start().then(() => {
+            // console.log("Connected to the hub!");
+        }).catch(err => {
+            // console.error("Failed to connect to the hub:", err.toString());
+        });
+
+        // Ki?m tra tr?ng thái k?t n?i
+        if (connection.state === signalR.HubConnectionState.Connected) {
+            // console.log("Connection is established.");
+        } else {
+            // console.log("Connection is not established.");
+        }
+
+        // X? lý s? ki?n k?t n?i b? ?óng
+        connection.onclose(() => {
+            // console.log("Connection closed.");
+        });
+
+        const $dropdownContent = $(".dropdown-menu-content");
+
+        // Thêm s? ki?n scroll cho danh sách thông báo
+        $dropdownContent.on("scroll", function () {
+            const scrollTop = $dropdownContent.scrollTop();
+            const innerHeight = $dropdownContent.innerHeight();
+            const scrollHeight = $dropdownContent[0].scrollHeight;
+
+            if (scrollTop + innerHeight >= scrollHeight - 10) {
+                if (!isLoading && currentPage <= totalPages) {
+                    loadMoreNotifications(); // G?i hàm load thêm d? li?u
+                }
+            }
+        });
+
+
+        // T?i d? li?u l?n ??u tiên
+        GetNoti();
+    });
+
+
+    function Profile() {
+        window.location.href = "/Booking/User/Profile?reference_id=" + JSON.parse(localStorage['CurrentUser']).reference_id
+    }
+
+    function GetNoti(page = 1) {
+        if (isLoading) return; // Ki?m tra n?u ?ang t?i, d?ng g?i thêm
+
+        isLoading = true; // ??t c? ?ang t?i
+        GetUrlPartialView(apiConfig.api.host_dwr_service,
+            apiConfig.api.notification.controller,
+            apiConfig.api.notification.action.get_list.path + "?page=" + page,
+            apiConfig.api.notification.action.get_list.method,
+            null,
+            'fnGetNotiSuccess', 'msgError');
+    }
+
+    function fnGetNotiSuccess(result) {
+        isLoading = false; // ??t l?i c? khi t?i xong
+        currentPage++; // T?ng s? trang hi?n t?i
+        totalPages = result.totalPages; // C?p nh?t t?ng s? trang
+
+        var $dropdownContent = $(".dropdown-menu-content");
+        var $iconBadge = $(".icon-badge");
+        $iconBadge.text(result.totalUnread); // C?p nh?t t?ng s? thông báo ch?a ??c
+
+        if (result.notiData.length > 0) {
+            result.notiData.forEach(function (notification) {
+                var timeAgoText = timeAgo(notification.time);
+                var readStatusClass = notification.isRead ? 'read' : 'unread'; // Xác ??nh class d?a trên isRead
+
+                var html = `
+                    <div class="item p-3 ${readStatusClass}">
+                        <div class="row gx-2 justify-content-between align-items-center">
+                            <div class="col-auto">
+                                <div class="app-icon-holder icon-holder-mono">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bell icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z"></path>
+                                        <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+                                    <div class="desc">${notification.message}</div>
+                                    <div class="meta">${timeAgoText}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="link-mask" href="${notification.url}" onClick="handleNotificationClick('${notification.id}')"></a>
+                    </div>
+                    `;
+                $dropdownContent.append(html);
+            });
+        } else {
+            $dropdownContent.append("<p class='no-notifications'>No notifications available.</p>");
+        }
+    }
+
+    function addNotificationToDropdown(message, url, id) {
+        // T?ng s? l??ng thông báo
+        var badge = document.querySelector('.icon-badge');
+        var count = parseInt(badge.textContent) || 0;
+        badge.textContent = count + 1;
+
+        const notificationDropdown = document.querySelector(".dropdown-menu-content");
+
+        // ?n ph?n t? "No notifications available" n?u có thông báo
+        const noNotiMessage = notificationDropdown.querySelector(".no-notifications");
+        if (noNotiMessage) {
+            noNotiMessage.remove();
+        }
+
+        // Ki?m tra n?u có nhi?u h?n 5 thông báo, thì xóa thông báo c? nh?t
+        if (notificationDropdown.children.length >= 5) {
+
+            notificationDropdown.removeChild(notificationDropdown.lastElementChild); // Xóa thông báo c? nh?t
+        }
+
+        const itemDiv = document.createElement("div");
+        itemDiv.classList.add("item", "p-3");
+
+        const rowDiv = document.createElement("div");
+        rowDiv.classList.add("row", "gx-2", "justify-content-between", "align-items-center");
+
+        const colDiv = document.createElement("div");
+        colDiv.classList.add("col-auto");
+
+        const iconDiv = document.createElement("div");
+        iconDiv.classList.add("app-icon-holder", "icon-holder-mono");
+
+        const svgIcon = `
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bell icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z" />
+                    <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                </svg>
+            `;
+        iconDiv.innerHTML = svgIcon;
+
+        colDiv.appendChild(iconDiv);
+        rowDiv.appendChild(colDiv);
+
+        const colDivInfo = document.createElement("div");
+        colDivInfo.classList.add("col");
+
+        const infoDiv = document.createElement("div");
+        infoDiv.classList.add("info");
+
+        const descDiv = document.createElement("div");
+        descDiv.classList.add("desc");
+        descDiv.textContent = message;
+
+        const metaDiv = document.createElement("div");
+        metaDiv.classList.add("meta");
+        metaDiv.textContent = "V?a xong"; // Th?i gian ho?c kho?ng th?i gian c?a thông báo
+
+        infoDiv.appendChild(descDiv);
+        infoDiv.appendChild(metaDiv);
+        colDivInfo.appendChild(infoDiv);
+        rowDiv.appendChild(colDivInfo);
+
+        itemDiv.appendChild(rowDiv);
+
+        // T?o th? a v?i href t? notification.url
+        const linkMask = document.createElement("a");
+        linkMask.classList.add("link-mask");
+        linkMask.href = url; // Gán URL t? thông báo vào href
+        itemDiv.appendChild(linkMask);
+        // Thêm s? ki?n onclick
+        linkMask.onclick = function () {
+            handleNotificationClick(id);
+        }
+
+        // Thêm ph?n t? m?i vào ??u danh sách thông báo
+        notificationDropdown.prepend(itemDiv);
+    }
+
+
+    function handleNotificationClick(id) {
+        PostBody(apiConfig.api.host_dwr_service,
+            apiConfig.api.notification.controller,
+            apiConfig.api.notification.action.mask_as_read.path + id,
+            apiConfig.api.notification.action.mask_as_read.method,
+            null,
+            'fnMaskAsReadSuccess',
+            msgError);
+    }
+
+    function fnMaskAsReadSuccess() {
+        GetNoti();
+    }
+
+    function timeAgo(date) {
+        const parsedDate = moment(date, "DD/MM/YYYY HH:mm:ss"); // Chuy?n chu?i thành ??nh d?ng mong mu?n
+        const seconds = Math.floor((new Date() - parsedDate) / 1000); // Tính s? giây ?ã qua
+
+        // Tr??ng h?p nh? h?n 60 giây, tr? v? "just now"
+        if (seconds < 60) {
+            return "V&#x1EEB;a xong"; // Tr? v? chu?i "Just now"
+        }
+
+        // ??nh ngh?a các kho?ng th?i gian c? b?n
+        const intervals = {
+            year: 31536000,
+            month: 2592000,
+            day: 86400,
+            hour: 3600,
+            minute: 60
+        };
+
+        // Map các key t? interval thành các chu?i t??ng ?ng trong
+        const dwrKeys = {
+            year: { singular: "n&#x103;m tr&#x1B0;&#x1EDB;c", plural: "n&#x103;m tr&#x1B0;&#x1EDB;c" },
+            month: { singular: "th&#xE1;ng tr&#x1B0;&#x1EDB;c", plural: "th&#xE1;ng tr&#x1B0;&#x1EDB;c" },
+            day: { singular: "ng&#xE0;y tr&#x1B0;&#x1EDB;c", plural: "ng&#xE0;y tr&#x1B0;&#x1EDB;c" },
+            hour: { singular: "gi&#x1EDD; tr&#x1B0;&#x1EDB;c", plural: "gi&#x1EDD; tr&#x1B0;&#x1EDB;c" },
+            minute: { singular: "ph&#xFA;t tr&#x1B0;&#x1EDB;c", plural: "ph&#xFA;t tr&#x1B0;&#x1EDB;c" },
+            second: { singular: "gi&#xE2;y tr&#x1B0;&#x1EDB;c", plural: "gi&#xE2;y tr&#x1B0;&#x1EDB;c" }
+        };
+
+        // X? lý theo th? t? các kho?ng th?i gian t? l?n ??n nh?
+        for (const [key, value] of Object.entries(intervals)) {
+            const interval = Math.floor(seconds / value);
+            if (interval >= 1) {
+                // Ki?m tra n?u là s? ít hay s? nhi?u
+                if (interval === 1) {
+                    return interval + " " + dwrKeys[key].singular; // Ví d?: "1 year ago"
+                } else {
+                    return interval + " " + dwrKeys[key].plural; // Ví d?: "2 years ago"
+                }
+            }
+        }
+
+        // Tr? v? s? giây còn l?i, n?u không có giá tr? l?n h?n 1 phút
+        return Math.floor(seconds) + " " + dwrKeys["second"].plural;
+    }
+
+    function loadMoreNotifications() {
+        if (currentPage <= totalPages && !isLoading) {
+            GetNoti(currentPage); // G?i hàm GetNoti v?i trang hi?n t?i
+        }
+    }
+
+
+
+</script>        </div><!--//app-header-inner-->
+        <div b-xpxzrxkekl="" id="app-sidepanel" class="app-sidepanel sidepanel-visible">
+<style>
+    .main-class-menu {
+        height: 100%;
+        background: rgb(249 226 246 / 88%);
+        width: 100%;
+    }
+</style>
+
+<div id="sidepanel-drop" class="sidepanel-drop"></div>
+<div class="sidepanel-inner d-flex flex-column">
+    <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">×</a>
+    <div>
+        <a href="/Booking">
+            <img src="/assets/images/logo/aeon-logo.png" width="100%">
+        </a>
+    </div><!--//app-branding-->
+
+    <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
+        <div class="main-class-menu" style="overflow-y: auto; ">
+            
+
+
+<style>
+    .badge-support {
+        background-color: #b30d8c !important;
+        color: white !important;
+        border-radius: 3px !important;
+        padding: 2px 6px !important;
+        font-size: 11px !important;
+        font-weight: bold !important;
+        margin-left: 8px !important;
+        min-width: 16px !important;
+        text-align: center !important;
+    }
+</style>
+
+<ul class="app-menu list-unstyled accordion" id="menu-accordion">
+    <li class="nav-item">
+        <a class="nav-link" href="/dwr">
+            <span class="nav-icon ">
+                <i class="bi bi-house-door"></i>
+            </span>
+            <span class="nav-link-text">Trang ch?</span>
+        </a>
+    </li>
+            <li class="nav-item has-submenu">
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a class="nav-link submenu-toggle active" href="#" data-bs-toggle="collapse" data-bs-target="#lbl_menu_delivery" aria-expanded="true" aria-controls="#lbl_menu_delivery">
+                    <span class="nav-icon">
+                        <svg class="svg-inline--fa fa-truck" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="truck" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M368 0C394.5 0 416 21.49 416 48V96H466.7C483.7 96 499.1 102.7 512 114.7L589.3 192C601.3 204 608 220.3 608 237.3V352C625.7 352 640 366.3 640 384C640 401.7 625.7 416 608 416H576C576 469 533 512 480 512C426.1 512 384 469 384 416H256C256 469 213 512 160 512C106.1 512 64 469 64 416H48C21.49 416 0 394.5 0 368V48C0 21.49 21.49 0 48 0H368zM416 160V256H544V237.3L466.7 160H416zM160 368C133.5 368 112 389.5 112 416C112 442.5 133.5 464 160 464C186.5 464 208 442.5 208 416C208 389.5 186.5 368 160 368zM480 464C506.5 464 528 442.5 528 416C528 389.5 506.5 368 480 368C453.5 368 432 389.5 432 416C432 442.5 453.5 464 480 464z"></path></svg><!-- <i class="fa fa-truck"></i> Font Awesome fontawesome.com -->
+                    </span>
+                    <span class="nav-link-text">Thông tin giao hàng</span>
+                        <span class="submenu-arrow">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+                            </svg>
+                        </span>
+                        <!--//submenu-arrow-->
+                </a><!--//nav-link-->
+                    <div id="lbl_menu_delivery" class="collapse submenu lbl_menu_delivery show" data-bs-parent="#menu-accordion">
+                                <ul class="submenu-list list-unstyled">
+                                        <li class="submenu-item">
+                                            <a class="submenu-link" href="/dwr/Delivery/index">
+                                                Phi?u giao hàng
+                                            </a>
+                                        </li>
+                                </ul>
+                                <ul class="submenu-list list-unstyled">
+                                        <li class="submenu-item active">
+                                            <a class="submenu-link active" href="/dwr/Deposit/index">
+                                                Phi?u thu ti?n c?c
+                                            </a>
+                                        </li>
+                                </ul>
+                                <ul class="submenu-list list-unstyled">
+                                        <li class="submenu-item">
+                                            <a class="submenu-link" href="/dwr/Cancel/index">
+                                                Phi?u giao hàng b? h?y
+                                            </a>
+                                        </li>
+                                </ul>
+                    </div>
+            </li>
+            <li class="nav-item has-submenu">
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#lbl_menu_goodsreturn" aria-expanded="false" aria-controls="#lbl_menu_goodsreturn">
+                    <span class="nav-icon">
+                        <svg class="svg-inline--fa fa-truck" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="truck" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M368 0C394.5 0 416 21.49 416 48V96H466.7C483.7 96 499.1 102.7 512 114.7L589.3 192C601.3 204 608 220.3 608 237.3V352C625.7 352 640 366.3 640 384C640 401.7 625.7 416 608 416H576C576 469 533 512 480 512C426.1 512 384 469 384 416H256C256 469 213 512 160 512C106.1 512 64 469 64 416H48C21.49 416 0 394.5 0 368V48C0 21.49 21.49 0 48 0H368zM416 160V256H544V237.3L466.7 160H416zM160 368C133.5 368 112 389.5 112 416C112 442.5 133.5 464 160 464C186.5 464 208 442.5 208 416C208 389.5 186.5 368 160 368zM480 464C506.5 464 528 442.5 528 416C528 389.5 506.5 368 480 368C453.5 368 432 389.5 432 416C432 442.5 453.5 464 480 464z"></path></svg><!-- <i class="fa fa-truck"></i> Font Awesome fontawesome.com -->
+                    </span>
+                    <span class="nav-link-text">Thông tin ??i tr?</span>
+                        <span class="submenu-arrow">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+                            </svg>
+                        </span>
+                        <!--//submenu-arrow-->
+                </a><!--//nav-link-->
+                    <div id="lbl_menu_goodsreturn" class="collapse submenu lbl_menu_goodsreturn" data-bs-parent="#menu-accordion">
+                                <ul class="submenu-list list-unstyled">
+                                        <li class="submenu-item">
+                                            <a class="submenu-link" href="/dwr/GoodsReturn/index">
+                                                Thông tin ??i tr?
+                                            </a>
+                                        </li>
+                                </ul>
+                    </div>
+            </li>
+        <!--//nav-item-->
+
+</ul>
+
+<script>
+    $(document).ready(function () {
+        //debugger
+        var service = 'Dwr';
+        if(service =='Booking'){
+            const userId = JSON.parse(localStorage.getItem("CurrentUser")).id; // L?y userId t? frontend
+            const store = JSON.parse(localStorage.getItem("CurrentUser")).working_location_id; // L?y userId t? frontend
+            // Kh?i t?o k?t n?i v?i SignalR Hub
+            const domain = CHAT_HUB; // L?y domain hi?n t?i t? URL
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl(`${domain}?user_id=${userId}&user_name=${store}&type=store&r=Noti`) // S? d?ng domain l?y ???c
+                .build();
+
+            connection.on("ReceiveNoti", function (num) {
+                $(".badge-support").text(num);
+            });
+
+            // K?t n?i t?i Hub
+            connection.start().then(() => {
+                // console.log("Connected to the hub!");
+            }).catch(err => {
+                // console.error("Failed to connect to the hub:", err.toString());
+            });
+
+            // Ki?m tra tr?ng thái k?t n?i
+            if (connection.state === signalR.HubConnectionState.Connected) {
+                // console.log("Connection is established.");
+            } else {
+                // console.log("Connection is not established.");
+            }
+
+            // X? lý s? ki?n k?t n?i b? ?óng
+            connection.onclose(() => {
+                // console.log("Connection closed.");
+            });
+
+            setTimeout(Count(store),100);
+        }
+    });
+
+    function Count(store){
+        GetUrlTemp(apiConfig.api.host_chat_service,
+            apiConfig.api.chat.controller,
+            apiConfig.api.chat.action.count_supplier.path.replace("{0}",store),
+            apiConfig.api.chat.action.count_supplier.method,
+            null,
+            'fnGetBadgeSuccess', 'msgError');
+    }
+
+    function fnGetBadgeSuccess(result){
+        $(".badge-support").text(result);
+    }
+
+    function GetUrlTemp(host, controller, action, method, params, callbackSuccess, callbackError, value) {
+        $.ajax({
+            type: method,
+            url: host + controller + action + (params == null ? "" : "?" + new URLSearchParams(params).toString()),
+            contentType: false,
+            processData: false,
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', getSessionToken());
+                xhr.setRequestHeader('Accept-Language', getLanguageFromCookie());
+                xhr.setRequestHeader('x-api-key', API_KEY);
+            },
+            success: function (result) {
+                if (window[callbackSuccess] != undefined)
+                    window[callbackSuccess](result, value);
+            },
+            error: function (request, status, error) {
+                if (window[callbackError] != undefined)
+                    window[callbackError](request, status, error);
+            }
+        });
+    }
+</script>
+        </div>
+      
+    </nav><!--//app-nav-->
+    <div class="app-sidepanel-footer">
+        <div class="container text-center py-3">
+            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Copyright © 2022 by <a class="app-link" href="#" style="color:#b51c8e !important"><b>AEON Vietnam</b></a></small>
+
+        </div>
+    </div>
+    <!--//app-sidepanel-footer-->
+
+</div><!--//sidepanel-inner-->        </div><!--//app-sidepanel-->
+    </header><!--//app-header-->
+
+    <div b-xpxzrxkekl="" class="app-wrapper" id="dwr-app">
+
+        
+
+
+
+<style>
+    .img-size {
+        text-align: center;
+        color: #a7a7a7;
+    }
+
+    .note-editor .btn:not(.btn-link):not(.btn-circle) i {
+        font-size: 12px;
+        position: relative;
+        line-height: 1.5;
+        top: 0px;
+    }
+
+    .note-editor .btn:not(.btn-link):not(.btn-circle) i {
+        font-size: 12px;
+        position: relative;
+        line-height: 1.5;
+        top: 0px;
+    }
+
+    .note-editor.note-frame {
+        border-radius: 0;
+    }
+
+    .addform {}
+
+    .fstElement {
+        width: 100%;
+        font-size: 9px;
+        border: none;
+        display: block;
+    }
+
+    .fstMultipleMode .fstControls {
+        width: 100%;
+        padding: 0.5em 0 0 0;
+    }
+
+    .fstMultipleMode.fstActive .fstResults {
+        z-index: 9999;
+    }
+
+    .drop_uploader.drop_zone {
+        border: 1px dashed #999999;
+        border-radius: 0;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    .navbtn {
+        margin-top: -10px !important;
+        float: right;
+    }
+
+    .header {
+        text-transform: uppercase !important;
+    }
+
+    /* Remove Arrows: Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+</style>
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2 class="pull-left">
+                    Danh sách phi?u thu ti?n c?c/Thêm m?i
+                </h2>
+            </div>
+            <div class="body">
+                <form id="form_data" class="formsubmit formdata" method="post" action="" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6 no-padding">
+                            <div style="padding-right:30px;display:inline-table;border-right: 1px solid #d8d5d5;">
+                                <div class="col-md-12 no-padding formsearch storeform">
+                                    <div class="tab-content">
+                                        <div id="">
+                                            <div class="addform row">
+                                                <div class="col-md-12">
+                                                    <label>Mã th? thành viên</label>
+                                                    <div class="form-group">
+                                                        <div class="form-line selectlist">
+                                                            <input class="form-control" id="code" maxlength="200" name="code" onchange="SearchMemberID(this.value)" placeholder="Ch?n mã thành viên" type="text" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label class="required">H? tên ng??i n?p ti?n</label>
+                                                    <div class="form-group">
+                                                        <div class="form-line selectlist">
+                                                            <input class="form-control" id="name" maxlength="200" name="name" placeholder="Nh?p h? tên ng??i n?p ti?n" required="required" type="text" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label class="required">Lý do n?p ti?n</label>
+                                                    <div class="form-group">
+                                                        <div class="form-line selectlist">
+                                                            <textarea class="form-control" id="payment_reason" maxlength="255" name="payment_reason" placeholder="Nh?p lý do n?p ti?n" required="required" style="height:80px;"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label class="required">Ngày giao hàng</label>
+                                                    <div class="form-group">
+                                                        <div class="form-line selectlist">
+                                                            <input class="form-control frmData inputdate required picker__input" type="text" placeholder="dd/mm/yyyy" data-root="" data-ismin="false" id="DeliveryDate" name="DeliveryDate" onkeypress="return isNumberKey(this, event);" required="" inputmode="text" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="DeliveryDate_root"><div class="picker" id="DeliveryDate_root" aria-hidden="true"><div class="picker__holder" tabindex="-1"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__header"><div class="picker__month">Tháng Ba</div><div class="picker__year">2026</div><div class="picker__nav--prev" data-nav="-1" role="button" aria-controls="DeliveryDate_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="DeliveryDate_table" title="Next month"> </div></div><table class="picker__table" id="DeliveryDate_table" role="grid" aria-controls="DeliveryDate" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="Th? Hai">T.Hai</th><th class="picker__weekday" scope="col" title="Th? Ba">T.Ba</th><th class="picker__weekday" scope="col" title="Th? T?">T.T?</th><th class="picker__weekday" scope="col" title="Th? N?m">T.N?m</th><th class="picker__weekday" scope="col" title="Th? Sáu">T.Sáu</th><th class="picker__weekday" scope="col" title="Th? B?y">T.B?y</th><th class="picker__weekday" scope="col" title="CN">CN</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1771779600000" role="gridcell" aria-label="23/02/2026">23</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1771866000000" role="gridcell" aria-label="24/02/2026">24</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1771952400000" role="gridcell" aria-label="25/02/2026">25</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1772038800000" role="gridcell" aria-label="26/02/2026">26</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1772125200000" role="gridcell" aria-label="27/02/2026">27</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1772211600000" role="gridcell" aria-label="28/02/2026">28</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1772298000000" role="gridcell" aria-label="01/03/2026">1</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1772384400000" role="gridcell" aria-label="02/03/2026">2</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1772470800000" role="gridcell" aria-label="03/03/2026">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1772557200000" role="gridcell" aria-label="04/03/2026">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1772643600000" role="gridcell" aria-label="05/03/2026">5</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1772730000000" role="gridcell" aria-label="06/03/2026">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1772816400000" role="gridcell" aria-label="07/03/2026">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1772902800000" role="gridcell" aria-label="08/03/2026">8</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1772989200000" role="gridcell" aria-label="09/03/2026">9</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1773075600000" role="gridcell" aria-label="10/03/2026">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1773162000000" role="gridcell" aria-label="11/03/2026">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1773248400000" role="gridcell" aria-label="12/03/2026">12</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1773334800000" role="gridcell" aria-label="13/03/2026">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1773421200000" role="gridcell" aria-label="14/03/2026">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1773507600000" role="gridcell" aria-label="15/03/2026">15</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1773594000000" role="gridcell" aria-label="16/03/2026">16</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1773680400000" role="gridcell" aria-label="17/03/2026">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1773766800000" role="gridcell" aria-label="18/03/2026">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today picker__day--highlighted" data-pick="1773853200000" role="gridcell" aria-label="19/03/2026" aria-activedescendant="true">19</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1773939600000" role="gridcell" aria-label="20/03/2026">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1774026000000" role="gridcell" aria-label="21/03/2026">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1774112400000" role="gridcell" aria-label="22/03/2026">22</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1774198800000" role="gridcell" aria-label="23/03/2026">23</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1774285200000" role="gridcell" aria-label="24/03/2026">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1774371600000" role="gridcell" aria-label="25/03/2026">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1774458000000" role="gridcell" aria-label="26/03/2026">26</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1774544400000" role="gridcell" aria-label="27/03/2026">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1774630800000" role="gridcell" aria-label="28/03/2026">28</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1774717200000" role="gridcell" aria-label="29/03/2026">29</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1774803600000" role="gridcell" aria-label="30/03/2026">30</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1774890000000" role="gridcell" aria-label="31/03/2026">31</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1774976400000" role="gridcell" aria-label="01/04/2026">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1775062800000" role="gridcell" aria-label="02/04/2026">2</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1775149200000" role="gridcell" aria-label="03/04/2026">3</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1775235600000" role="gridcell" aria-label="04/04/2026">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1775322000000" role="gridcell" aria-label="05/04/2026">5</div></td></tr></tbody></table><div class="picker__footer"><button class="picker__button--today" type="button" data-pick="1773853200000" disabled="" aria-controls="DeliveryDate">Hôm Nay</button><button class="picker__button--clear" type="button" data-clear="1" disabled="" aria-controls="DeliveryDate">Xoá</button><button class="picker__button--close" type="button" data-close="true" disabled="" aria-controls="DeliveryDate">?óng</button></div></div></div></div></div></div><input type="hidden" name="DeliveryDate_submit">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label>Kèm theo</label>
+                                                    <div class="form-group">
+                                                        <input type="file" class="form-control" id="inputAttachment" multiple="">
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 no-padding storeform">
+                            <div style="display:inline-table;">
+                                <div class="addform row">
+                                    <div class="col-md-12 d-flex justify-content-between flex-wrap">
+                                        <div class="col-12 col-md-6">
+                                            <div class="d-flex justify-content-between">
+                                                <label>Mã phi?u giao hàng</label>
+                                                <div>
+                                                    <input class="form-check-input no-action" type="checkbox" value="" id="isWithMemberCode" disabled="">
+                                                    <label class="form-check-label" for="isWithMemberCode">
+                                                        Cùng mã th? thành viên
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-line selectlist">
+                                                    <select class="form-control frmFilter required select2-hidden-accessible" id="delivery_code" name="delivery_code" style="width:100%" data-select2-id="delivery_code" tabindex="-1" aria-hidden="true">
+                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="5" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-delivery_code-container"><span class="select2-selection__rendered" id="select2-delivery_code-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Mã phi?u giao hàng</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-5">
+                                            <label class="required">Ngành hàng</label>
+                                            <div class="form-group">
+                                                <div class="form-line selectlist">
+                                                    <select class="form-control frmData required select2-hidden-accessible" id="product_line" name="product_line" style="width:100%" data-select2-id="product_line" tabindex="-1" aria-hidden="true">
+                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-product_line-container"><span class="select2-selection__rendered" id="select2-product_line-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Ch?n ngành hàng</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="required">Thành ph?/T?nh</label>
+                                        <div class="form-group">
+                                            <div class="form-line selectlist">
+                                                <select id="Province" name="Province" class="form-control frmData required select2-hidden-accessible" placeholder="Thành ph?/T?nh" data-select2-id="Province" tabindex="-1" aria-hidden="true">
+                                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="2" style="width: 782px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-Province-container"><span class="select2-selection__rendered" id="select2-Province-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Thành ph?/T?nh</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="required">Qu?n/Huy?n</label>
+                                        <div class="form-group">
+                                            <div class="form-line selectlist">
+                                                <select id="District" name="District" class="form-control frmData required select2-hidden-accessible" placeholder="Qu?n/Huy?n" data-select2-id="District" tabindex="-1" aria-hidden="true">
+                                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="3" style="width: 782px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-District-container"><span class="select2-selection__rendered" id="select2-District-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Qu?n/Huy?n</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="required">Ph??ng/Xã</label>
+                                        <div class="form-group">
+                                            <div class="form-line selectlist">
+                                                <select id="Ward" name="Ward" class="form-control frmData required select2-hidden-accessible" placeholder="Ph??ng/Xã" data-select2-id="Ward" tabindex="-1" aria-hidden="true">
+                                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="4" style="width: 782px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-Ward-container"><span class="select2-selection__rendered" id="select2-Ward-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Ph??ng/Xã</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="required">S? nhà</label>
+                                        <div class="form-group">
+                                            <div class="form-line selectlist">
+                                                <input class="form-control" id="address" maxlength="200" minlength="10" name="address" placeholder="Nh?p s? nhà, tên ???ng" required="required" type="text" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 no-padding">
+                            <div style="padding-right:30px;border-right: 1px solid #d8d5d5;">
+                                <div class="col-md-12 no-padding">
+                                    <label class="required" style="font-size: 14px; font-weight: 600; margin-bottom: 10px;">Ph??ng th?c thanh toán</label>
+                                    <div class="form-group" style="margin-top: 15px; margin-bottom: 20px;">
+                                        <div class="form-line selectlist" id="deposit_type">
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="display: flex; flex-wrap: nowrap; justify-content: space-around; margin-bottom: 25px;">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" checked="" type="radio" name="paymentType" id="paymentCash" onchange="onChangePayment()" value="3" style="width: 18px; height: 18px; margin-right: 8px;">
+                                            <label class="form-check-label" for="paymentCash" style="font-size: 14px; cursor: pointer;">Ti?n m?t</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="paymentType" id="paymentCard" onchange="onChangePayment()" value="4" style="width: 18px; height: 18px; margin-right: 8px;">
+                                            <label class="form-check-label" for="paymentCard" style="font-size: 14px; cursor: pointer;">Th?</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="paymentType" id="paymentTransfer" onchange="onChangePayment()" value="5" style="width: 18px; height: 18px; margin-right: 8px;">
+                                            <label class="form-check-label" for="paymentTransfer" style="font-size: 14px; cursor: pointer;">Chuy?n kho?n</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="div_cash" class="col-md-12 no-padding">
+                                    <div id="group_cash">
+                                        <div class="col-md-12">
+                                            <label class="required">S? ti?n</label>
+                                            <div class="form-group">
+                                                <div class="form-line selectlist">
+                                                    <input type="text" id="cash_money" class="form-control" placeholder="Nh?p s? ti?n" oninput="onChangeTypeNumber(this); onChangeConvertCurrencyToWords(this);" onpaste="handlePasteOnlyNumber(this, event)">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <label class="required">Vi?t b?ng ch?</label>
+                                            <div class="form-group">
+                                                <div class="form-line selectlist">
+                                                    <textarea id="cash_written_in_word" class="form-control" style="height:80px;" readonly=""></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="group_bank" style="display: none;">
+                                        <div class="col-md-12">
+                                            <label class="required">Tên ngân hàng</label>
+                                            <div class="form-group">
+                                                <div class="form-line selectlist">
+                                                    <input type="text" id="bank_name" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <label class="required">S? tài kho?n</label>
+                                            <div class="form-group">
+                                                <div class="form-line selectlist">
+                                                    <input type="text" id="account_no" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <label class="required">Tên ch? tài kho?n</label>
+                                            <div class="form-group">
+                                                <div class="form-line selectlist">
+                                                    <input type="text" id="account_name" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <label class="required">S? ti?n</label>
+                                            <div class="form-group">
+                                                <div class="form-line selectlist">
+                                                    <input type="text" id="card_money" class="form-control" oninput="onChangeTypeNumber(this); onChangeConvertCurrencyToWordsbyCard(this);" onpaste="handlePasteOnlyNumber(this, event)">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <label class="required">Vi?t b?ng ch?</label>
+                                            <div class="form-group">
+                                                <div class="form-line selectlist">
+                                                    <textarea id="card_written_in_word" class="form-control" readonly="" style="height:80px;"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div id="group_bank_info" style="display: none;">
+                                                <div>
+                                                    <div class="addform row">
+                                                        <div class="col-md-12">
+                                                            <label>TID</label>
+                                                            <div class="form-group">
+                                                                <div class="form-line selectlist">
+                                                                    <input class="form-control" id="TID" maxlength="200" name="TID" placeholder="Nh?p TID" type="text" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label>MID</label>
+                                                            <div class="form-group">
+                                                                <div class="form-line selectlist">
+                                                                    <input class="form-control" id="MID" maxlength="200" name="MID" placeholder="Nh?p MID" type="text" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label>Approval</label>
+                                                            <div class="form-group">
+                                                                <div class="form-line selectlist">
+                                                                    <input class="form-control" id="Approval" maxlength="200" name="Approval" placeholder="Nh?p mã Approval" type="text" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" onclick="window.location.href='/Dwr/Deposit'" class="btn waves-effect" style="margin-right:5px">Back</button>
+                        <button type="button" class="btn bg-aeon waves-effect" onclick="Save()">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" data-bs-keyboard="false" data-bs-backdrop="static" role="dialog" aria-labelledby="copyModalLabel" aria-hidden="true" id="exampleModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ch?ng t? g?c</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="file" class="form-control" id="pofile">
+                <label><a id="result"></a></label>
+                <div id="error"></div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">?óng</button>
+                <button type="button" class="btn btn-primary" onclick="UploadFile()">T?i lên</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    </div><!--//app-wrapper-->
+    <script src="/js/mdb.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/plugins/popper.min.js"></script>
+    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/lib/datatables/js/dataTables.dataTables.min.js"></script>
+    <script src="/lib/jquery-validate/jquery.validate.min.js"></script>
+    <script src="/lib/datatables.net/jquery.dataTables.min.js"></script>
+    <script src="/lib/datatables.net-bs5/dataTables.bootstrap5.min.js"></script>
+    <script src="/lib/datatables-plugins/pagination/input.min.js"></script>
+    <script src="/assets/plugins/toastr/toastr.min.js"></script>
+    <script src="/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
+    <script src="/lib/select2/js/select2.full.min.js"></script>
+    <script src="/lib/moment.js/moment.min.js"></script>
+    <script src="/lib/jquery.inputmask/jquery.inputmask.js"></script>
+    <script src="/js/api.construct.js?v=h-Xz7AUg7QSigmcSEHlb-WenQgOyo1AYanKuuY7XndI"></script>
+    <script src="/lib/qrcodejs/qrcode.min.js"></script>
+    <script src="/lib/html2canvas/html2canvas.min.js"></script>
+    <script src="/lib/pickadate.js/picker.js"></script>
+    <script src="/lib/pickadate.js/picker.date.js"></script>
+    <script src="/lib/pickadate.js/picker.time.js"></script>
+    <script src="/js/vi_vn.js"></script>
+    <script src="/js/common.js?v=ZCmkcfw9EheWcmUYOJnaYq18rp9l0jBcQnEEi1xiemg"></script>
+    <script src="/js/treeview.js"></script>
+    <script src="/lib/flatpickr/flatpickr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.9/signalr.min.js"></script>
+    <!-- Javascript -->
+    
+
+    <script>
+        $(document).ready(function () {
+
+            callApi_multipleselect(
+                "#store_view", 'Ch?n c?a hàng',
+                apiConfig.api.host_user_service,
+                apiConfig.api.store.controller,
+                apiConfig.api.store.action.dropdown_store.path,
+                true
+            );
+
+            //filter theo COD, isDeposit = 1
+            callApi_multipleselect(
+                "#product_line", 'Ch?n ngành hàng',
+                apiConfig.api.host_booking_service,
+                apiConfig.api.line.controller,
+                apiConfig.api.line.action.dropdown_line.path,
+                false
+            );
+
+            //#region generate dropdown
+            callApi_multipleselect(
+                "#Province", 'Thành ph?/T?nh',
+                apiConfig.api.host_dwr_service,
+                apiConfig.api.provinces.controller,
+                apiConfig.api.provinces.action.dropdown_province.path,
+                false
+            );
+            callApi_multipleselect(
+                "#District", 'Qu?n/Huy?n',
+                apiConfig.api.host_dwr_service,
+                apiConfig.api.provinces.controller,
+                apiConfig.api.provinces.action.dropdown_district.path,
+                false,
+                { parent: "#Province" }
+            );
+
+            callApi_multipleselect(
+                "#Ward", 'Ph??ng/Xã',
+                apiConfig.api.host_dwr_service,
+                apiConfig.api.provinces.controller,
+                apiConfig.api.provinces.action.dropdown_ward.path,
+                false,
+                { parent: "#District" }
+            );
+
+            $('#Province').on('select2:select', function (e) {
+                $('#District').val('').trigger('change');
+                $('#Ward').val('').trigger('change');
+            });
+
+            $('#District').on('select2:select', function (e) {
+                $('#Ward').val('').trigger('change');
+            });
+            //#endregion generate dropdown
+
+            onChangePayment();
+
+            $("#isWithMemberCode").prop("disabled", true).addClass("no-action");
+
+            $("#code").on("input", function () {
+                if ($(this).val().trim() !== "") {
+                    $("#isWithMemberCode")
+                        .prop("disabled", false)
+                        .removeClass("no-action");
+                } else {
+                    $("#isWithMemberCode")
+                        .prop("checked", false)
+                        .prop("disabled", true)
+                        .addClass("no-action");
+
+                    $("#delivery_code").val(null).trigger("change");
+                    loadDeliveryCodeDropdown(false);
+                }
+            });
+
+            $("#isWithMemberCode").change(function () {
+                $("#delivery_code").val(null).trigger("change");
+                loadDeliveryCodeDropdown($(this).is(":checked"));
+            });
+
+            loadDeliveryCodeDropdown(false);
+            
+        })
+
+        function loadDeliveryCodeDropdown(isFilter) {
+            callApi_multipleselect(
+                "#delivery_code",
+                'Mã phi?u giao hàng',
+                apiConfig.api.host_dwr_service,
+                apiConfig.api.Delivery.controller,
+                apiConfig.api.Delivery.action.dropdown_delivery.path + '?DeliveryType=1&isDeposit=1&DeliveryStatus=3',
+                false,
+                isFilter ? { code: '#code' } : {}
+            );
+        }
+
+        function readURL(input, type) {
+            var fsize = 1024 * 1024 * 2;
+            if (input.files[0].size < fsize) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $(input).parent().children('img').attr('src', e.target.result);
+
+                        if (type == 'bus')
+                            $('#Image0').attr('src', e.target.result);
+                        else
+                            $('#Image').attr('src', e.target.result);
+
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $(input).parent().children("i").removeClass("hidden");
+
+                }
+            }
+            else {
+                notify.alert("Allowed file size exceeded. (Max. 2 MB)", 'Warning', TITLE_STATUS_DANGER);
+            }
+        }
+
+        function Save() {
+            var formdata = new FormData($(".formdata")[0]);
+            validateform(formdata);
+        }
+
+        function isEmail(email) {
+            var regex = /^([a-zA-Z0-9_.+-])+\@(([a - zA - Z0 - 9 -]) +\.) + ([a - zA - Z0 - 9]{ 2, 4})+$ /;
+            return regex.test(email);
+        }
+        function fnAddSuccess(result) {
+            toastr.success('T?o m?i thành công', 'Thông báo');
+            setTimeout(function () {
+                window.location.href = '/Dwr/Deposit'
+            }, 600)
+        }
+        //function fnAddError(result) {
+        //    toastr.er('Thêm m?i thành công', 'Thông báo');
+        //}
+        function phonenumber(inputtxt) {
+            var phoneno10x = /[0-9]{11}/;
+            var phoneno9x = /[0-9]{10}/;
+
+            if (inputtxt === '') {
+                return true;
+            }
+            else {
+                if (inputtxt.match(phoneno10x) || inputtxt.match(phoneno9x)) {
+                    return true;
+                }
+                else {
+                    var msg = '<label id="name-error" class="error">' + localizationResources.lbl_phone_invalid + '</label>';
+                    $("#phone_number").closest('.form-line').addClass("error");
+                    $("#phone_number").closest('.form-group').append(msg);
+                    return false;
+                }
+            }
+        }
+
+        function IsNumeric(e) {
+            var specialKeys = new Array();
+            specialKeys.push(8);
+            var keyCode = e.which ? e.which : e.keyCode
+            var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+            return ret;
+        }
+
+        var required_mgs = '<label id="name-error" class="error">Tr??ng b?t bu?c</label>';
+        function validateform(formdata) {
+            $("label.error").remove();
+            $(".error").removeClass("error");
+            var checkvalidate = false;
+            for (var key of formdata.keys()) {
+                if ($(".storeform #" + key).prop("required") && $("#" + key).val().toString().trim() == "") {
+                    $(".storeform #" + key).parent().addClass("error");
+                    $(".storeform #" + key).parent().parent().append(required_mgs);
+                    checkvalidate = true;
+                }
+            }
+
+            if (!$("#Province").val()) {
+                $(".formdata #" + "Province").parent().addClass("error");
+                $(".formdata #" + "Province").parent().parent().append(required_mgs);
+                checkvalidate = true;
+            }
+            if (!$("#District").val()) {
+                $(".formdata #" + "District").parent().addClass("error");
+                $(".formdata #" + "District").parent().parent().append(required_mgs);
+                checkvalidate = true;
+            }
+            if (!$("#Ward").val()) {
+                $(".formdata #" + "Ward").parent().addClass("error");
+                $(".formdata #" + "Ward").parent().parent().append(required_mgs);
+                checkvalidate = true;
+            }
+
+
+            //if (validateImage("img-file0")) {
+            //    checkvalidate = true;
+            //}
+
+            // Validate based on selected payment type (paymentType values: 3=Cash, 4=Card, 5=Transfer)
+            var paymentType = $('input[name="paymentType"]:checked').val();
+
+            if (paymentType === "3") {
+                // Cash: require cash amount
+                var cashVal = $('#cash_money').val() ? $('#cash_money').val().toString().trim() : '';
+                if (cashVal === '') {
+                    $('#cash_money').closest('.form-line').addClass('error');
+                    $('#cash_money').closest('.form-group').append(required_mgs);
+                    checkvalidate = true;
+                }
+            } else if (paymentType === "4" || paymentType === "5") {
+                // Card / Transfer: require bank info and card amount
+                var bankFields = ['#bank_name', '#account_no', '#account_name', '#card_money'];
+                bankFields.forEach(function (sel) {
+                    var v = $(sel).val() ? $(sel).val().toString().trim() : '';
+                    if (v === '') {
+                        $(sel).closest('.form-line').addClass('error');
+                        $(sel).closest('.form-group').append(required_mgs);
+                        checkvalidate = true;
+                    }
+                });
+            } else {
+                // No payment selected
+                $('#deposit_type').addClass('error');
+                $('#deposit_type').append(required_mgs);
+                checkvalidate = true;
+            }
+
+            //validation line
+            if (!$("#product_line").val()) {
+                $("#product_line").parent().addClass("error");
+                $("#product_line").parent().append(required_mgs);
+                checkvalidate = true;
+            }
+
+            if (!checkvalidate) {
+
+                var formdata = new FormData();
+                const fileInput = document.getElementById("inputAttachment");
+
+                formdata.append("deposit.customer_code", $("#code").val());
+                formdata.append("deposit.customer_name", $("#name").val());
+                formdata.append("deposit.reason", $("#payment_reason").val());
+
+                formdata.append("deposit.delivery_id", $("#delivery_code").val() ?? "");
+                formdata.append("deposit.customer_address", $("#address").val());
+
+
+                formdata.append("deposit.city", $("#Province").val());
+                formdata.append("deposit.district", $("#District").val());
+                formdata.append("deposit.ward", $("#Ward").val());
+                formdata.append("deposit.delivery_date", formatDate($("#DeliveryDate").val()));
+                formdata.append("deposit.line_id", $("#product_line").val());
+                formdata.append("deposit.line_name", $('#product_line').select2('data')[0].text);
+
+                // Determine payment type from the visible radio group `paymentType` (3=Cash,4=Card,5=Transfer)
+                var paymentType = $('input[name="paymentType"]:checked').val();
+                formdata.append("deposit.type", paymentType ?? "");
+
+                if (paymentType === "3") {
+                    // Cash
+                    var payment_type = [1];
+                    formdata.append("deposit.price", $("#cash_money").val() ? $("#cash_money").val().replaceAll('.', '') : "");
+                    formdata.append("deposit.price_string", $("#cash_written_in_word").val() || "");
+
+                    // Clear card fields
+                    formdata.append("deposit.card_price", "");
+                    formdata.append("deposit.card_price_string", "");
+                    formdata.append("deposit.bank_name", "");
+                    formdata.append("deposit.bank_account_no", "");
+                    formdata.append("deposit.bank_account_name", "");
+                    formdata.append("deposit.payment_type", payment_type.join(","));
+                } else if (paymentType === "4" || paymentType === "5") {
+                    // Card or Transfer - treat both as non-cash payment (map to payment_type 2)
+                    var payment_type = [2];
+                    formdata.append("deposit.card_price", $("#card_money").val() ? $("#card_money").val().replaceAll('.', '') : "");
+                    formdata.append("deposit.card_price_string", $("#card_written_in_word").val() || "");
+
+                    formdata.append("deposit.bank_name", $("#bank_name").val() || "");
+                    formdata.append("deposit.bank_account_no", $("#account_no").val() || "");
+                    formdata.append("deposit.bank_account_name", $("#account_name").val() || "");
+                    // TextBoxFor generated IDs are capitalized (e.g. MID, TID, Approval)
+                    formdata.append("deposit.mid", $("#MID").val() || "");
+                    formdata.append("deposit.tid", $("#TID").val() || "");
+                    formdata.append("deposit.approval", $("#Approval").val() || "");
+                    // If cash amount is also present (mixed), include it
+                    if ($("#cash_money").val()) {
+                        formdata.append("deposit.price", $("#cash_money").val().replaceAll('.', ''));
+                        formdata.append("deposit.price_string", $("#cash_written_in_word").val() || "");
+                    } else {
+                        formdata.append("deposit.price", "");
+                        formdata.append("deposit.price_string", "");
+                    }
+
+                    formdata.append("deposit.payment_type", payment_type.join(","));
+                } else {
+                    // fallback - no payment selected
+                    formdata.append("deposit.price", "");
+                    formdata.append("deposit.price_string", "");
+                    formdata.append("deposit.card_price", "");
+                    formdata.append("deposit.card_price_string", "");
+                    formdata.append("deposit.bank_name", "");
+                    formdata.append("deposit.bank_account_no", "");
+                    formdata.append("deposit.bank_account_name", "");
+                    formdata.append("deposit.payment_type", "");
+                }
+
+                if (fileInput.files.length > 0) {
+                    for (var i = 0; i < fileInput.files.length; i++) {
+                        formdata.append("deposit.file", fileInput.files[i], fileInput.files[i].name);
+                    }
+                }
+
+                //formdata.append("deposit.file_old", "/dwr/06062024101135_File_test.txt");
+
+
+                console.log(formdata.getAll("deposit.customer_code"));
+
+                //API AddNew
+                PostFormData(apiConfig.api.host_dwr_service,
+                    apiConfig.api.Deposit.controller,
+                    apiConfig.api.Deposit.action.add_Deposit.path,
+                    apiConfig.api.Deposit.action.add_Deposit.method,
+                    formdata
+                    , 'fnAddSuccess', 'EditMsgError');
+            }
+        }
+
+        function onChangePayment() {
+            let val = $('input[name="paymentType"]:checked').val();
+
+            if (val == "3") {
+                // Ti?n m?t - Reset card/bank fields
+                $("#group_cash").show();
+                $("#group_bank").hide();
+                $("#group_bank_info").hide();
+                
+                // Clear card/bank fields
+                $("#card_money").val("");
+                $("#card_written_in_word").val("");
+                $("#bank_name").val("");
+                $("#account_no").val("");
+                $("#account_name").val("");
+                $("#MID").val("");
+                $("#TID").val("");
+                $("#Approval").val("");
+            } else {
+                // Th? + chuy?n kho?n - Reset cash fields
+                $("#group_cash").hide();
+                $("#group_bank").show();
+                $("#group_bank_info").show();
+                
+                // Clear cash fields
+                $("#cash_money").val("");
+                $("#cash_written_in_word").val("");
+            }
+        }
+
+        /*function onChangeCash() {
+            if ($("#deposit_type_cash").prop("checked")) {
+                $('#cash_money').removeAttr('disabled');
+                $('#cash_written_in_word').removeAttr('disabled');
+            }
+            else {
+                $('#cash_money').attr("disabled", "disabled");
+                $('#cash_written_in_word').attr("disabled", "disabled");
+            }
+        }
+
+        function onChangeCard() {
+            if ($("#deposit_type_card").prop("checked")) {
+                $('#bank_name').removeAttr('disabled');
+                $('#account_no').removeAttr('disabled');
+                $('#account_name').removeAttr('disabled');
+                $('#card_money').removeAttr('disabled');
+                $('#card_written_in_word').removeAttr('disabled');
+            }
+            else {
+                $('#bank_name').attr("disabled", "disabled");
+                $('#account_no').attr("disabled", "disabled");
+                $('#account_name').attr("disabled", "disabled");
+                $('#card_money').attr("disabled", "disabled");
+                $('#card_written_in_word').attr("disabled", "disabled");
+            }
+        } */
+
+                function formatThousandsSeparator(number) {
+                const parts = number.toString().split('.');
+                const wholePart = parts[0].replace(/(\d)(?=(\d{3})+$)/g, '$1.'); // Add commas for thousands
+                const decimalPart = parts[1] || ''; // Handle decimal part
+                return wholePart + (decimalPart ? `.${decimalPart}` : '');
+
+            }
+
+        function onChangeTypeNumber(input) {
+            try {
+                var value = input.value.replace(/\./g, "");
+                if (!isNaN(value))
+                    input.value = value == "" ? "" : formatThousandsSeparator(parseFloat(value));
+            } catch (e) {
+                console.log('err: ' + e)
+            }
+
+        }
+
+        function SearchMemberID(MemberID) {
+
+            if (MemberID.trim() == "")
+                return;
+            GetUrl(apiConfig.api.host_user_service,
+                apiConfig.api.user.controller,
+                apiConfig.api.user.action.get_user_by_code.path,
+                apiConfig.api.user.action.get_user_by_code.method,
+                {
+                    code: MemberID
+                },
+                'fnSearchMemberIDSuccess', 'msgSearchMemberID');
+        }
+
+        function fnSearchMemberIDSuccess(result) {
+            if (result) {
+                // if (result.mobile)
+                //     $("#CustomerPhone").val(result.mobile);
+                // else
+                //     $("#CustomerPhone").val(result.phone);
+
+                $("#name").val(result.fullName);
+                $("#address").val(result.street);
+
+                ShowDropDownList("Province", "", result.state);
+                ShowDropDownList("District", result.state, result.district);
+                ShowDropDownList("Ward", result.district, result.ward);
+            }
+        }
+
+        function msgSearchMemberID() {
+            //$("#CustomerPhone").val('');
+            $("#name").val('');
+            $("#address").val('');
+            $("#Province").val(null).trigger("change");
+            $("#District").val(null).trigger("change");
+            $("#Ward").val(null).trigger("change");
+            toastr.warning('Không tìm th?y thông tin thành viên', 'C?nh báo');
+        }
+
+        function ShowDropDownList(elementID, parent, id) {
+            let path = apiConfig.api.provinces.action.dropdown_province.path;
+
+            if (elementID == "District")
+                path = apiConfig.api.provinces.action.dropdown_district.path;
+            else if (elementID == "Ward")
+                path = apiConfig.api.provinces.action.dropdown_ward.path;
+
+            GetUrl(apiConfig.api.host_dwr_service,
+                apiConfig.api.provinces.controller,
+                path,
+                apiConfig.api.provinces.action.dropdown_province.method,
+                {
+                    "parent": parent,
+                    "code": id
+                },
+                'fnShowDropDownListSuccess', 'msgError', elementID);
+        }
+        function fnShowDropDownListSuccess(result, elementID) {
+            if (result.length > 0)
+                $('#' + elementID).append(new Option(result[0].value, result[0].key, true, true)).trigger('change');
+
+        }
+
+        function EditMsgError(data) {
+            try {
+                var err = data.responseJSON;
+                var message = err.errors.msg[0];
+                toastr.error(message, 'Thông báo');
+            }
+            catch (ex) {
+                console.log(ex.message);
+            }
+
+        }
+
+        function onChangeConvertCurrencyToWords(element) {
+            try {
+                var value = element.value;
+                $("#cash_written_in_word").val(convertCurrencyToWords(value));
+            }
+            catch {
+                $("#cash_written_in_word").val("");
+            }
+
+        }
+
+        function onChangeConvertCurrencyToWordsbyCard(element) {
+            try {
+                var value = element.value;
+                $("#card_written_in_word").val(convertCurrencyToWords(value));
+            }
+            catch {
+                $("#card_written_in_word").val("");
+            }
+
+        }
+
+        function handlePasteOnlyNumber(element, event) {
+            let pastedData = element.value;
+
+            if (!/^\d+$/.test(pastedData)) // ki?m tra n?u chu?i ch? ch?a các ký t? s?
+            {
+                event.preventDefault(); // Ch?n hành ??ng dán
+                toastr.warning('Ch? nh?n d? li?u là s? (Only numeric values are allowed).', 'Thông báo');
+                element.value = "";
+                return false;
+            }
+
+            return true;
+        }
+
+        function isNumberKey(txt, evt) {
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+
+            if (charCode > 31 &&
+                (charCode < 48 || charCode > 57))
+                return false;
+            else
+                return true;
+        }
+    </script>
+
+
+    <script>
+        hideLoading();
+        var API_KEY = '3EB76D87D97C427943957C555AB0B60847582D38CB1688ED86C59251206305E3';
+        var AZURE_STORAGE_URL = 'https://aeonvnbookingstorage.blob.core.windows.net/image/';
+        var USER_SERVICE = 'http://20.24.110.171/user-service';
+        var BOOKING_SERVICE = 'http://20.24.110.171/booking-service';
+        var DWR_SERVICE = 'http://20.24.110.171/dwr-service';
+        var CHAT_SERVICE = 'http://20.24.110.171/chat-service';
+        var CHAT_HUB = 'http://20.24.110.171/chat-service/chatHub';
+        var storeRDC = ["8001", "8002", "8003", "8004", "8005", "8007", "8008"];
+        var localizationResources = {
+            'lbl_error': 'L?i',
+            'lbl_warning': 'C?nh báo',
+            'error401': 'B?n c?n ??ng nh?p vào h? th?ng',
+            'error400': 'Có l?i x?y ra trong quá trình x? lý!',
+            'lbl_placholder_search': 'Nh?p t? khóa tìm ki?m',
+            'errorServer': 'Không th? k?t n?i ??n server',
+            'lbl_phone_invalid': 'S? ?i?n tho?i không ?úng ??nh d?ng',
+            'lbl_email_invalid': 'Email không ?úng ??nh d?ng',
+            'lbl_finish': '?ã hoàn thành',
+            'export_store_8': 'Không th? xu?t báo cáo c?a RDC chung v?i các store khác',
+            'lbl_id_invalid': 'CMND/CCCD không ?úng ??nh d?ng.',
+            //DELIVERY STATUS
+            'lbl_delivered_full': '?ã giao hàng thành công',
+            'lbl_delivered_partialy': '?ã nh?n hàng (thi?u hóa ??n)',
+            'lbl_delivered_not': 'Ch?a giao hàng',
+            'lbl_delivered_return': '?ã tr? l?i toàn b? hàng',
+            'lbl_delivered_check_in': '?ã check-in',
+            'lbl_delivered_missing': '?ã nh?n hàng (thi?u hàng)',
+            'lbl_delivered_return_order': '?ã tr? l?i theo ??n hàng',
+            'lbl_delivered_return_sku': '?ã tr? l?i theo SKU',
+            'lbl_order_delete': '?ã xóa',
+            'lbl_delivered_cancel': '?ã h?y',
+
+
+            //QR STATUS
+            'lbl_qr_check_in': '?ã check in',
+            'lbl_qr_check_out': '?ã check out',
+
+
+            //RECEIPT STATUS
+            'lbl_receipt_full': '??n hàng ??y ??',
+            'lbl_receipt_missing': '??n hàng thi?u hóa ??n',
+            'lbl_receipt_return': '??n hàng b? tr? l?i',
+
+            //ERROR MSG
+            'TIMEFRAME_IS_EXIST': 'Khung th?i gian ?ã t?n t?i',
+            'TIMEFRAME_NOT_FOUND': 'Khung tìm th?y khung gi?',
+            'LINE_NOT_FOUND': 'Ngành hàng không có d? li?u',
+            'DEPARTMENT_NOT_FOUND': 'Phòng ban không có d? li?u',
+            'ERROR_TIMEFROM_TIMETO': 'Gi? b?t ??u ph?i nh? h?n gi? k?t thúc',
+            'SYSTEM_PARAMETER_NOT_FOUND': 'Không tìm th?y tham s?',
+            'USER_NOT_FOUND': 'Không tìm th?y nhân viên',
+            'USER_IS_EXIST': 'Mã nhân viên/Tên ??ng nh?p ?ã t?n t?i',
+            'STORE_IS_EXIST': 'Store ?ã t?n t?i',
+            'ORDER_MAX_AMOUNT': 'Khung gi? này ?ã ?? s? l??ng NCC giao hàng. Vui lòng  ch?n l?i khung gi? khác. Xin c?m ?n!',
+            'VEHICLE_MAX_AMOUNT': '?ã ??t ?? s? l??ng xe',
+            'STORE_NOT_ORGANIZATION': 'C?a hàng không thu?c c? c?u t? ch?c',
+            'ORDER_REGIS_DATE_INVALID': 'Ngày ??ng ký không h?p l?',
+            'NO_FILE_UPLOAD': 'Tài li?u không t?n t?i',
+            'INVALID_FILE': 'Tài li?u không ?úng ??nh d?ng',
+            'ROLE_IS_EXIST' : 'Tên phân quy?n ?ã t?n t?i',
+
+
+            //ROLE
+            'lbl_role_Add': 'Thêm',
+            'lbl_role_Return': 'Tr? hàng',
+            'lbl_role_Approve': 'Duy?t',
+            'lbl_role_Refuse': 'T? ch?i',
+            'lbl_role_ChangeActive': 'Chuy?n tr?ng thái',
+            'lbl_role_Delete': 'Xóa',
+            'lbl_role_Edit': 'C?p nh?t',
+            'lbl_role_Detail': 'Chi ti?t',
+            'lbl_role_Print': 'In',
+            'lbl_role_EarlyDeliveryStore': 'Giao hàng s?m Store',
+            'lbl_role_LateDeliveryStore': 'Giao quá h?n Store',
+            'lbl_role_EarlyDeliveryRDC': 'Giao hàng s?m RDC',
+            'lbl_role_LateDeliveryRDC': 'Giao quá h?n RDC',
+            'lbl_role_Cancel': 'H?y ??n',
+            'lbl_role_DeleteAfterCheckIn': 'Xóa sau checkin',
+            'lbl_role_DeleteBeforeCheckIn': 'Xóa tr??c checkin',
+            'lbl_role_RollBack': 'Khôi ph?c',
+
+            //MENU
+            'lbl_menu_user': 'Nhân viên',
+            'lbl_menu_role': 'Phân quy?n',
+            'lbl_menu_system_parameter': 'Thông s?',
+            'lbl_menu_system_timeframe': 'Khung gi? giao hàng',
+            'lbl_menu_store_management': 'Qu?n lý c?a hàng',
+            'lbl_menu_booking_management': 'Qu?n lý ??n ??ng ký',
+            'lbl_menu_refuse': '??n ??ng ký b? t? ch?i',
+            'lbl_menu_exchange_management': 'Qu?n lý phi?u ??i hàng',
+            'lbl_menu_employee': 'Nhân viên',
+            'lbl_menu_system': 'H? th?ng',
+            'lbl_menu_store': 'C?a hàng',
+            'lbl_menu_booking': '??n ??ng ký',
+            'lbl_menu_exchange': '??i hàng',
+            'lbl_menu_booking_current_management': '??n ??ng ký trong ngày',
+            'lbl_menu_report': 'Báo cáo',
+            'lbl_menu_order_report': 'Báo cáo ??n hàng',
+            'lbl_menu_supplier': 'Nhà cung c?p',
+            'lbl_header_purchase_order': '??n ??t hàng',
+            'lbl_log': 'L?ch s? thao tác',
+            'lbl_log_download': 'L?ch s? download',
+            'lbl_menu_outright': 'Giao theo ??n hàng',
+            'lbl_menu_replenish': 'Tr? v? / B? sung',
+            'lbl_menu_concess': 'Giao hàng ký g?i',
+            'lbl_menu_consignment': 'CTTT hàng ký g?i',
+            'lbl_menu_organization': "C? c?u t? ch?c",
+            'lbl_menu_delivery': "Thông tin giao hàng",
+            'lbl_menu_refund': "Thông tin ??i/tr?",
+            'lbl_menu_warranty': "Thông tin b?o hành",
+            'lbl_menu_delivery_note': "Phi?u giao hàng",
+            'lbl_menu_deposit_note': "Phi?u thu ti?n c?c",
+            'lbl_menu_cancel_note': "Phi?u giao hàng b? h?y",
+            'lbl_menu_approvetree': "Cây phê duy?t",
+            'lbl_menu_warranty_outright': "Xu?t hàng b?o hành Outright",
+            'lbl_menu_warranty_concess': "Xu?t hàng b?o hành Concess",
+            'lbl_menu_deposit_refund_note': "Phi?u hoàn ti?n c?c"
+
+        };
+        function logout() {
+            $.ajax({
+                method: "GET",
+                url: "/Authenticate/Logout",
+                success: function (result) {
+                    sessionStorage.clear();
+                    ClearLocalStorageByPrefix()
+                    window.location.href = "/Authenticate";
+                }
+            });
+        }
+        function ChangeLanguage(key_value) {
+            $.ajax({
+                method: "POST",
+                url: "/Authenticate/ChangeLanguage",
+                data: { key_value: key_value, },
+                success: function (data) {
+                    if (data.result) {
+                        location.reload();
+                    }
+                }
+            });
+        }
+    </script>
+    <script src="/js/api.function.js?v=5Uwqlf2zTpJTJI4CoQGSRKFzQIvpa4FG5el1RXneXeo"></script>
+    <!-- Charts JS -->
+    <!-- Page Specific JS -->
+    
+
+
+
+</body></html>

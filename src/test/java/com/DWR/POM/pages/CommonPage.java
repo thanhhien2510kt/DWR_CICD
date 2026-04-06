@@ -16,63 +16,63 @@ public class CommonPage {
     private WarantyDeliveryPage warantyDeliveryPage;
 
     public LoginPage getLoginPage() {
-        if(loginPage == null){
+        if (loginPage == null) {
             loginPage = new LoginPage();
         }
         return loginPage;
     }
 
     public DashboardPage getDashboardPage() {
-        if(dashboardPage == null){
+        if (dashboardPage == null) {
             dashboardPage = new DashboardPage();
         }
         return dashboardPage;
     }
 
     public DeliveryReceiptPage getDeliveryReceiptPage() {
-        if(deliveryReceiptPage == null){
+        if (deliveryReceiptPage == null) {
             deliveryReceiptPage = new DeliveryReceiptPage();
         }
         return deliveryReceiptPage;
     }
 
     public CancelledDeliveryReceiptPage getCancelledDeliveryReceiptPage() {
-        if(cancelledDeliveryReceiptPage == null){
+        if (cancelledDeliveryReceiptPage == null) {
             cancelledDeliveryReceiptPage = new CancelledDeliveryReceiptPage();
         }
         return cancelledDeliveryReceiptPage;
     }
 
     public DepositReceiptPage getDepositReceiptPage() {
-        if(depositReceiptPage == null){
+        if (depositReceiptPage == null) {
             depositReceiptPage = new DepositReceiptPage();
         }
         return depositReceiptPage;
     }
 
     public WarantyReceiptPage getWarantyReceiptPage() {
-        if(warantyReceiptPage == null){
+        if (warantyReceiptPage == null) {
             warantyReceiptPage = new WarantyReceiptPage();
         }
         return warantyReceiptPage;
     }
 
     public RefundRecieptPage getRefundRecieptPage() {
-        if(refundRecieptPage == null){
+        if (refundRecieptPage == null) {
             refundRecieptPage = new RefundRecieptPage();
         }
         return refundRecieptPage;
     }
 
     public WarantyDeliveryPage getWarantyDeliveryPage() {
-        if(warantyDeliveryPage == null){
+        if (warantyDeliveryPage == null) {
             warantyDeliveryPage = new WarantyDeliveryPage();
         }
         return warantyDeliveryPage;
     }
 
-    //hàm xây dựng
-    public CommonPage (){
+    // hàm xây dựng
+    public CommonPage() {
 
     }
 
@@ -90,63 +90,63 @@ public class CommonPage {
     public By menuRefundInfo = By.xpath("//span[contains(text(),'Thông tin đổi trả')]");
     public By menuRefundReceipt = By.xpath("//a[@href='/dwr/GoodsReturn/index']");
 
-    public DashboardPage clickMenuDWR(){
+    public DashboardPage clickMenuDWR() {
         WebUI.waitForPageLoaded();
-        WebUI.clickElement(menuDWR,5);
+        WebUI.clickElement(menuDWR, 5);
 
         return new DashboardPage();
     }
 
-    public DeliveryReceiptPage clickDeliveryReceiptPage(){
+    public DeliveryReceiptPage clickDeliveryReceiptPage() {
         WebUI.waitForPageLoaded();
-        WebUI.clickElement(menuDeliveryInfo,3);
-        WebUI.clickElement(menuDeliveryReceiptPage,3);
-        return new DeliveryReceiptPage();
-    }
-
-    public DeliveryReceiptPage clickCancelledDeliveryReceiptPage(){
-        WebUI.waitForPageLoaded();
-        WebUI.clickElement(menuDeliveryInfo,3);
-        WebUI.clickElement(menuCancelledDeliveryReceiptPage,3);
-        return new DeliveryReceiptPage();
-    }
-
-    public DepositReceiptPage clickDepositReceiptPage(){
-        WebUI.waitForPageLoaded();
-        WebUI.clickElement(menuDeliveryInfo,3);
-        if(!WebUI.checkElementDisplay(menuDepositReceipt)){
-            WebUI.clickElement(menuDeliveryInfo,3);
-            WebUI.clickElement(menuDepositReceipt,3);
+        if (!WebUI.checkElementDisplay(menuDeliveryReceiptPage)) {
+            WebUI.clickElement(menuDeliveryInfo, 3);
+            WebUI.clickElement(menuDeliveryReceiptPage, 3);
         }
-        WebUI.clickElement(menuDepositReceipt,3);
+        WebUI.clickElement(menuDeliveryReceiptPage, 3);
+        return new DeliveryReceiptPage();
+    }
+
+    public DeliveryReceiptPage clickCancelledDeliveryReceiptPage() {
+        WebUI.waitForPageLoaded();
+        WebUI.clickElement(menuDeliveryInfo, 3);
+        WebUI.clickElement(menuCancelledDeliveryReceiptPage, 3);
+        return new DeliveryReceiptPage();
+    }
+
+    public DepositReceiptPage clickDepositReceiptPage() {
+        WebUI.waitForPageLoaded();
+        WebUI.clickElement(menuDeliveryInfo, 3);
+        if (!WebUI.checkElementDisplay(menuDepositReceipt)) {
+            WebUI.clickElement(menuDeliveryInfo, 3);
+            WebUI.clickElement(menuDepositReceipt, 3);
+        }
+        WebUI.clickElement(menuDepositReceipt, 3);
         return new DepositReceiptPage();
     }
 
-    public WarantyReceiptPage clickWarantyReceiptPage(){
+    public WarantyReceiptPage clickWarantyReceiptPage() {
         WebUI.waitForPageLoaded();
-        WebUI.clickElement(menuWarantyInfo,3);
-        WebUI.clickElement(menuWarantyReceipt,3);
+        WebUI.clickElement(menuWarantyInfo, 3);
+        WebUI.clickElement(menuWarantyReceipt, 3);
 
         return new WarantyReceiptPage();
     }
 
-    public RefundRecieptPage clickRefundRecieptPage(){
+    public RefundRecieptPage clickRefundRecieptPage() {
         WebUI.waitForPageLoaded();
-        WebUI.clickElement(menuRefundInfo,3);
-        WebUI.clickElement(menuRefundReceipt,3);
+        WebUI.clickElement(menuRefundInfo, 3);
+        WebUI.clickElement(menuRefundReceipt, 3);
 
         return new RefundRecieptPage();
     }
 
-    public WarantyDeliveryPage clickWarantyDeliveryPage(){
+    public WarantyDeliveryPage clickWarantyDeliveryPage() {
         WebUI.waitForPageLoaded();
-        WebUI.clickElement(menuWarantyInfo,3);
-        WebUI.clickElement(menuWarantyDelivery,3);
+        WebUI.clickElement(menuWarantyInfo, 3);
+        WebUI.clickElement(menuWarantyDelivery, 3);
 
         return new WarantyDeliveryPage();
     }
-
-
-
 
 }

@@ -53,6 +53,7 @@ public class WebUI {
 
     }
 
+    //Annotation @Step (của Allure Report) để log step này trong báo cáo test.
     @Step("Check Data {1} In Table By Column {2}")
     public static void checkDataInTableByColumn_contains(int column, String value, String columnName) {
 
@@ -152,6 +153,7 @@ public class WebUI {
 
     public static WebElement getWebElement(By by) {
         return driverManager.getDriver().findElement(by);
+        //Lấy ra instance WebDriver hiện tại từ driverManager, tìm và trả về phần tử WebElement tương ứng với locator by.
     }
 
     public static List<WebElement> getListWebElement(By by) {
@@ -274,6 +276,17 @@ public class WebUI {
         getWebElement(by).click();
         LogUtils.info("Click element: " + by);
         ExtentTestManager.logMessage(Status.PASS, "Click element: " + by);
+    }
+
+    @Step("Click element with JS: {0} ")
+    public static void clickElementWithJs(By by) {
+        waitForElementPresent(by);
+        sleep(TIMEOUT_STEP);
+        WebElement element = getWebElement(by);
+        JavascriptExecutor js = (JavascriptExecutor) driverManager.getDriver();
+        js.executeScript("arguments[0].click();", element);
+        LogUtils.info("Click element with JS: " + by);
+        ExtentTestManager.logMessage(Status.PASS, "Click element with JS: " + by);
     }
 
     @Step("Check Element {0} is checked or not")
@@ -639,6 +652,16 @@ public class WebUI {
         } catch (Throwable error) {
             LogUtils.error("Element not exist. " + by.toString());
             Assert.fail("Element not exist. " + by.toString());
+        }
+    }
+
+    public static void waitForElementInvisible(By by) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driverManager.getDriver(), Duration.ofSeconds(TIMEOUT_EXPLICIT_WAIT), Duration.ofMillis(500));
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
+        } catch (Throwable error) {
+            LogUtils.error("Element is still visible. " + by.toString());
+            Assert.fail("Element is still visible. " + by.toString());
         }
     }
 

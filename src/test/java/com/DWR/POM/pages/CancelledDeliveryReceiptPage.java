@@ -12,9 +12,9 @@ import java.time.format.DateTimeFormatter;
 import static com.DWR.Keywords.WebUI.getWebElement;
 import static com.DWR.Keywords.WebUI.sleep;
 
-public class CancelledDeliveryReceiptPage extends CommonPage{
+public class CancelledDeliveryReceiptPage extends CommonPage {
 
-    //Element Add
+    // Element Add
     private By buttonAddNew = By.xpath("//i[normalize-space()='add']");
 
     private By CDOCheckBox = By.xpath("//label[normalize-space()='CDO']");
@@ -34,7 +34,6 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
     private By wardName = By.xpath("//span[contains(text(),'Phường/Xã')]");
     private By customerAddress = By.xpath("//input[@id='CustomerAddress']");
 
-
     private By selectDeliveryDate = By.xpath("//div[@class='form-line selectlist']/child::input[@id=\"DeliveryDate\"]");
     private By itemDeliveryDate = By.xpath("//div[@aria-label='" + currentDay() + "']");
     private By billCode = By.xpath("//input[@id='BillCode']");
@@ -49,17 +48,21 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
     private By quanity = By.xpath("//tbody//th[6]/input");
     private By price = By.xpath("//tbody//th[7]/input");
     private By discount = By.xpath("//tbody//th[8]/input");
-    private By chooseFileButton = By.xpath("(//label[contains(text(),'Đính kèm receipt và hình ảnh quà tặng kèm theo')]/parent::div)/following-sibling::div//input[@id='file']");
+    private By chooseFileButton = By.xpath(
+            "(//label[contains(text(),'Đính kèm receipt và hình ảnh quà tặng kèm theo')]/parent::div)/following-sibling::div//input[@id='file']");
 
     private By savebutton = By.xpath("//button[contains(text(),'Lưu')]");
 
     private By headerDeliveryReceipt = By.xpath("//h2[normalize-space()='Danh Sách Phiếu Giao Hàng']");
 
-    //Element Search
+    // Element Search
     private By searchCustomerName = By.xpath("//input[@id='customer_name']");
     private By searchCode = By.xpath("//input[@id='Code']");
-    private By searchType = By.xpath("(//div/label[text()='Loại phiếu']/parent::div)/following-sibling::div//span[@role='combobox']");
-    private By searchDepositStatus = By.xpath("(//div/label[text()='Trạng thái phiếu cọc']/parent::div)/following-sibling::div//span[@role='combobox']");
+    private By searchDeliveryCode = By.xpath("//input[@id='delivery_code']");
+    private By searchType = By
+            .xpath("(//div/label[text()='Loại phiếu']/parent::div)/following-sibling::div//span[@role='combobox']");
+    private By searchDepositStatus = By.xpath(
+            "(//div/label[text()='Trạng thái phiếu cọc']/parent::div)/following-sibling::div//span[@role='combobox']");
 
     private By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
     private By detailButton = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Detail']");
@@ -67,16 +70,20 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
     private By deliveryReceiptCode = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[3]");
     private By deliveryReceiptStatus = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[11]");
 
-    private By iconSendOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Send']");
+    private By iconSendOfFirstItem = By
+            .xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Send']");
     private By buttonYes = By.xpath("//button[contains(text(),'Đồng ý')]");
 
-    private By iconApproveOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Approve']");
+    private By iconApproveOfFirstItem = By
+            .xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Approve']");
     private By ApproveConfirmButton = By.xpath("//button[@id='btnApprove']");
     private By ApproveCancellationConfirmButton = By.xpath("//button[contains(text(),'Đồng ý')]");
 
-    private By iconPrintOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Print']");
+    private By iconPrintOfFirstItem = By
+            .xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Print']");
 
-    private By iconCallBackOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Callback']");
+    private By iconCallBackOfFirstItem = By
+            .xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Callback']");
     private By callBackConfirmButton = By.xpath("//button[@id='btnCallBack']");
     private By chooseStatus = By.xpath("//select[@id='choose_status']");
 
@@ -86,7 +93,7 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
     private By totalPrice = By.xpath("//input[@id='total_price']");
     private By returnButton = By.xpath("//button[contains(text(),'Quay lại')]");
 
-    //Hàm xử lý cho trang DeliveryReceiptPage
+    // Hàm xử lý cho trang DeliveryReceiptPage
 
     public String currentDay() {
         // Lấy ngày hôm nay
@@ -106,23 +113,23 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
         WebUI.clickElement(buttonAddNew);
     }
 
-    public void uploadFile (){
+    public void uploadFile() {
         String filePath = SystemHelper.getCurrentDir() + "src\\test\\resources\\TestData\\BOOKING APP.pdf";
-        WebUI.setText(chooseFileButton,filePath);
+        WebUI.setText(chooseFileButton, filePath);
         WebUI.sleep(2);
 
     }
 
     public void enterDataAddNewCOD_No() {
-        WebUI.zoomConcept("80%","Chrome");
+        WebUI.zoomConcept("80%", "Chrome");
         WebUI.clickElement(CODCheckBox);
         WebUI.clickElement(noDepositCheckBox);
         WebUI.setText(customerCode, "3003228094");
-        WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
+        WebUI.clickElement(customerCodeLable); // blur chuột ra ngoài để load customercode
         WebUI.waitForPageLoaded();
 
         WebUI.clickElement(customerPhone2);
-        WebUI.setText(customerPhone2,"0908081322");
+        WebUI.setText(customerPhone2, "0908081322");
 
         WebUI.clickElement(customerName);
         WebUI.clearText(customerName);
@@ -165,7 +172,6 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
 
         Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt), "Failed login");
 
-
     }
 
     public void enterDataAddNewCOD_Yes() {
@@ -174,11 +180,11 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
         WebUI.clickElement(CODCheckBox);
         WebUI.clickElement(yesDepositCheckBox);
         WebUI.setText(customerCode, "3003228094");
-        WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
+        WebUI.clickElement(customerCodeLable); // blur chuột ra ngoài để load customercode
         WebUI.waitForPageLoaded();
 
         WebUI.clickElement(customerPhone2);
-        WebUI.setText(customerPhone2,"0908081322");
+        WebUI.setText(customerPhone2, "0908081322");
 
         WebUI.clickElement(customerName);
         WebUI.clearText(customerName);
@@ -193,7 +199,6 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
         WebUI.clickElement(numberProduct);
         WebUI.setText(numberProduct, "1");
         sleep(2);
-
 
         WebUI.clickElement(selectSKU);
         WebUI.waitForPageLoaded();
@@ -222,25 +227,25 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
 
         Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt), "Failed login");
 
-
     }
 
     public void enterDataAddNewCDO() {
 
         WebUI.zoomConcept("80%", "Chrome");
         WebUI.clickElement(CDOCheckBox);
-        //WebUI.setText(customerCode, "3000012570");
-        //WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
-        //WebUI.waitForPageLoaded();
+        // WebUI.setText(customerCode, "3000012570");
+        // WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load
+        // customercode
+        // WebUI.waitForPageLoaded();
 
         WebUI.clickElement(customerPhone1);
-        WebUI.setText(customerPhone1,"0908081322");
+        WebUI.setText(customerPhone1, "0908081322");
 
         WebUI.clickElement(customerPhone2);
-        WebUI.setText(customerPhone2,"0908081322");
+        WebUI.setText(customerPhone2, "0908081322");
 
         WebUI.clickElement(customerName);
-        //WebUI.clearText(customerName);
+        // WebUI.clearText(customerName);
         WebUI.setText(customerName, "Rosy Dương");
 
         WebUI.clickElement(provinceName);
@@ -264,7 +269,7 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
         sleep(3);
 
         WebUI.clickElement(customerAddress);
-        WebUI.setText(customerAddress,"123 Ngô Quyền");
+        WebUI.setText(customerAddress, "123 Ngô Quyền");
 
         WebUI.setText(billCode, "HD6512381");
         WebUI.clickElement(numberProduct);
@@ -297,7 +302,6 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
         WebUI.sleep(2);
 
         Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt), "Failed login");
-
 
     }
 
@@ -340,6 +344,19 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
         WebUI.setText(searchCode, code);
         sleep(1);
 
+        WebUI.clickElement(searchButton);
+        sleep(3);
+
+    }
+
+    public void searchReceptByDeliveryCode(String code) {
+        WebUI.waitForPageLoaded();
+        WebUI.zoomConcept("80%", "Chrome");
+        WebUI.sleep(1);
+        WebUI.clickElement(searchDeliveryCode);
+        sleep(1);
+        WebUI.setText(searchDeliveryCode, code);
+        sleep(1);
 
         WebUI.clickElement(searchButton);
         sleep(3);
@@ -382,7 +399,6 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
         WebUI.sleep(2);
     }
 
-
     public void clickIconSend() {
         WebUI.clickElement(iconSendOfFirstItem);
         sleep(2);
@@ -414,22 +430,22 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
 
     }
 
-    public void clickIconCallBack (){
+    public void clickIconCallBack() {
         WebUI.zoomConcept("50%", "Chrome");
         WebUI.clickElement(iconCallBackOfFirstItem);
         WebUI.sleep(2);
     }
 
-    public void clickIconCallBack_exportGoods (){
+    public void clickIconCallBack_exportGoods() {
         WebUI.clickElement(callBackConfirmButton);
         WebUI.sleep(2);
     }
 
-    public void clickIconCallBack_cancelReceipt (String type){
+    public void clickIconCallBack_cancelReceipt(String type) {
         WebUI.clickElement(chooseStatus);
         System.out.println("Loại phiếu giao hàng:" + type);
         WebUI.sleep(2);
-        if (type.equals("CDO")){
+        if (type.equals("CDO")) {
             System.out.println("Ở đây");
             WebUI.pressDOWN();
             WebUI.sleep(1);
@@ -438,7 +454,7 @@ public class CancelledDeliveryReceiptPage extends CommonPage{
         WebUI.clickElement(callBackConfirmButton);
     }
 
-    public void closeToastMessage (){
+    public void closeToastMessage() {
         WebUI.sleep(1);
         WebUI.waitForElementClickable(toastMessage);
         WebUI.clickElement(toastMessage);

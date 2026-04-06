@@ -1,67 +1,74 @@
 package com.DWR.POM.pages;
 
 import com.DWR.Keywords.WebUI;
-import com.DWR.driver.driverManager;
 import com.DWR.helpers.SystemHelper;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
-import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import static com.DWR.Keywords.WebUI.*;
 
-
 public class DeliveryReceiptPage extends CommonPage {
 
-    //Element Add
     private By buttonAddNew = By.xpath("//i[normalize-space()='add']");
+    private By CDOInput = By.id("typeCDO");
+    private By CDOLabel = By.xpath("//label[@for='typeCDO']");
+    private By CODInput = By.id("typeCOD");
+    private By CODLabel = By.xpath("//label[@for='typeCOD']");
 
-    private By CDOCheckBox = By.xpath("//label[normalize-space()='CDO']");
-    private By CODCheckBox = By.xpath("//label[normalize-space()='COD']");
+    private By noDepositInput = By.id("deposit_no");
+    private By noDepositLabel = By.xpath("//label[@for='deposit_no']");
+    private By yesDepositInput = By.id("deposit_yes");
+    private By yesDepositLabel = By.xpath("//label[@for='deposit_yes']");
 
-    private By noDepositCheckBox = By.xpath("//label[@for='deposit_no']");
-    private By yesDepositCheckBox = By.xpath("//label[@for='deposit_yes']");
+    private By storeDropdown = By.id("Store");
 
-    private By customerCode = By.xpath("//input[@id='CustomerCode']");
     private By customerCodeLable = By.xpath("//label[contains(text(),'Mã thẻ thành viên')]");
 
-    private By customerPhone1 = By.xpath("//input[@id='CustomerPhone']");
-    private By customerPhone2 = By.xpath("//input[@id='CustomerPhone2']");
-    private By customerName = By.xpath("//input[@id='CustomerName']");
-    private By provinceName = By.xpath("//span[contains(text(),'Thành phố/Tỉnh')]");
-    private By districtrName = By.xpath("//span[contains(text(),'Quận/Huyện')]");
-    private By wardName = By.xpath("//span[contains(text(),'Phường/Xã')]");
-    private By customerAddress = By.xpath("//input[@id='CustomerAddress']");
+    private By customerPhone1 = By.id("CustomerPhone");
+    private By customerName = By.id("CustomerName");
+    private By provinceName = By.xpath("//span[@id='select2-Province-container']");
+    private By provinceDropdown = By.xpath("//li[contains(text(),'Bình Dương')]");
+    private By districtrName = By.xpath("//span[@id='select2-District-container']");
+    private By wardName = By.xpath("//span[@id='select2-Ward-container']");
+    private By customerAddress = By.id("CustomerAddress");
 
+    private By selectDeliveryDate = By.name("DeliveryDate");
+    private By deliveryTimeDropdown = By.xpath("//span[@id='select2-DeliveryTime-container']");
+    private By billCode = By.id("BillCode");
+    private By numberProduct = By.id("NumberProduct");
 
-    private By selectDeliveryDate = By.xpath("//div[@class='form-line selectlist']/child::input[@id=\"DeliveryDate\"]");
-    private By itemDeliveryDate = By.xpath("//div[@aria-label='" + currentDay() + "']");
-    private By billCode = By.xpath("//input[@id='BillCode']");
-    private By numberProduct = By.xpath("//input[@id='NumberProduct']");
+    private By isInstallationTrue = By.id("IsInstallation_True");
+    private By isInstallationFalse = By.id("IsInstallation_False");
+    private By isVatTrue = By.id("IsVat_True");
+    private By isVatFalse = By.id("IsVat_False");
 
-    private By selectSKU = By.xpath("//span[normalize-space()='Chọn mã sản phẩm']");
-    private By SearchSKU = By.xpath("//input[@placeholder='Nhập từ khóa tìm kiếm']");
-    private By itemSKU = By.xpath("//span[@title='02478333']");
+    private By sapCode = By.id("SAPCode");
+    private By numberBag = By.id("NumberBag");
+    private By bagPrice = By.id("MoneyBag");
+    private By labelBagPrice = By.xpath("//label[contains(text(),'Tiền túi hàng')]");
+    private By giftItem = By.id("gift_note");
+    private By extraShippingFee = By.id("shipping_price");
 
-    private By quayHang = By.xpath("//tbody//th[4]//span");
-    private By nganhHang = By.xpath("//tbody//th[5]//span");
-    private By quanity = By.xpath("//tbody//th[6]/input");
-    private By price = By.xpath("//tbody//th[7]/input");
-    private By discount = By.xpath("//tbody//th[8]/input");
-    private By chooseFileButton = By.xpath("(//label[contains(text(),'Đính kèm receipt và hình ảnh quà tặng kèm theo')]/parent::div)/following-sibling::div//input[@id='file']");
+    private By selectSKU = By.xpath("//span[contains(@id,'select2-') and contains(.,'Chọn mã sản phẩm')]");
+    private By SKUDropdown = By.xpath("//li[normalize-space()='00100014']");
+    private By quanity = By.cssSelector("input.product_quantity");
+    private By price = By.cssSelector("input.product_price");
+    private By discount = By.cssSelector("input.product_discount_price");
 
-    private By savebutton = By.xpath("//button[contains(text(),'Lưu')]");
-
+    private By chooseFileButton = By.id("file");
+    private By savebutton = By.cssSelector("button.bg-aeon");
     private By headerDeliveryReceipt = By.xpath("//h2[normalize-space()='Danh Sách Phiếu Giao Hàng']");
 
-    //Element Search
+    // Element Search
     private By searchCustomerName = By.xpath("//input[@id='customer_name']");
     private By searchCode = By.xpath("//input[@id='Code']");
-    private By searchType = By.xpath("(//div/label[text()='Loại phiếu']/parent::div)/following-sibling::div//span[@role='combobox']");
-    private By searchDepositStatus = By.xpath("(//div/label[text()='Trạng thái phiếu cọc']/parent::div)/following-sibling::div//span[@role='combobox']");
+    private By searchType = By
+            .xpath("(//div/label[text()='Loại phiếu']/parent::div)/following-sibling::div//span[@role='combobox']");
+    private By searchDepositStatus = By.xpath(
+            "(//div/label[text()='Trạng thái phiếu cọc']/parent::div)/following-sibling::div//span[@role='combobox']");
 
     private By searchButton = By.xpath("//span[contains(text(),'Tìm kiếm')]");
     private By detailButton = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Detail']");
@@ -69,15 +76,19 @@ public class DeliveryReceiptPage extends CommonPage {
     private By deliveryReceiptCode = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[3]");
     private By deliveryReceiptStatus = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[11]");
 
-    private By iconSendOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Send']");
+    private By iconSendOfFirstItem = By
+            .xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Send']");
     private By buttonYes = By.xpath("//button[contains(text(),'Đồng ý')]");
 
-    private By iconApproveOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Approve']");
+    private By iconApproveOfFirstItem = By
+            .xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Approve']");
     private By ApproveConfirmButton = By.xpath("//button[@id='btnApprove']");
 
-    private By iconPrintOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Print']");
+    private By iconPrintOfFirstItem = By
+            .xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Print']");
 
-    private By iconCallBackOfFirstItem = By.xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Callback']");
+    private By iconCallBackOfFirstItem = By
+            .xpath("//table[@id='delivery-table']/tbody[1]/tr[1]/td[12]//button[@title='Callback']");
     private By callBackConfirmButton = By.xpath("//button[@id='btnCallBack']");
     private By chooseStatus = By.xpath("//select[@id='choose_status']");
 
@@ -87,7 +98,7 @@ public class DeliveryReceiptPage extends CommonPage {
     private By totalPrice = By.xpath("//input[@id='total_price']");
     private By returnButton = By.xpath("//button[contains(text(),'Quay lại')]");
 
-    //Hàm xử lý cho trang DeliveryReceiptPage
+    // Hàm xử lý cho trang DeliveryReceiptPage
 
     public String currentDay() {
         // Lấy ngày hôm nay
@@ -107,208 +118,280 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.clickElement(buttonAddNew);
     }
 
-    public void uploadFile (){
+    public void uploadFile() {
         String filePath = SystemHelper.getCurrentDir() + "src\\test\\resources\\TestData\\BOOKING APP.pdf";
-        WebUI.setText(chooseFileButton,filePath);
+        WebUI.setText(chooseFileButton, filePath);
         WebUI.sleep(2);
 
     }
 
     public void enterDataAddNewCOD_No() {
-        WebUI.zoomConcept("80%","Chrome");
-        WebUI.clickElement(CODCheckBox);
-        WebUI.clickElement(noDepositCheckBox);
-        WebUI.setText(customerCode, "3003228094");
-        WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
+        WebUI.zoomConcept("80%", "Chrome");
+
+        if (!WebUI.checkElementIsChecked(CODInput)) {
+            WebUI.clickElement(CODLabel);
+        }
+        WebUI.sleep(1);
+        if (!WebUI.checkElementIsChecked(noDepositInput)) {
+            WebUI.clickElement(noDepositLabel);
+        }
+        WebUI.sleep(2);
+
+        WebUI.setText(customerPhone1, "0908081322");
+        WebUI.clickElement(customerCodeLable); // blur chuột ra ngoài để load customercode
         WebUI.waitForPageLoaded();
-
-        WebUI.clickElement(customerPhone2);
-        WebUI.setText(customerPhone2,"0908081322");
-
-        WebUI.clickElement(customerName);
-        WebUI.clearText(customerName);
+        WebUI.sleep(2);
         WebUI.setText(customerName, "Rosy Dương");
 
-        WebUI.clickElement(selectDeliveryDate);
-        sleep(3);
-        WebUI.clickElement(itemDeliveryDate);
-        sleep(3);
+        // Chọn Tỉnh/Thành
+        WebUI.clickElement(provinceName);
+        WebUI.waitForElementVisible(provinceDropdown, 5);
+        WebUI.pressDOWN();
+        WebUI.pressENTER();
+        WebUI.sleep(2);
 
-        WebUI.setText(billCode, "HD6512381");
-        WebUI.clickElement(numberProduct);
-        WebUI.setText(numberProduct, "1");
-        sleep(2);
-
-        WebUI.clickElement(selectSKU);
+        // Chọn Quận/Huyện
+        WebUI.clickElement(districtrName);
         WebUI.sleep(3);
-        //WebUI.setText(SearchSKU, "023");
-        //sleep(2);
+        WebUI.pressDOWN();
         WebUI.pressENTER();
-        sleep(5);
-        WebUI.clickElement(quayHang);
-        sleep(1);
-        WebUI.pressENTER();
-        sleep(1);
-        WebUI.clickElement(nganhHang);
-        sleep(1);
-        WebUI.pressENTER();
-        sleep(1);
-        WebUI.setText(quanity, "1");
-        sleep(1);
-        WebUI.setText(price, "560000");
-        sleep(1);
-        WebUI.setText(discount, "10");
-        sleep(1);
+        WebUI.sleep(2);
 
-        WebUI.scrollToElement(driverManager.getDriver().findElement(savebutton));
-        sleep(2);
+        // Chọn Phường/Xã
+        WebUI.clickElement(wardName);
+        WebUI.sleep(3);
+        WebUI.pressDOWN();
+        WebUI.pressENTER();
+        WebUI.sleep(2);
+
+        WebUI.setText(customerAddress, "123 Ngô Quyền");
+        WebUI.setText(billCode, "HD6512381");
+
+        // Nhập ngày giao hàng trực tiếp hoặc chọn
+        WebUI.setText(selectDeliveryDate, currentDay());
+        WebUI.pressENTER();
+
+        // Chọn khung giờ
+        WebUI.clickElement(deliveryTimeDropdown);
+        WebUI.pressDOWN();
+        WebUI.pressENTER();
+
+        WebUI.setText(sapCode, "SAP123");
+        WebUI.clearText(numberBag);
+        WebUI.setText(numberBag, "1");
+        WebUI.clickElement(labelBagPrice);
+        WebUI.clearText(bagPrice);
+        WebUI.setText(bagPrice, "2000");
+        WebUI.setText(giftItem, "No Gift");
+
+        WebUI.clearText(numberProduct);
+        WebUI.setText(numberProduct, "1");
+        WebUI.sleep(2); // Đợi bảng render
+
+        // Bảng sản phẩm
+        WebUI.clickElement(selectSKU);
+        WebUI.waitForElementVisible(SKUDropdown, 5);
+        WebUI.pressENTER();
+        WebUI.sleep(3);
+
+        // Các thông tin khác nếu có
+        WebUI.clearText(quanity);
+        WebUI.setText(quanity, "1");
+        WebUI.clearText(price);
+        WebUI.setText(price, "3000000");
+        WebUI.clearText(discount);
+        WebUI.setText(discount, "0");
+
+        WebUI.setText(extraShippingFee, "0");
+
+        WebUI.scrollToElement(getWebElement(savebutton));
+        WebUI.sleep(1);
 
         uploadFile();
 
         WebUI.clickElement(savebutton);
         WebUI.waitForPageLoaded();
+        WebUI.sleep(4);
 
-        Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt), "Failed login");
-
-
+        Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt), "Failed to save COD receipt without deposit");
     }
 
     public void enterDataAddNewCOD_Yes() {
         WebUI.zoomConcept("80%", "Chrome");
 
-        WebUI.clickElement(CODCheckBox);
-        WebUI.clickElement(yesDepositCheckBox);
-        WebUI.setText(customerCode, "3003228094");
-        WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
+        if (!WebUI.checkElementIsChecked(CODInput)) {
+            WebUI.clickElement(CODLabel);
+        }
+        WebUI.sleep(1);
+        if (!WebUI.checkElementIsChecked(yesDepositInput)) {
+            WebUI.clickElement(yesDepositLabel);
+        }
+        WebUI.sleep(2);
+
+        WebUI.setText(customerPhone1, "0908081322");
+        WebUI.clickElement(customerCodeLable); // blur chuột ra ngoài để load customercode
         WebUI.waitForPageLoaded();
-
-        WebUI.clickElement(customerPhone2);
-        WebUI.setText(customerPhone2,"0908081322");
-
-        WebUI.clickElement(customerName);
-        WebUI.clearText(customerName);
+        WebUI.sleep(2);
         WebUI.setText(customerName, "Rosy Dương");
 
-        WebUI.clickElement(selectDeliveryDate);
-        sleep(3);
-        WebUI.clickElement(itemDeliveryDate);
-        sleep(3);
+        // Chọn Tỉnh/Thành
+        WebUI.clickElement(provinceName);
+        WebUI.waitForElementVisible(provinceDropdown, 5);
+        WebUI.pressDOWN();
+        WebUI.pressENTER();
+        WebUI.sleep(2);
 
+        // Chọn Quận/Huyện
+        WebUI.clickElement(districtrName);
+        WebUI.sleep(3);
+        WebUI.pressDOWN();
+        WebUI.pressENTER();
+        WebUI.sleep(2);
+
+        // Chọn Phường/Xã
+        WebUI.clickElement(wardName);
+        WebUI.sleep(3);
+        WebUI.pressDOWN();
+        WebUI.pressENTER();
+        WebUI.sleep(2);
+
+        WebUI.setText(customerAddress, "123 Ngô Quyền");
         WebUI.setText(billCode, "HD6512381");
-        WebUI.clickElement(numberProduct);
+
+        // Nhập ngày giao hàng trực tiếp hoặc chọn
+        WebUI.setText(selectDeliveryDate, currentDay());
+        WebUI.pressENTER();
+
+        // Chọn khung giờ
+        WebUI.clickElement(deliveryTimeDropdown);
+        WebUI.pressDOWN();
+        WebUI.pressENTER();
+
+        WebUI.setText(sapCode, "SAP123");
+        WebUI.clearText(numberBag);
+        WebUI.setText(numberBag, "1");
+        WebUI.clickElement(labelBagPrice);
+        WebUI.clearText(bagPrice);
+        WebUI.setText(bagPrice, "2000");
+        WebUI.setText(giftItem, "No Gift");
+
+        WebUI.clearText(numberProduct);
         WebUI.setText(numberProduct, "1");
-        sleep(2);
+        WebUI.sleep(2); // Đợi bảng render
 
-
+        // Bảng sản phẩm
         WebUI.clickElement(selectSKU);
-        WebUI.waitForPageLoaded();
-        WebUI.setText(SearchSKU, "023");
-        sleep(2);
+        WebUI.waitForElementVisible(SKUDropdown, 5);
         WebUI.pressENTER();
-        sleep(4);
-        WebUI.clickElement(quayHang);
-        sleep(1);
-        WebUI.pressENTER();
-        sleep(1);
-        WebUI.clickElement(nganhHang);
-        sleep(1);
-        WebUI.setText(quanity, "1");
-        sleep(1);
-        WebUI.setText(price, "560000");
-        sleep(1);
-        WebUI.setText(discount, "10");
-        sleep(1);
+        WebUI.sleep(3);
 
-        WebUI.scrollToElement(driverManager.getDriver().findElement(savebutton));
-        sleep(2);
+        // Các thông tin khác nếu có
+        WebUI.clearText(quanity);
+        WebUI.setText(quanity, "1");
+        WebUI.clearText(price);
+        WebUI.setText(price, "3000000");
+        WebUI.clearText(discount);
+        WebUI.setText(discount, "0");
+
+        WebUI.setText(extraShippingFee, "0");
+
+        WebUI.scrollToElement(getWebElement(savebutton));
+        WebUI.sleep(1);
 
         uploadFile();
 
         WebUI.clickElement(savebutton);
         WebUI.waitForPageLoaded();
+        WebUI.sleep(4);
 
-        Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt), "Failed login");
-
-
+        Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt), "Failed to save COD receipt with deposit");
     }
 
     public void enterDataAddNewCDO() {
-
         WebUI.zoomConcept("80%", "Chrome");
-        WebUI.clickElement(CDOCheckBox);
-        //WebUI.setText(customerCode, "3000012570");
-        //WebUI.clickElement(customerCodeLable); //blur chuột ra ngoài để load customercode
-        //WebUI.waitForPageLoaded();
+        if (!WebUI.checkElementIsChecked(CDOInput)) {
+            WebUI.clickElement(CDOLabel);
+        }
+        WebUI.sleep(2);
 
-        WebUI.clickElement(customerPhone1);
-        WebUI.setText(customerPhone1,"0908081322");
-
-        WebUI.clickElement(customerPhone2);
-        WebUI.setText(customerPhone2,"0908081322");
-
-        WebUI.clickElement(customerName);
-        //WebUI.clearText(customerName);
+        WebUI.setText(customerPhone1, "0908081322");
+        WebUI.clickElement(customerCodeLable); // blur chuột ra ngoài để load customercode
+        WebUI.waitForPageLoaded();
+        WebUI.sleep(2);
         WebUI.setText(customerName, "Rosy Dương");
 
+        // Chọn Tỉnh/Thành
         WebUI.clickElement(provinceName);
-        sleep(1);
+        WebUI.waitForElementVisible(provinceDropdown, 5);
+        // WebUI.sleep(4);
+        WebUI.pressDOWN();
         WebUI.pressENTER();
-        sleep(2);
+        WebUI.sleep(2);
 
+        // Chọn Quận/Huyện
         WebUI.clickElement(districtrName);
-        sleep(1);
+        WebUI.sleep(3);
+        WebUI.pressDOWN();
         WebUI.pressENTER();
-        sleep(2);
+        WebUI.sleep(2);
 
+        // Chọn Phường/Xã
         WebUI.clickElement(wardName);
-        sleep(1);
+        WebUI.sleep(3);
+        WebUI.pressDOWN();
         WebUI.pressENTER();
-        sleep(2);
+        WebUI.sleep(2);
 
-        WebUI.clickElement(selectDeliveryDate);
-        sleep(3);
-        WebUI.clickElement(itemDeliveryDate);
-        sleep(3);
-
-        WebUI.clickElement(customerAddress);
-        WebUI.setText(customerAddress,"123 Ngô Quyền");
-
+        WebUI.setText(customerAddress, "123 Ngô Quyền");
         WebUI.setText(billCode, "HD6512381");
-        WebUI.clickElement(numberProduct);
-        WebUI.setText(numberProduct, "1");
-        sleep(2);
-        WebUI.clickElement(selectSKU);
-        WebUI.waitForPageLoaded();
-        WebUI.setText(SearchSKU, "023");
-        sleep(2);
-        WebUI.pressENTER();
-        sleep(5);
-        WebUI.clickElement(quayHang);
-        sleep(1);
-        WebUI.pressENTER();
-        sleep(1);
-        WebUI.clickElement(nganhHang);
-        sleep(1);
-        WebUI.pressENTER();
-        WebUI.setText(quanity, "1");
-        sleep(1);
-        WebUI.setText(price, "3000000");
-        sleep(1);
-        WebUI.setText(discount, "0");
-        sleep(1);
 
-        WebUI.scrollToElement(driverManager.getDriver().findElement(savebutton));
-        sleep(2);
+        // Nhập ngày giao hàng trực tiếp hoặc chọn
+        WebUI.setText(selectDeliveryDate, currentDay());
+        WebUI.pressENTER();
+
+        // Chọn khung giờ
+        WebUI.clickElement(deliveryTimeDropdown);
+        WebUI.pressDOWN();
+        WebUI.pressENTER();
+
+        WebUI.setText(sapCode, "SAP123");
+        WebUI.clearText(numberBag);
+        WebUI.setText(numberBag, "1");
+        WebUI.clickElement(labelBagPrice);
+        WebUI.clearText(bagPrice);
+        WebUI.setText(bagPrice, "2000");
+        WebUI.setText(giftItem, "No Gift");
+
+        WebUI.clearText(numberProduct);
+        WebUI.setText(numberProduct, "1");
+        WebUI.sleep(2); // Đợi bảng render
+
+        // Bảng sản phẩm
+        WebUI.clickElement(selectSKU);
+        WebUI.waitForElementVisible(SKUDropdown, 5);
+        WebUI.pressENTER();
+        WebUI.sleep(3);
+
+        // Các thông tin khác nếu có
+        WebUI.clearText(quanity);
+        WebUI.setText(quanity, "1");
+        WebUI.clearText(price);
+        WebUI.setText(price, "3000000");
+        WebUI.clearText(discount);
+        WebUI.setText(discount, "0");
+
+        WebUI.setText(extraShippingFee, "0");
+
+        WebUI.scrollToElement(getWebElement(savebutton));
+        WebUI.sleep(1);
 
         uploadFile();
 
         WebUI.clickElement(savebutton);
         WebUI.waitForPageLoaded();
-        WebUI.sleep(2);
+        WebUI.sleep(4);
 
-        Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt), "Failed login");
-
-
+        Assert.assertTrue(WebUI.checkElementExist(headerDeliveryReceipt), "Failed to save CDO receipt");
     }
 
     public void searchRecept(String type, String name, String deposit) {
@@ -349,7 +432,6 @@ public class DeliveryReceiptPage extends CommonPage {
         sleep(1);
         WebUI.setText(searchCode, code);
         sleep(1);
-
 
         WebUI.clickElement(searchButton);
         sleep(3);
@@ -392,7 +474,6 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.sleep(2);
     }
 
-
     public void clickIconSend() {
         WebUI.clickElement(iconSendOfFirstItem);
         sleep(2);
@@ -405,11 +486,12 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.clickElement(iconApproveOfFirstItem);
         sleep(2);
         WebUI.clickElement(ApproveConfirmButton);
-        sleep(5);
+        sleep(4);
     }
 
     public void clickIconPrint() {
         WebUI.zoomConcept("50%", "Chrome");
+        WebUI.waitForElementVisible(iconPrintOfFirstItem, 3);
         WebUI.clickElement(iconPrintOfFirstItem);
         sleep(2);
         WebUI.clickElement(buttonYes);
@@ -424,18 +506,23 @@ public class DeliveryReceiptPage extends CommonPage {
 
     }
 
-    public void clickIconCallBack (){
+    public void clickIconCallBack() {
         WebUI.zoomConcept("50%", "Chrome");
         WebUI.clickElement(iconCallBackOfFirstItem);
         WebUI.sleep(2);
     }
 
-    public void clickIconCallBack_exportGoods (){
+    public void clickIconCallBack_Confirm() {
         WebUI.clickElement(callBackConfirmButton);
         WebUI.sleep(2);
     }
 
-    public void clickIconCallBack_cancelReceipt (){
+    public void clickIconCallBack_exportGoods() {
+        WebUI.clickElement(callBackConfirmButton);
+        WebUI.sleep(2);
+    }
+
+    public void clickIconCallBack_cancelReceipt() {
         WebUI.clickElement(chooseStatus);
         WebUI.sleep(2);
         WebUI.pressDOWN();
@@ -444,11 +531,10 @@ public class DeliveryReceiptPage extends CommonPage {
         WebUI.sleep(2);
     }
 
-    public void closeToastMessage (){
+    public void closeToastMessage() {
         WebUI.sleep(1);
         WebUI.waitForElementClickable(toastMessage);
         WebUI.clickElement(toastMessage);
     }
-
 
 }

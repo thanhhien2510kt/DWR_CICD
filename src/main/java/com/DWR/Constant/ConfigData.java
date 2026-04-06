@@ -1,6 +1,6 @@
 package com.DWR.Constant;
 
-import com.DWR.helpers.PropertiesHelper;
+import com.DWR.helpers.PropertiesHelper;  // Import class PropertiesHelper – class này có nhiệm vụ đọc giá trị từ file .properties
 
 public class ConfigData {
     public static String URL = PropertiesHelper.getValue("URL") ;
@@ -12,5 +12,6 @@ public class ConfigData {
     public static String SCREENSHOT_PATH = PropertiesHelper.getValue("SCREENSHOT_PATH");
     public static String RECORD_VIDEO_PATH = PropertiesHelper.getValue("RECORD_VIDEO_PATH");
 
-
 }
+
+//Class ConfigData là nơi gom các config quan trọng từ file config.properties vào thành biến static, để dùng ở bất kỳ đâu trong project.

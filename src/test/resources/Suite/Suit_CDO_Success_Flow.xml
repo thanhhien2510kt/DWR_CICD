@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suit_CDO_Success_Flow" verbose="1">
+
+    <test name="Add Approve and Confirm Delivery Flow">
+        <parameter name="type" value="CDO"/>
+        <classes>
+            <class name="com.DWR.POM.testcases.DeliveryReceiptTest">
+                <methods>
+                    <include name="testAddNewDeliveryReceipt_CDO"/>
+                    <include name="approveFlow_CDO"/>
+                    <include name="confirmSuccessfullDelivery"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
