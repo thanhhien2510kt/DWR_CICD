@@ -54,3 +54,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: allure-history
+          publish_branch: gh-pages  # Thêm dòng này
+          force_orphan: true       # THÊM DÒNG NÀY (Rất quan trọng cho lần đầu)
+

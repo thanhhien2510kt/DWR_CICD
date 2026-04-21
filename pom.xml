@@ -14,6 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Default suite, có thể override bằng -DsuiteXmlFile=... -->
         <suiteXmlFile>src/test/resources/Suite/Suit_CDO_Success_Flow.xml</suiteXmlFile>
+        <aspectj.version>1.9.22.1</aspectj.version>
     </properties>
 
     <dependencies>
@@ -135,7 +136,7 @@
                         <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
                     <argLine>
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar"
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <testFailureIgnore>true</testFailureIgnore>
                     <systemPropertyVariables>
