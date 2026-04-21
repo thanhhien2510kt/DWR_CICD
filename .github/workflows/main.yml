@@ -9,7 +9,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -27,12 +28,7 @@ jobs:
           sudo apt-get install -y google-chrome-stable
 
       - name: Run Automation Tests
-        run: |
-          # Bước này để kiểm tra xem file có thực sự tồn tại không (nếu không thấy nó sẽ báo lỗi ở đây)
-          ls -R src/test/resources/
-          
-          # Chạy test với đường dẫn được bao bọc bởi dấu nháy và dùng biến $GITHUB_WORKSPACE
-          mvn test -DsuiteXmlFile="${{ github.workspace }}/src/test/resources/Suite/Suit_CDO_Success_Flow.xml" -Dheadless=true
+        run: mvn test -DsuiteXmlFile="${{ github.workspace }}/src/test/resources/Suite/Suit_CDO_Success_Flow.xml" -Dheadless=true
         continue-on-error: true
 
       - name: Get Allure history
@@ -52,13 +48,13 @@ jobs:
           gh_pages: gh-pages
           allure_report: allure-report
           allure_history: allure-history
+          keep_reports: 20
 
       - name: Deploy report to Github Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: allure-history
-          publish_branch: gh-pages  # Thêm dòng này
-          force_orphan: true       # THÊM DÒNG NÀY (Rất quan trọng cho lần đầu)
-
+          publish_branch: gh-pages
+          force_orphan: true
