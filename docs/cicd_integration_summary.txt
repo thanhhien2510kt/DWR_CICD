@@ -1,0 +1,42 @@
+TỔNG HỢP CÁC BƯỚC THIẾT LẬP CI/CD CHO BỘ AUTOMATION TEST (DWR_CICD)
+----------------------------------------------------------------------
+
+0. CÁCH THỨC HOẠT ĐỘNG (FLOW)
+   - Bước 1 (Website): Bạn push code lên repo Website -> GitHub chạy Deploy website lên server thực tế.
+   - Bước 2 (Trigger): Ngay sau khi Deploy xong, repo Website gửi một tín hiệu "gọi cửa" (Repository Dispatch) sang repo Automation.
+   - Bước 3 (Automation): Repo Automation nhận được tín hiệu -> Tự động bật máy ảo, cài Chrome và chạy bộ code Selenium (Headless mode).
+   - Bước 4 (Báo cáo): Sau khi chạy xong bài test -> Hệ thống tự gom kết quả lại, tạo link báo cáo Web và nén file ZIP gửi cho bạn.
+
+1. THAY ĐỔI TRONG CODE AUTOMATION (REPO DWR_CICD)
+   - BaseTest.java: Cấu hình thêm ChromeOptions/EdgeOptions với tham số "--headless" để trình duyệt có thể chạy ẩn danh trên server (không cần màn hình).
+   - CaptureHelper.java: Thêm đoạn kiểm tra "null" cho ScreenRecorder để tránh lỗi crash khi chạy trên môi trường không có giao diện đồ họa.
+   - pom.xml: 
+     + Cập nhật đường dẫn file Suite XML chính xác.
+     + Sửa đường dẫn AspectJ Weaver để Maven có thể tìm thấy thư viện này trên môi trường Linux của GitHub Actions.
+   - config.properties:
+     + Đặt RECORD_VIDEO = false (Tắt quay phim vì server không hỗ trợ).
+     + Tăng TIMEOUT_EXPLICIT_WAIT lên 30s để bù đắp độ trễ mạng của server.
+
+2. CẤU HÌNH GITHUB ACTIONS (REPO DWR_CICD)
+   - .github/workflows/main.yml: Tạo file này để tự động hóa:
+     + Cài đặt Java 17 và Google Chrome.
+     + Chạy lệnh: mvn test -Dheadless=true.
+     + Thu thập kết quả Allure Report.
+     + Xuất báo cáo ra link web (GitHub Pages) và đính kèm file ZIP (Artifacts).
+
+3. CẤU HÌNH TRIGGER TỪ WEBSITE (REPO BEVERAGE_ORDERING_DEPLOY)
+   - .github/workflows/deploy.yml: Thêm bước "Trigger Automation Tests" sử dụng lệnh curl để gửi tín hiệu sang repo DWR_CICD ngay sau khi website được deploy thành công.
+
+4. CÁC LƯU Ý QUAN TRỌNG KHI VẬN HÀNH
+   - Quyền hạn (Permissions): Luôn đảm bảo trong phần Settings -> Actions -> General của Repo đã chọn "Read and write permissions".
+   - Token (Secrets):
+     + MY_GITHUB_PAT: Mã Token cá nhân để 2 repo gọi được cho nhau.
+     + GITHUB_TOKEN: Có sẵn, dùng để đẩy báo cáo lên web.
+   - Xem báo cáo:
+     + Nếu repo là Public: Xem tại link https://thanhhien2510kt.github.io/DWR_CICD/
+     + Nếu repo là Private: Tải file "allure-report-zip" trong phần Summary của mỗi lần chạy (Action run).
+     + Mở file báo cáo Offline: Cần dùng VS Code "Live Server" để mở file index.html (do chế độ bảo mật của trình duyệt).
+
+5. MẸO FIX LỖI KHI VIẾT TEST CHO CI/CD
+   - Luôn sử dụng Headless Mode khi test tại máy cá nhân trước khi push để đảm bảo script không bị phụ thuộc vào màn hình.
+   - Ưu tiên sử dụng Explicit Wait (wait.until...) thay vì Thread.sleep vì server có tốc độ xử lý biến thiên.
