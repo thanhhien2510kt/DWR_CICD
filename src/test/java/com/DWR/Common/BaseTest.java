@@ -57,21 +57,41 @@ public class BaseTest extends CommonPage {
 
     private WebDriver initChromeDriver() {
         System.out.println("Launching Chrome browser...");
-        WebDriver driver = new ChromeDriver();
+        org.openqa.selenium.chrome.ChromeOptions options = new org.openqa.selenium.chrome.ChromeOptions();
+        String headless = System.getProperty("headless");
+        if (headless != null && headless.equalsIgnoreCase("true")) {
+            options.addArguments("--headless=new");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--window-size=1920,1080");
+        }
+        WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         return driver;
     }
 
     private WebDriver initEdgeDriver() {
         System.out.println("Launching Edge browser...");
-        WebDriver driver = new EdgeDriver();
+        org.openqa.selenium.edge.EdgeOptions options = new org.openqa.selenium.edge.EdgeOptions();
+        String headless = System.getProperty("headless");
+        if (headless != null && headless.equalsIgnoreCase("true")) {
+            options.addArguments("--headless");
+            options.addArguments("--window-size=1920,1080");
+        }
+        WebDriver driver = new EdgeDriver(options);
         driver.manage().window().maximize();
         return driver;
     }
 
     private WebDriver initFirefoxDriver() {
         System.out.println("Launching Firefox browser...");
-        WebDriver driver = new FirefoxDriver();
+        org.openqa.selenium.firefox.FirefoxOptions options = new org.openqa.selenium.firefox.FirefoxOptions();
+        String headless = System.getProperty("headless");
+        if (headless != null && headless.equalsIgnoreCase("true")) {
+            options.addArguments("-headless");
+        }
+        WebDriver driver = new FirefoxDriver(options);
         driver.manage().window().maximize();
         return driver;
     }
